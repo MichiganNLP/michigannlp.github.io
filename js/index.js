@@ -1,5 +1,4 @@
 $(document).ready(function() {
-    alert("running");
     //Dynamically load recent news
      $.ajax({
         type: "GET",

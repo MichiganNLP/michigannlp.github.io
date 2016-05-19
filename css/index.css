@@ -1,3 +1,5 @@
+/* Home Page */
+
 .recent-news-date {
     font-size: 20px;
     font-style: italic;
@@ -29,4 +31,18 @@ p.lead {
 
 #recent_news_heading {
     font-size: 30px;
+}
+
+/* People Page */
+
+.profile_pic {
+    display: block;
+    margin: 0 auto;
+    width: 60%;
+    border-radius: 15px;
+    margin-bottom: 10px;
+}
+
+#people {
+    text-align: center;
 }
