@@ -1,7 +1,4 @@
 $(document).ready(function() {
-    //Load navbar
-    $("#navbar").load("navbar.html");
-
     //Dynamically load recent news
      $.ajax({
         type: "GET",
