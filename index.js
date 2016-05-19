@@ -1,4 +1,5 @@
 $(document).ready(function() {
+    //Dynamically load recent news
      $.ajax({
         type: "GET",
         url: "recent_news.csv",
@@ -11,6 +12,7 @@ $(document).ready(function() {
 //<p class="recent-news-date">Sample date0</p>
 //<p class="lead">This is a description of what's happening0 (see more <a href="">here</a>)</p>
 function processRecentNews(allText) {
+    alert(allText);
     var allTextLines = allText.split(/\r\n|\n/);
     var headers = allTextLines[0].split(',');
     var lines = [];
@@ -19,7 +21,7 @@ function processRecentNews(allText) {
         var data = allTextLines[i].split(',');
 
         if(data.length==headers.length) {
-            $('#recent_news').append('<p class="recent-news-date">'+data[1]+'</p>');
+            $('#recent_news').append('<p class="recent-news-date">' + data[1] + '</p>');
             $('#recent_news').append('<p class="lead">' + data[2] + ' (see more <a href="' + data[3] + '">here</a>)</p>');
         }
     }
