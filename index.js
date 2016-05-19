@@ -12,7 +12,6 @@ $(document).ready(function() {
 //<p class="recent-news-date">Sample date0</p>
 //<p class="lead">This is a description of what's happening0 (see more <a href="">here</a>)</p>
 function processRecentNews(allText) {
-    alert(allText);
     var allTextLines = allText.split(/\r\n|\n/);
     var headers = allTextLines[0].split(',');
     var lines = [];
