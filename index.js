@@ -12,10 +12,10 @@ $(document).ready(function() {
 //<p class="lead">This is a description of what's happening0 (see more <a href="">here</a>)</p>
 function processRecentNews(allText) {
     var allTextLines = allText.split(/\r\n|\n/);
-    alert(allTextLines);
     var headers = allTextLines[0].split(',');
     var lines = [];
     
+    alert(allTextLines.length);
     for (var i=1; i<allTextLines.length; i++) {
         var data = allTextLines[i].split(',');
         if (data.length == headers.length) {
