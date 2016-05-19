@@ -1,6 +1,16 @@
 $(document).ready(function() {
-   $("#recent-news").load("recent_news.csv")
+                  
+
   });
+
+jQuery(document).ready(function(){
+                       $.ajax({
+                              type: "GET",
+                              url: "recent_news.csv",
+                              dataType: "text",
+                              success: function(data) {processData(data);}
+                              });
+                       });
 
 //from http://stackoverflow.com/questions/7431268/how-to-read-data-from-csv-file-using-javascript
 function processData(allText) {
@@ -12,13 +22,14 @@ function processData(allText) {
     for (var i=1; i<allTextLines.length; i++) {
         var data = allTextLines[i].split(',');
         if (data.length == headers.length) {
-            
-            var tarr = [];
-            for (var j=0; j<headers.length; j++) {
-                tarr.push(headers[j]+":"+data[j]);
-            }
-            lines.push(tarr);
+            $('#recent_news').append('<p class="recent-news-date">');
+            $('#recent_news').append(data[0]);
+            $('#recent_news').append('</p>');
+            $('#recent_news').append('<p class="lead">');
+            $('#recent_news').append(data[1]);
+            $('#recent_news').append('(see more <a href="');
+            $('#recent_news').append(data[2]);
+            $('#recent_news').append('">here</a>)</p>');
         }
     }
-     alert(lines);
 }
