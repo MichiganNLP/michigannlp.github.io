@@ -16,6 +16,7 @@ jQuery(document).ready(function(){
 function processData(allText) {
     alert("processing data");
     var allTextLines = allText.split(/\r\n|\n/);
+    alert(allTextLines);
     var headers = allTextLines[0].split(',');
     var lines = [];
     
@@ -30,7 +31,6 @@ function processData(allText) {
             $('#recent_news').append('(see more <a href="');
             $('#recent_news').append(data[2]);
             $('#recent_news').append('">here</a>)</p>');
-            alert(data[1])
         }
     }
 }
