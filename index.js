@@ -14,9 +14,8 @@ jQuery(document).ready(function(){
 
 //from http://stackoverflow.com/questions/7431268/how-to-read-data-from-csv-file-using-javascript
 function processData(allText) {
-    alert("processing data");
+    alert(allText);
     var allTextLines = allText.split(/\r\n|\n/);
-    alert(allTextLines);
     var headers = allTextLines[0].split(',');
     var lines = [];
     
