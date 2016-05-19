@@ -17,9 +17,7 @@ function processRecentNews(allText) {
     
     for (var i=1; i<allTextLines.length; i++) {
         var data = allTextLines[i].split(',');
-        alert(data.length);
-        alert(headers.length);
-        if (data.length == headers.length) {
+
             $('#recent_news').append('<p class="recent-news-date">');
             $('#recent_news').append(data[1]);
             $('#recent_news').append('</p>');
@@ -28,6 +26,5 @@ function processRecentNews(allText) {
             $('#recent_news').append('(see more <a href="');
             $('#recent_news').append(data[3]);
             $('#recent_news').append('">here</a>)</p>');
-        }
     }
 }
