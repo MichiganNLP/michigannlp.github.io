@@ -30,6 +30,7 @@ function processData(allText) {
             $('#recent_news').append('(see more <a href="');
             $('#recent_news').append(data[2]);
             $('#recent_news').append('">here</a>)</p>');
+            alert(data[1])
         }
     }
 }
