@@ -15,9 +15,10 @@ function processRecentNews(allText) {
     var headers = allTextLines[0].split(',');
     var lines = [];
     
-    alert(allTextLines.length);
     for (var i=1; i<allTextLines.length; i++) {
         var data = allTextLines[i].split(',');
+        alert(data.length);
+        alert(headers.length);
         if (data.length == headers.length) {
             $('#recent_news').append('<p class="recent-news-date">');
             $('#recent_news').append(data[1]);
