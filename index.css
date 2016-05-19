@@ -1,0 +1,14 @@
+.centered {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.featurette-heading {
+    font-weight: 300;
+    line-height: 1;
+    letter-spacing: -1px;
+}
+
+p.lead {
+    font-weight: 10;
+}
