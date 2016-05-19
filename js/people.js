@@ -1,5 +1,6 @@
 $(document).ready(function() {
-    //Dynamically load recent news
+    //Dynamically load people
+    alert("running");
      $.ajax({
         type: "GET",
         url: "../data/people.csv",
