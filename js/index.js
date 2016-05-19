@@ -2,7 +2,7 @@ $(document).ready(function() {
     //Dynamically load recent news
      $.ajax({
         type: "GET",
-        url: "recent_news.csv",
+        url: "../data/recent_news.csv",
         dataType: "text",
         success: function(data) {processRecentNews(data);}
     });
