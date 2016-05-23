@@ -1,6 +1,5 @@
 $(document).ready(function() {
     //Dynamically load recent news
-    alert("running");
      $.ajax({
         type: "GET",
         url: "../data/people.csv",
@@ -10,14 +9,9 @@ $(document).ready(function() {
 });
 
 //Template:
-//<div class="col-md-3">
-//<img src="images/laura.jpg" class="profile_pic" alt="Laura Wendlandt">
-//<p class="lead"><b>Laura Wendlandt</b></p>
-//<p class="lead">PhD Student, Computer Science and Engineering</p>
-//<p class="lead">wenlaura at umich.edu</p>
-//</div>
+//<p class="recent-news-date">Sample date0</p>
+//<p class="lead">This is a description of what's happening0 (see more <a href="">here</a>)</p>
 function processPeople(allText) {
-    alert("processPeople");
     var allTextLines = allText.split(/\r\n|\n/);
     var headers = allTextLines[0].split(';');
     var lines = [];
@@ -26,7 +20,7 @@ function processPeople(allText) {
         var data = allTextLines[i].split(';');
         
         if(i % 4 == 0) { //append new row
-            $('#people').append('<div class="row" id="row' + i +'">);
+            $('#people').append('<div class="row" id="row' + i +'">');
         }
 
         if(data.length==headers.length) {
