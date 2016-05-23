@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    //Dynamically load people
+    //Dynamically load recent news
     alert("running");
      $.ajax({
         type: "GET",
@@ -17,7 +17,7 @@ $(document).ready(function() {
 //<p class="lead">wenlaura at umich.edu</p>
 //</div>
 function processPeople(allText) {
-    alert(allText);
+    alert("processPeople");
     var allTextLines = allText.split(/\r\n|\n/);
     var headers = allTextLines[0].split(';');
     var lines = [];
