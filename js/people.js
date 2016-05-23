@@ -9,25 +9,30 @@ $(document).ready(function() {
 });
 
 //Template:
-//<p class="recent-news-date">Sample date0</p>
-//<p class="lead">This is a description of what's happening0 (see more <a href="">here</a>)</p>
+//<div class="col-md-3">
+//<img src="images/laura.jpg" class="profile_pic" alt="Laura Wendlandt">
+//<p class="lead"><b>Laura Wendlandt</b></p>
+//<p class="lead">PhD Student, Computer Science and Engineering</p>
+//<p class="lead">wenlaura at umich.edu</p>
 function processPeople(allText) {
     var allTextLines = allText.split(/\r\n|\n/);
     var headers = allTextLines[0].split(';');
     var lines = [];
     
+    var rowNum = -1;
     for (var i=1; i<allTextLines.length; i++) {
         var data = allTextLines[i].split(';');
         
         if(i % 4 == 0) { //append new row
-            $('#people').append('<div class="row" id="row' + i +'">');
+            rowNum = rowNum + 1;
+            $('#people').append('<div class="row" id="row' + rowNum +'">');
         }
 
         if(data.length==headers.length) {
-            $('#row' + i).append('<img src="images/' + data[1] + '" class="profile_pic" alt="' + data[2] + '">');
-            $('#row' + i).append('<p class="lead"><b>' + data[2] + '</b></p>');
-            $('#row' + i).append('<p class="lead">' + data[3] + '</p>');
-            $('#row' + i).append('<p class="lead">' + data[4] + ' at umich.edu</p>');
+            $('#row' + rowNum).append('<img src="images/' + data[1] + '" class="profile_pic" alt="' + data[2] + '">');
+            $('#row' + rowNum).append('<p class="lead"><b>' + data[2] + '</b></p>');
+            $('#row' + rowNum).append('<p class="lead">' + data[3] + '</p>');
+            $('#row' + rowNum).append('<p class="lead">' + data[4] + ' at umich.edu</p>');
         }
     }
 }
