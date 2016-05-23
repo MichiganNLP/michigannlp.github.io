@@ -24,7 +24,7 @@ function processPeople(allText) {
     for (var i=1; i<allTextLines.length; i++) {
         var data = allTextLines[i].split(';');
         
-        if(i % 4 == 0) { //append new row
+        if(i % 4 == 1) { //append new row
             rowNum = rowNum + 1;
             $('#people').append('<div class="row" id="row' + rowNum +'">');
         }
