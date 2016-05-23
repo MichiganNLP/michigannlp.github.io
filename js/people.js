@@ -14,6 +14,7 @@ $(document).ready(function() {
 //<p class="lead"><b>Laura Wendlandt</b></p>
 //<p class="lead">PhD Student, Computer Science and Engineering</p>
 //<p class="lead">wenlaura at umich.edu</p>
+//<div>
 function processPeople(allText) {
     var allTextLines = allText.split(/\r\n|\n/);
     var headers = allTextLines[0].split(';');
@@ -29,10 +30,9 @@ function processPeople(allText) {
         }
 
         if(data.length==headers.length) {
-            $('#row' + rowNum).append('<img src="images/' + data[1] + '" class="profile_pic" alt="' + data[2] + '">');
-            $('#row' + rowNum).append('<p class="lead"><b>' + data[2] + '</b></p>');
-            $('#row' + rowNum).append('<p class="lead">' + data[3] + '</p>');
-            $('#row' + rowNum).append('<p class="lead">' + data[4] + ' at umich.edu</p>');
+            $('#row' + rowNum).append('<div class="col-md-3"><img src="images/'+ data[1] + '" class="profile_pic" alt="' + data[2] + '">' +
+                '<p class="lead"><b>' + data[2] + '</b></p>' + '<p class="lead">' + data[3] + '</p>' +
+                '<p class="lead">' + data[4] + ' at umich.edu</p>' + '</div>');
         }
     }
 }
