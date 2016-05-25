@@ -1,7 +1,7 @@
 //global variables
 var years = []; //each year has a name (ie. 2016) and a list of publications
 var categories = [];
-$.cookie('categorySet',0);
+//$.cookie('categorySet',0);
 var categorySet = ($.cookie('categorySet') != null)
     ? $.cookie('categorySet')
     : 0;
