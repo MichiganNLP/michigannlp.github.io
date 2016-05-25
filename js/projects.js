@@ -1,5 +1,11 @@
 //global variables
 var projects = []
+var projectSet = ($.cookie('projectSet') != null)
+    ? $.cookie('projectSet')
+    : 0;
+var currentProject = ($.cookie('currentProject') != null)
+    ? $.cookie('currentProject')
+    : 'nothing';
 
 $(document).ready(function() {
     //Dynamically load recent news
@@ -12,47 +18,62 @@ $(document).ready(function() {
 });
 
 function processProjects(allText) {
-    //http://www.bennadel.com/blog/1504-ask-ben-parsing-csv-strings-with-javascript-exec-regular-expression-command.htm
-    strDelimiter = (",");
+    arrData = parseCsv(allText);
     
-    // Create a regular expression to parse the CSV values.
-    var objPattern = new RegExp(
-        (
-        // Delimiters.
-        "(\\" + strDelimiter + "|\\r?\\n|\\r|^)" +
-        // Quoted fields.
-        "(?:\"([^\"]*(?:\"\"[^\"]*)*)\"|" +
-        // Standard fields.
-        "([^\"\\" + strDelimiter + "\\r\\n]*))"
-    ),
-    "gi"
-    );
-    
-    var arrData = [[]];
-    var arrMatches = null;
-    while (arrMatches = objPattern.exec(allText)){
-        var strMatchedDelimiter = arrMatches[ 1 ];
-        if (strMatchedDelimiter.length &&(strMatchedDelimiter != strDelimiter)){
-            arrData.push( [] );
+    if(projectSet==0) {
+        $('#projects').append('<p class="lead">Click below to learn more about different projects.</p>');
+        for (var i=1; i<arrData.length; i++) {
+            var data = arrData[i];
+            var project = {name:data[0], people:data[1], data:data[2]};
+            projects.push(project);
+            $('#projects').append('<p class="lead"><a onclick="loadProject(\'' + project.name + '\')" href="#">' + project.name + '</a></p>')
         }
-        if (arrMatches[ 2 ]){
-            // We found a quoted value. When we capture
-            // this value, unescape any double quotes.
-            var strMatchedValue = arrMatches[ 2 ].replace(
-                new RegExp( "\"\"", "g" ),
-                    "\""
-                    );
-        } else {
-            // We found a non-quoted value.
-            var strMatchedValue = arrMatches[ 3 ];
+    } else {
+        $('#projects').append('<p class="lead"><a onclick="allProjects()" href="">Go back to all projects</a></p>');
+        
+        for(var i=1; i<arrData.length; i++) {
+            var data = arrData[i];
+            var project;
+            if(data[0] == currentProject) {
+                project = {name:data[0], people:data[1], data:data[2]};
+                break;
+            }
         }
-        arrData[ arrData.length - 1 ].push( strMatchedValue );
+        
+        $('#projects').append('<h2 class="featurette-heading">' + project.name + '</h2>');
+        $('#projects').append('<p class="lead">' + project.description + '</p>');
+        $('#projects').append('<p class="lead">People involved: ' project.people '</p>');
+        $('#projects').append('<p class="lead">Relevant publications:</p>');
+        
+        $.ajax({
+            type: "GET",
+            url: "../data/publications.csv",
+            dataType: "text",
+            success: function(data) {processPublications(data);}
+        });
     }
+}
+
+function processPublications(allText) {
+    arrData = parseCsv(allText);
     
     for (var i=1; i<arrData.length; i++) {
         var data = arrData[i];
-        var project = {name:data[0], people:data[1], data:data[2]};
-        projects.push(project);
-        $('#projects').append('<p class="lead"><a href="#">' + project.name + '</a></p>')
+        
+        var publication = {citation:data[1], link:data[2], category:data[3], demo:data[4], data: data[5], software:data[6]};
+
+        entry = showPublication(publication);
+        $('#projects').append('<p class="lead">' + entry + '</p>');
     }
+}
+
+function allProjects() {
+    $.cookie('projectSet',0);
+    location.reload();
+}
+
+function loadProject(project) {
+    $.cookie('projectSet', 1);
+    $.cookie('currentProject',project);
+    location.reload();
 }

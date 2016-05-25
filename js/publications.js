@@ -20,42 +20,7 @@ $(document).ready(function() {
 });
 
 function processPublications(allText) {
-    //http://www.bennadel.com/blog/1504-ask-ben-parsing-csv-strings-with-javascript-exec-regular-expression-command.htm
-    strDelimiter = (",");
-    
-    // Create a regular expression to parse the CSV values.
-    var objPattern = new RegExp(
-        (
-        // Delimiters.
-        "(\\" + strDelimiter + "|\\r?\\n|\\r|^)" +
-        // Quoted fields.
-        "(?:\"([^\"]*(?:\"\"[^\"]*)*)\"|" +
-        // Standard fields.
-        "([^\"\\" + strDelimiter + "\\r\\n]*))"
-    ),
-    "gi"
-    );
-    
-    var arrData = [[]];
-    var arrMatches = null;
-    while (arrMatches = objPattern.exec(allText)){
-        var strMatchedDelimiter = arrMatches[ 1 ];
-        if (strMatchedDelimiter.length &&(strMatchedDelimiter != strDelimiter)){
-            arrData.push( [] );
-        }
-        if (arrMatches[ 2 ]){
-            // We found a quoted value. When we capture
-            // this value, unescape any double quotes.
-            var strMatchedValue = arrMatches[ 2 ].replace(
-                new RegExp( "\"\"", "g" ),
-                    "\""
-                    );
-        } else {
-            // We found a non-quoted value.
-            var strMatchedValue = arrMatches[ 3 ];
-        }
-        arrData[ arrData.length - 1 ].push( strMatchedValue );
-    }
+    arrData = parseCsv(allText);
     
     var rowNum = -1;
     for (var i=1; i<arrData.length; i++) {
@@ -141,42 +106,4 @@ function showCategories() {
         }
     }
     $('#categories').append('<p class="lead">View publications by category: ' + entry + '</p>');
-}
-
-//Template:
-//<h2 class="featurette-heading">2016</h2>
-//<p class="lead">Chai, Joyce Y., Anoop Sarkar, and Rada Mihalcea. "What’s Hot in Human Language
-//Technology: Highlights from NAACL HLT 2015." Thirtieth AAAI Conference on Artificial
-//Intelligence. 2016. (<a href="">pdf</a>, <a href="">demo</a>, <a href="">data</a>, <a
-//href="">software</a>)</p>
-function showPublication(publication) {
-    var entry = '<p class="lead">' + publication.citation;
-    if(publication.link || publication.demo || publication.data || publication.software) {
-        entry = entry + ' (';
-        if(publication.link) {
-            entry = entry + '<a href="' + publication.link + '">pdf</a>';
-            if(publication.demo || publication.data || publication.software) {
-                entry = entry + ', ';
-            }
-        }
-        if(publication.demo) {
-            entry = entry + '<a href="' + publication.demo + '">demo</a>';
-            if(publication.data || publication.software) {
-                entry = entry + ', ';
-            }
-        }
-        if(publication.data) {
-            entry = entry + '<a href="' + publication.data + '">data</a>';
-            if(publication.software) {
-                entry = entry + ', ';
-            }
-        }
-        if(publication.software) {
-            entry = entry + '<a href="' + publication.software + '">software</a>';
-        }
-        entry = entry + ')';
-    }
-    entry = entry + '</p>';
-
-    return entry;
 }
