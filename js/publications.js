@@ -113,7 +113,7 @@ function processPublications(allText) {
     }
 }
 
-function allPublications(category) {
+function allPublications() {
     $.cookie('categorySet',false);
     location.reload();
 }
