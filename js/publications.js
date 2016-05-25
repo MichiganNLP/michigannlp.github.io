@@ -96,6 +96,8 @@ function processPublications(allText) {
     
     showCategories();
     
+    alert("categorySet");
+    alert(categorySet);
     if(categorySet) {
         $('#categories').append('<p class="lead"><a onclick="allPublications()" href="">Go back to all publications</a></p>');
     }
