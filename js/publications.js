@@ -1,14 +1,17 @@
 //global variables
 var years = []; //each year has a name (ie. 2016) and a list of publications
+var loaded = false;
 
 $(document).ready(function() {
     //Dynamically load recent news
-     $.ajax({
-        type: "GET",
-        url: "../data/publications.csv",
-        dataType: "text",
-        success: function(data) {processPublications(data);}
-    });
+    if(!loaded) {
+         $.ajax({
+            type: "GET",
+            url: "../data/publications.csv",
+            dataType: "text",
+            success: function(data) {processPublications(data);}
+        });
+    }
 });
 
 //Template:
@@ -18,6 +21,8 @@ $(document).ready(function() {
 //Intelligence. 2016. (<a href="">pdf</a>, <a href="">demo</a>, <a href="">data</a>, <a
 //href="">software</a>)</p>
 function processPublications(allText) {
+    loaded = true;
+    
     //http://www.bennadel.com/blog/1504-ask-ben-parsing-csv-strings-with-javascript-exec-regular-expression-command.htm
     strDelimiter = (",");
     
