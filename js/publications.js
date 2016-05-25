@@ -19,7 +19,6 @@ $(document).ready(function() {
 });
 
 function processPublications(allText) {
-    alert("processPublications");
     //http://www.bennadel.com/blog/1504-ask-ben-parsing-csv-strings-with-javascript-exec-regular-expression-command.htm
     strDelimiter = (",");
     
@@ -114,6 +113,7 @@ function processPublications(allText) {
 }
 
 function allPublications() {
+    alert('allPublications');
     $.cookie('categorySet',false);
     location.reload();
 }
