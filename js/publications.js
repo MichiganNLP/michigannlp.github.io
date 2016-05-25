@@ -15,7 +15,7 @@ $(document).ready(function() {
 //Intelligence. 2016. (<a href="">pdf</a>, <a href="">demo</a>, <a href="">data</a>, <a
 //href="">software</a>)</p>
 function processPublications(allText) {
-    http://www.bennadel.com/blog/1504-ask-ben-parsing-csv-strings-with-javascript-exec-regular-expression-command.htm
+    //http://www.bennadel.com/blog/1504-ask-ben-parsing-csv-strings-with-javascript-exec-regular-expression-command.htm
     strDelimiter = (",");
     
     // Create a regular expression to parse the CSV values.
@@ -53,6 +53,7 @@ function processPublications(allText) {
     }
     
     var years = []; //each year has a number (ie. 2016) and a list of publications
+    var categories = [];
     
     var rowNum = -1;
     for (var i=1; i<arrData.length; i++) {
@@ -60,12 +61,28 @@ function processPublications(allText) {
         
         var publication = {citation:data[1], link:data[2], category:data[3], demo:data[4], data: data[5], software:data[6]};
         
+        var allCats = publication.category.split(';');
+        //Is this category already in the array?
+        for(var j=0; j<allCats.length; ++j) {
+            var found = false;
+            for(var k=0; k<categories.length; ++k) {
+                if(categories[k] == allCats[j]) {
+                    found = true;
+                    break;
+                }
+            }
+            if(!found) {
+                categories.push(allCats[j]);
+            }
+        }
+        
         //Is this year already in the array?
         var found = false;
-        for(j=0; j<years.length; ++j) {
+        for(var j=0; j<years.length; ++j) {
             if(years[j].name==data[0]) {
                 found = true;
                 years[j].publications.push(publication);
+                break;
             }
         }
         if(!found) {
@@ -73,6 +90,19 @@ function processPublications(allText) {
             years.push(year);
         }
     }
+    
+    //Template:
+    //<p class="lead">View publications by category: <a href="">Word Sense Disambiguation</a>, <a
+    //href="">Semantic Similarity</a>, <a href="">Romanian Texts</a></p>
+    categories.sort();
+    entry = "";
+    for(var i=0; i<categories.length; ++i) {
+        entry = entry + '<a href="">' + categories[i] + "</a>";
+        if(i != categories.length-1) {
+            entry = entry + ', ';
+        }
+    }
+    $('#categories').append('<p class="lead">View publications by category: ' + entry + '</p>');
     
     for(var i=0; i<years.length; ++i) {
         $('#publications').append('<h2 class="featurette-heading">' + years[i].name + '</h2>');
