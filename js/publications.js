@@ -99,7 +99,7 @@ function processPublications(allText) {
     categories.sort();
     entry = "";
     for(var i=0; i<categories.length; ++i) {
-        entry = entry + '<a onclick="loadcategory(' + categories[i] + ')" href="#">' + categories[i] + "</a>";
+        entry = entry + '<a onclick="loadcategory("' + categories[i] + '")" href="#">' + categories[i] + "</a>";
         if(i != categories.length-1) {
             entry = entry + ', ';
         }
