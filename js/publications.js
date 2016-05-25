@@ -132,6 +132,7 @@ function loadCategory(category) {
         }
     }
     
+    location.reload();
 }
 
 function showPublication(publication) {
