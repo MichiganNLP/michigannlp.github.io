@@ -81,26 +81,26 @@ function processPublications(allText) {
             var entry = '<p class="lead">' + publication.citation;
             if(publication.link || publication.demo || publication.data || publication.software) {
                 entry = entry + ' (';
-                if(publications.link) {
+                if(publication.link) {
                     entry = entry + '<a href="' + publication.link + '">pdf</a>';
-                    if(publications.demo || publications.data || publications.software) {
+                    if(publication.demo || publication.data || publication.software) {
                         entry = entry + ', ';
                     }
                 }
-                if(publications.demo) {
+                if(publication.demo) {
                     entry = entry + '<a href="' + publication.demo + '">demo</a>';
-                    if(publications.data || publications.software) {
+                    if(publication.data || publication.software) {
                         entry = entry + ', ';
                     }
                 }
-                if(publications.data) {
+                if(publication.data) {
                     entry = entry + '<a href="' + publication.data + '">data</a>';
-                    if(publications.software) {
+                    if(publication.software) {
                         entry = entry + ', ';
                     }
                 }
-                if(publications.software) {
-                    entry = entry + '<a href="' + publications.software + '">software</a>';
+                if(publication.software) {
+                    entry = entry + '<a href="' + publication.software + '">software</a>';
                 }
                 entry = entry + ')';
             }
