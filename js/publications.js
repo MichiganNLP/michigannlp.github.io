@@ -20,6 +20,8 @@ $(document).ready(function() {
 });
 
 function processPublications(allText) {
+    alert("categorySet");
+    alert(categorySet);
     //http://www.bennadel.com/blog/1504-ask-ben-parsing-csv-strings-with-javascript-exec-regular-expression-command.htm
     strDelimiter = (",");
     
