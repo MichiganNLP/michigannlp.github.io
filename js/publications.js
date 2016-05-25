@@ -1,3 +1,6 @@
+//global variables
+var years = []; //each year has a name (ie. 2016) and a list of publications
+
 $(document).ready(function() {
     //Dynamically load recent news
      $.ajax({
@@ -52,7 +55,6 @@ function processPublications(allText) {
         arrData[ arrData.length - 1 ].push( strMatchedValue );
     }
     
-    var years = []; //each year has a number (ie. 2016) and a list of publications
     var categories = [];
     
     var rowNum = -1;
@@ -97,7 +99,7 @@ function processPublications(allText) {
     categories.sort();
     entry = "";
     for(var i=0; i<categories.length; ++i) {
-        entry = entry + '<a href="">' + categories[i] + "</a>";
+        entry = entry + '<a onclick="loadcategory(' + categories[i] + ')" href="#">' + categories[i] + "</a>";
         if(i != categories.length-1) {
             entry = entry + ', ';
         }
@@ -108,34 +110,57 @@ function processPublications(allText) {
         $('#publications').append('<h2 class="featurette-heading">' + years[i].name + '</h2>');
         for(var j=0; j<years[i].publications.length; ++j) {
             publication = years[i].publications[j];
-            var entry = '<p class="lead">' + publication.citation;
-            if(publication.link || publication.demo || publication.data || publication.software) {
-                entry = entry + ' (';
-                if(publication.link) {
-                    entry = entry + '<a href="' + publication.link + '">pdf</a>';
-                    if(publication.demo || publication.data || publication.software) {
-                        entry = entry + ', ';
-                    }
-                }
-                if(publication.demo) {
-                    entry = entry + '<a href="' + publication.demo + '">demo</a>';
-                    if(publication.data || publication.software) {
-                        entry = entry + ', ';
-                    }
-                }
-                if(publication.data) {
-                    entry = entry + '<a href="' + publication.data + '">data</a>';
-                    if(publication.software) {
-                        entry = entry + ', ';
-                    }
-                }
-                if(publication.software) {
-                    entry = entry + '<a href="' + publication.software + '">software</a>';
-                }
-                entry = entry + ')';
-            }
-            entry = entry + '</p>';
+            entry = showPublication(publication);
             $('#publications').append(entry);
         }
     }
+}
+
+function loadCategory(category) {
+    //clear current publications
+    $('#publications').html();
+    
+    //only show publications in the right category
+    for(var i=0; i<years.length; ++i) {
+        for(var j=0; j<years[i].publications.length; ++j) {
+            publication = years[i].publications[j];
+            if(publication.category==category) {
+                entry = showPublication(publication);
+                $('#publications').append(entry);
+            }
+        }
+    }
+    
+}
+
+function showPublication(publication) {
+    var entry = '<p class="lead">' + publication.citation;
+    if(publication.link || publication.demo || publication.data || publication.software) {
+        entry = entry + ' (';
+        if(publication.link) {
+            entry = entry + '<a href="' + publication.link + '">pdf</a>';
+            if(publication.demo || publication.data || publication.software) {
+                entry = entry + ', ';
+            }
+        }
+        if(publication.demo) {
+            entry = entry + '<a href="' + publication.demo + '">demo</a>';
+            if(publication.data || publication.software) {
+                entry = entry + ', ';
+            }
+        }
+        if(publication.data) {
+            entry = entry + '<a href="' + publication.data + '">data</a>';
+            if(publication.software) {
+                entry = entry + ', ';
+            }
+        }
+        if(publication.software) {
+            entry = entry + '<a href="' + publication.software + '">software</a>';
+        }
+        entry = entry + ')';
+    }
+    entry = entry + '</p>';
+
+    return entry;
 }
