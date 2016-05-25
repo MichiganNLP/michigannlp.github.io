@@ -99,11 +99,11 @@ function processPublications(allText) {
     }
     
     for(var i=0; i<years.length; ++i) {
+        if(!(categorySet==true)) {
+            $('#publications').append('<h2 class="featurette-heading">' + years[i].name + '</h2>');
+        }
         for(var j=0; j<years[i].publications.length; ++j) {
             publication = years[i].publications[j];
-            if(!(categorySet==true)) {
-                $('#publications').append('<h2 class="featurette-heading">' + years[i].name + '</h2>');
-            }
             if(!(categorySet==true) || publication.category==category) {
                 entry = showPublication(publication);
                 $('#publications').append(entry);
