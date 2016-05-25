@@ -15,8 +15,6 @@ $(document).ready(function() {
 //Intelligence. 2016. (<a href="">pdf</a>, <a href="">demo</a>, <a href="">data</a>, <a
 //href="">software</a>)</p>
 function processPublications(allText) {
-    alert(allText);
-    
     var allTextLines = allText.split(/\r\n|\n/);
     var headers = allTextLines[0].split(';');
     var lines = [];
@@ -25,7 +23,7 @@ function processPublications(allText) {
     
     var rowNum = -1;
     for (var i=1; i<allTextLines.length; i++) {
-        var data = allTextLines[i].split(';');
+        var data = allTextLines[i].split(',');
         
         var publication = {citation:data[1], category:data[2], link:data[3], demo:data[4], data: data[5], software:data[6]};
         
@@ -46,7 +44,7 @@ function processPublications(allText) {
     for(var i=0; i<years.length; ++i) {
         $('#publications').append('<h2 class="featurette-heading">' + years[i].name + '</h2>');
         for(var j=0; j<years[i].publications.length; ++j) {
-            publication = years[i].publication[j];
+            publication = years[i].publications[j];
             var entry = '<p class="lead">' + publication.citation;
             if(publication.link != "" || publication.demo != "" || publication.data != "" || publication.software != "") {
                 entry = entry + '(';
