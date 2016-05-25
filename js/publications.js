@@ -3,14 +3,12 @@ var years = []; //each year has a name (ie. 2016) and a list of publications
 
 $(document).ready(function() {
     //Dynamically load recent news
-    if(!loaded) {
-         $.ajax({
-            type: "GET",
-            url: "../data/publications.csv",
-            dataType: "text",
-            success: function(data) {processPublications(data);}
-        });
-    }
+     $.ajax({
+        type: "GET",
+        url: "../data/publications.csv",
+        dataType: "text",
+        success: function(data) {processPublications(data);}
+    });
 });
 
 //Template:
