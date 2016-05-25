@@ -3,25 +3,20 @@ var years = []; //each year has a name (ie. 2016) and a list of publications
 var categorySet = ($.cookie('categorySet') != null)
     ? $.cookie('categorySet')
     : false;
+var category = ($.cookie('category') != null)
+    ? $.cookie('category')
+    : 'nothing';
 
 $(document).ready(function() {
     //Dynamically load recent news
-    if(!categorySet) {
-         $.ajax({
-            type: "GET",
-            url: "../data/publications.csv",
-            dataType: "text",
-            success: function(data) {processPublications(data);}
-        });
-    }
+     $.ajax({
+        type: "GET",
+        url: "../data/publications.csv",
+        dataType: "text",
+        success: function(data) {processPublications(data);}
+    });
 });
 
-//Template:
-//<h2 class="featurette-heading">2016</h2>
-//<p class="lead">Chai, Joyce Y., Anoop Sarkar, and Rada Mihalcea. "What’s Hot in Human Language
-//Technology: Highlights from NAACL HLT 2015." Thirtieth AAAI Conference on Artificial
-//Intelligence. 2016. (<a href="">pdf</a>, <a href="">demo</a>, <a href="">data</a>, <a
-//href="">software</a>)</p>
 function processPublications(allText) {
     alert("processPublications");
     //http://www.bennadel.com/blog/1504-ask-ben-parsing-csv-strings-with-javascript-exec-regular-expression-command.htm
@@ -99,9 +94,33 @@ function processPublications(allText) {
         }
     }
     
-    //Template:
-    //<p class="lead">View publications by category: <a href="">Word Sense Disambiguation</a>, <a
-    //href="">Semantic Similarity</a>, <a href="">Romanian Texts</a></p>
+    showCategories();
+    
+    if(categorySet) {
+        $('#categories').append('<p class="lead"><a href="">Go back to all publications</a></p>');
+    }
+    
+    for(var i=0; i<years.length; ++i) {
+        for(var j=0; j<years[i].publications.length; ++j) {
+            publication = years[i].publications[j];
+            if(!categorySet || publication.category==category) {
+                entry = showPublication(publication);
+                $('#publications').append(entry);
+            }
+        }
+    }
+}
+
+function loadCategory(category) {
+    $.cookie('categorySet', true);
+    $.cookie('category',category);
+    location.reload();
+}
+
+//Template:
+//<p class="lead">View publications by category: <a href="">Word Sense Disambiguation</a>, <a
+//href="">Semantic Similarity</a>, <a href="">Romanian Texts</a></p>
+function showCategories() {
     categories.sort();
     entry = "";
     for(var i=0; i<categories.length; ++i) {
@@ -111,36 +130,14 @@ function processPublications(allText) {
         }
     }
     $('#categories').append('<p class="lead">View publications by category: ' + entry + '</p>');
-    
-    for(var i=0; i<years.length; ++i) {
-        $('#publications').append('<h2 class="featurette-heading">' + years[i].name + '</h2>');
-        for(var j=0; j<years[i].publications.length; ++j) {
-            publication = years[i].publications[j];
-            entry = showPublication(publication);
-            $('#publications').append(entry);
-        }
-    }
 }
 
-function loadCategory(category) {
-    //clear current publications
-    $('#publications').innerHTML = "";
-    
-    //only show publications in the right category
-    for(var i=0; i<years.length; ++i) {
-        for(var j=0; j<years[i].publications.length; ++j) {
-            publication = years[i].publications[j];
-            if(publication.category==category) {
-                entry = showPublication(publication);
-                $('#publications').append(entry);
-            }
-        }
-    }
-    
-    $.cookie('categorySet', true);
-    location.reload();
-}
-
+//Template:
+//<h2 class="featurette-heading">2016</h2>
+//<p class="lead">Chai, Joyce Y., Anoop Sarkar, and Rada Mihalcea. "What’s Hot in Human Language
+//Technology: Highlights from NAACL HLT 2015." Thirtieth AAAI Conference on Artificial
+//Intelligence. 2016. (<a href="">pdf</a>, <a href="">demo</a>, <a href="">data</a>, <a
+//href="">software</a>)</p>
 function showPublication(publication) {
     var entry = '<p class="lead">' + publication.citation;
     if(publication.link || publication.demo || publication.data || publication.software) {
