@@ -1,10 +1,9 @@
 //global variables
 var years = []; //each year has a name (ie. 2016) and a list of publications
 var categories = [];
-//var categorySet = ($.cookie('categorySet') != null)
-//    ? $.cookie('categorySet')
-//    : false;
-categorySet = false;
+var categorySet = ($.cookie('categorySet') != null)
+    ? $.cookie('categorySet')
+    : false;
 var category = ($.cookie('category') != null)
     ? $.cookie('category')
     : 'nothing';
@@ -103,6 +102,9 @@ function processPublications(allText) {
     for(var i=0; i<years.length; ++i) {
         for(var j=0; j<years[i].publications.length; ++j) {
             publication = years[i].publications[j];
+            if(!categorySet) {
+                $('#publications').append('<h2 class="featurette-heading">' + years[i].name + '</h2>');
+            }
             if(!categorySet || publication.category==category) {
                 entry = showPublication(publication);
                 $('#publications').append(entry);
