@@ -74,38 +74,36 @@ function processPublications(allText) {
         }
     }
     
-    alert(years);
-
     for(var i=0; i<years.length; ++i) {
         $('#publications').append('<h2 class="featurette-heading">' + years[i].name + '</h2>');
         for(var j=0; j<years[i].publications.length; ++j) {
             publication = years[i].publications[j];
-            var entry = '<p class="lead">' + publication.citation + '*' + publication.link + '*' + publication.category + '*' + publication.demo + '*' + publication.data + '*' + publication.software;
-            /*if(publication.link != "" || publication.demo != "" || publication.data != "" || publication.software != "") {
+            var entry = '<p class="lead">' + publication.citation;
+            if(publication.link || publication.demo || publication.data || publication.software) {
                 entry = entry + ' (';
-                if(publications.link != "") {
+                if(publications.link) {
                     entry = entry + '<a href="' + publication.link + '">pdf</a>';
-                    if(publications.demo != "" || publications.data != "" || publications.software != "") {
+                    if(publications.demo || publications.data || publications.software) {
                         entry = entry + ', ';
                     }
                 }
-                if(publications.demo != "") {
+                if(publications.demo) {
                     entry = entry + '<a href="' + publication.demo + '">demo</a>';
-                    if(publications.data != "" || publications.software != "") {
+                    if(publications.data || publications.software) {
                         entry = entry + ', ';
                     }
                 }
-                if(publications.data != "") {
+                if(publications.data) {
                     entry = entry + '<a href="' + publication.data + '">data</a>';
-                    if(publications.software != "") {
+                    if(publications.software) {
                         entry = entry + ', ';
                     }
                 }
-                if(publications.software != "") {
+                if(publications.software) {
                     entry = entry + '<a href="' + publications.software + '">software</a>';
                 }
                 entry = entry + ')';
-            }*/
+            }
             entry = entry + '</p>';
             $('#publications').append(entry);
         }
