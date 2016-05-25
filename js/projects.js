@@ -42,7 +42,7 @@ function processProjects(allText) {
         
         $('#projects').append('<h2 class="featurette-heading">' + project.name + '</h2>');
         $('#projects').append('<p class="lead">' + project.description + '</p>');
-        $('#projects').append('<p class="lead">People involved: ' project.people '</p>');
+        $('#projects').append('<p class="lead">People involved: ' + project.people + '</p>');
         $('#projects').append('<p class="lead">Relevant publications:</p>');
         
         $.ajax({
