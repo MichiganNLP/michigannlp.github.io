@@ -1,9 +1,10 @@
 //global variables
 var years = []; //each year has a name (ie. 2016) and a list of publications
 var categories = [];
-var categorySet = ($.cookie('categorySet') != null)
-    ? $.cookie('categorySet')
-    : false;
+//var categorySet = ($.cookie('categorySet') != null)
+//    ? $.cookie('categorySet')
+//    : 0;
+var categorySet = 0;
 var category = ($.cookie('category') != null)
     ? $.cookie('category')
     : 'nothing';
@@ -94,17 +95,17 @@ function processPublications(allText) {
     
     showCategories();
     
-    if(categorySet==true) {
+    if(categorySet==1) {
         $('#categories').append('<p class="lead"><a onclick="allPublications()" href="">Go back to all publications</a></p>');
     }
     
     for(var i=0; i<years.length; ++i) {
-        if(!(categorySet==true)) {
+        if(categorySet==0) {
             $('#publications').append('<h2 class="featurette-heading">' + years[i].name + '</h2>');
         }
         for(var j=0; j<years[i].publications.length; ++j) {
             publication = years[i].publications[j];
-            if(!(categorySet==true) || publication.category==category) {
+            if(categorySet==0 || publication.category==category) {
                 entry = showPublication(publication);
                 $('#publications').append(entry);
             }
@@ -114,12 +115,12 @@ function processPublications(allText) {
 
 function allPublications() {
     alert('allPublications');
-    $.cookie('categorySet',false);
+    $.cookie('categorySet',0);
     location.reload();
 }
 
 function loadCategory(category) {
-    $.cookie('categorySet', true);
+    $.cookie('categorySet', 1);
     $.cookie('category',category);
     location.reload();
 }
