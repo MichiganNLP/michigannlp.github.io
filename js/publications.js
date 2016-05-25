@@ -75,6 +75,7 @@ function processPublications(allText) {
     }
     
     years.sort();
+    years.reverse();
 
     for(var i=0; i<years.length; ++i) {
         $('#publications').append('<h2 class="featurette-heading">' + years[i].name + '</h2>');
@@ -82,7 +83,7 @@ function processPublications(allText) {
             publication = years[i].publications[j];
             var entry = '<p class="lead">' + publication.citation;
             if(publication.link != "" || publication.demo != "" || publication.data != "" || publication.software != "") {
-                entry = entry + '(';
+                entry = entry + ' (';
                 if(publications.link != "") {
                     entry = entry + '<a href="' + publication.link + ">pdf</a>";
                     if(publications.demo != "" || publications.data != "" || publications.software != "") {
