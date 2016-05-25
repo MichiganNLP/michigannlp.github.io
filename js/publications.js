@@ -15,15 +15,48 @@ $(document).ready(function() {
 //Intelligence. 2016. (<a href="">pdf</a>, <a href="">demo</a>, <a href="">data</a>, <a
 //href="">software</a>)</p>
 function processPublications(allText) {
-    var allTextLines = allText.split(/\r\n|\n/);
-    var headers = allTextLines[0].split(';');
-    var lines = [];
+    http://www.bennadel.com/blog/1504-ask-ben-parsing-csv-strings-with-javascript-exec-regular-expression-command.htm
+    strDelimiter = (",");
+    
+    // Create a regular expression to parse the CSV values.
+    var objPattern = new RegExp(
+        (
+        // Delimiters.
+        "(\\" + strDelimiter + "|\\r?\\n|\\r|^)" +
+        // Quoted fields.
+        "(?:\"([^\"]*(?:\"\"[^\"]*)*)\"|" +
+        // Standard fields.
+        "([^\"\\" + strDelimiter + "\\r\\n]*))"
+    ),
+    "gi"
+    );
+    
+    var arrData = [[]];
+    var arrMatches = null;
+    while (arrMatches = objPattern.exec( strData )){
+        var strMatchedDelimiter = arrMatches[ 1 ];
+        if (strMatchedDelimiter.length &&(strMatchedDelimiter != strDelimiter)){
+            arrData.push( [] );
+        }
+        if (arrMatches[ 2 ]){
+            // We found a quoted value. When we capture
+            // this value, unescape any double quotes.
+            var strMatchedValue = arrMatches[ 2 ].replace(
+                new RegExp( "\"\"", "g" ),
+                    "\""
+                    );
+        } else {
+            // We found a non-quoted value.
+            var strMatchedValue = arrMatches[ 3 ];
+        }
+        arrData[ arrData.length - 1 ].push( strMatchedValue );
+    }
     
     var years = []; //each year has a number (ie. 2016) and a list of publications
     
     var rowNum = -1;
-    for (var i=1; i<allTextLines.length; i++) {
-        var data = allTextLines[i].split(',');
+    for (var i=1; i<arrData.length; i++) {
+        var data = arrData[i];
         
         var publication = {citation:data[1], category:data[2], link:data[3], demo:data[4], data: data[5], software:data[6]};
         
@@ -40,6 +73,8 @@ function processPublications(allText) {
             years.push(year);
         }
     }
+    
+    years.sort();
 
     for(var i=0; i<years.length; ++i) {
         $('#publications').append('<h2 class="featurette-heading">' + years[i].name + '</h2>');
