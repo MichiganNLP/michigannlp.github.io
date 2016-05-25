@@ -18,7 +18,8 @@ $(document).ready(function() {
 //Intelligence. 2016. (<a href="">pdf</a>, <a href="">demo</a>, <a href="">data</a>, <a
 //href="">software</a>)</p>
 function processPublications(allText) {
-    if($('#publications').html=="") {
+    alert($('#publications').html);
+    if($('#publications').html) {
         return;
     }
     alert("processPublications");
