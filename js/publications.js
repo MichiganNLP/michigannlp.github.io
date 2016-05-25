@@ -20,8 +20,6 @@ $(document).ready(function() {
 });
 
 function processPublications(allText) {
-    alert("categorySet");
-    alert(categorySet);
     //http://www.bennadel.com/blog/1504-ask-ben-parsing-csv-strings-with-javascript-exec-regular-expression-command.htm
     strDelimiter = (",");
     
@@ -116,7 +114,6 @@ function processPublications(allText) {
 }
 
 function allPublications() {
-    alert('allPublications');
     $.cookie('categorySet',0);
     location.reload();
 }
@@ -134,7 +131,11 @@ function showCategories() {
     categories.sort();
     entry = "";
     for(var i=0; i<categories.length; ++i) {
-        entry = entry + '<a onclick="loadCategory(\'' + categories[i] + '\')" href="#">' + categories[i] + "</a>";
+        if(categorySet==1 && category==categories[i]) {
+            entry = entry + '<a onclick="loadCategory(\'' + categories[i] + '\')" href="#"><b>' + categories[i] + "</b></a>";
+        } else {
+            entry = entry + '<a onclick="loadCategory(\'' + categories[i] + '\')" href="#">' + categories[i] + "</a>";
+        }
         if(i != categories.length-1) {
             entry = entry + ', ';
         }
