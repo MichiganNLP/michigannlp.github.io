@@ -19,8 +19,6 @@ $(document).ready(function() {
 });
 
 function processPublications(allText) {
-    alert("categorySet");
-    alert(categorySet);
     //http://www.bennadel.com/blog/1504-ask-ben-parsing-csv-strings-with-javascript-exec-regular-expression-command.htm
     strDelimiter = (",");
     
@@ -96,8 +94,6 @@ function processPublications(allText) {
     
     showCategories();
     
-    alert("categorySet");
-    alert(categorySet);
     if(categorySet==true) {
         $('#categories').append('<p class="lead"><a onclick="allPublications()" href="">Go back to all publications</a></p>');
     }
@@ -105,10 +101,10 @@ function processPublications(allText) {
     for(var i=0; i<years.length; ++i) {
         for(var j=0; j<years[i].publications.length; ++j) {
             publication = years[i].publications[j];
-            if(categorySet==false) {
+            if(!(categorySet==true)) {
                 $('#publications').append('<h2 class="featurette-heading">' + years[i].name + '</h2>');
             }
-            if(categorySet==false || publication.category==category) {
+            if(!(categorySet==true) || publication.category==category) {
                 entry = showPublication(publication);
                 $('#publications').append(entry);
             }
