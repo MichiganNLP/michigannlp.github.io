@@ -104,6 +104,7 @@ function processPublications(allText) {
             entry = entry + ', ';
         }
     }
+    alert(entry);
     $('#categories').append('<p class="lead">View publications by category: ' + entry + '</p>');
     
     for(var i=0; i<years.length; ++i) {
