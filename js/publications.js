@@ -80,8 +80,8 @@ function processPublications(allText) {
         $('#publications').append('<h2 class="featurette-heading">' + years[i].name + '</h2>');
         for(var j=0; j<years[i].publications.length; ++j) {
             publication = years[i].publications[j];
-            var entry = '<p class="lead">' + publication.citation;
-            if(publication.link != "" || publication.demo != "" || publication.data != "" || publication.software != "") {
+            var entry = '<p class="lead">' + publication.citation + '*' + publication.link + '*' + publication.category + '*' + publication.demo + '*' + publication.data + '*' + publication.software;
+            /*if(publication.link != "" || publication.demo != "" || publication.data != "" || publication.software != "") {
                 entry = entry + ' (';
                 if(publications.link != "") {
                     entry = entry + '<a href="' + publication.link + '">pdf</a>';
@@ -105,7 +105,7 @@ function processPublications(allText) {
                     entry = entry + '<a href="' + publications.software + '">software</a>';
                 }
                 entry = entry + ')';
-            }
+            }*/
             entry = entry + '</p>';
             $('#publications').append(entry);
         }
