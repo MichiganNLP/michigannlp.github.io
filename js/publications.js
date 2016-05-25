@@ -33,7 +33,7 @@ function processPublications(allText) {
     
     var arrData = [[]];
     var arrMatches = null;
-    while (arrMatches = objPattern.exec( strData )){
+    while (arrMatches = objPattern.exec(allText)){
         var strMatchedDelimiter = arrMatches[ 1 ];
         if (strMatchedDelimiter.length &&(strMatchedDelimiter != strDelimiter)){
             arrData.push( [] );
