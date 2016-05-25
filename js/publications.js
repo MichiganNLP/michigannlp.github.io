@@ -73,9 +73,6 @@ function processPublications(allText) {
             years.push(year);
         }
     }
-    
-    years.sort();
-    years.reverse();
 
     for(var i=0; i<years.length; ++i) {
         $('#publications').append('<h2 class="featurette-heading">' + years[i].name + '</h2>');
