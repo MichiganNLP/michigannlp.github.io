@@ -61,7 +61,7 @@ function processPublications(allText) {
         
         var publication = {citation:data[1], link:data[2], category:data[3], demo:data[4], data: data[5], software:data[6]};
         
-        var allCats = publication.category.split(';');
+        var allCats = publication.category.split(',');
         //Is this category already in the array?
         for(var j=0; j<allCats.length; ++j) {
             var found = false;
