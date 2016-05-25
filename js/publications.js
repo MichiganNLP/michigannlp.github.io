@@ -98,7 +98,7 @@ function processPublications(allText) {
     //href="">Semantic Similarity</a>, <a href="">Romanian Texts</a></p>
     categories.sort();
     entry = "";
-    for(var i=0; i<categories.length; ++i) {    
+    for(var i=0; i<categories.length; ++i) {
         entry = entry + '<a onclick="loadCategory(\'' + categories[i] + '\')" href="#">' + categories[i] + "</a>";
         if(i != categories.length-1) {
             entry = entry + ', ';
@@ -119,7 +119,7 @@ function processPublications(allText) {
 function loadCategory(category) {
     alert(category);
     //clear current publications
-    $('#publications').html();
+    $('#publications').innerHTML = "";
     
     //only show publications in the right category
     for(var i=0; i<years.length; ++i) {
