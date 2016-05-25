@@ -1,8 +1,9 @@
 //global variables
 var years = []; //each year has a name (ie. 2016) and a list of publications
-var categorySet = ($.cookie('categorySet') != null)
-    ? $.cookie('categorySet')
-    : false;
+//var categorySet = ($.cookie('categorySet') != null)
+//    ? $.cookie('categorySet')
+//    : false;
+categorySet = false;
 var category = ($.cookie('category') != null)
     ? $.cookie('category')
     : 'nothing';
@@ -97,7 +98,7 @@ function processPublications(allText) {
     showCategories();
     
     if(categorySet) {
-        $('#categories').append('<p class="lead"><a href="">Go back to all publications</a></p>');
+        $('#categories').append('<p class="lead"><a onclick="allPublications()" href="">Go back to all publications</a></p>');
     }
     
     for(var i=0; i<years.length; ++i) {
@@ -109,6 +110,11 @@ function processPublications(allText) {
             }
         }
     }
+}
+
+function allPublications(category) {
+    $.cookie('categorySet',false);
+    location.reload();
 }
 
 function loadCategory(category) {
