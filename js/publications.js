@@ -98,13 +98,12 @@ function processPublications(allText) {
     //href="">Semantic Similarity</a>, <a href="">Romanian Texts</a></p>
     categories.sort();
     entry = "";
-    for(var i=0; i<categories.length; ++i) {
-        entry = entry + '<a onclick="loadcategory("' + categories[i] + '")" href="#">' + categories[i] + "</a>";
+    for(var i=0; i<categories.length; ++i) {    
+        entry = entry + '<a onclick="loadCategory(\'' + categories[i] + '\')" href="#">' + categories[i] + "</a>";
         if(i != categories.length-1) {
             entry = entry + ', ';
         }
     }
-    alert(entry);
     $('#categories').append('<p class="lead">View publications by category: ' + entry + '</p>');
     
     for(var i=0; i<years.length; ++i) {
@@ -118,6 +117,7 @@ function processPublications(allText) {
 }
 
 function loadCategory(category) {
+    alert(category);
     //clear current publications
     $('#publications').html();
     
