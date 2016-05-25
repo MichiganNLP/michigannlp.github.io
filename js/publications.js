@@ -1,5 +1,6 @@
 //global variables
 var years = []; //each year has a name (ie. 2016) and a list of publications
+var categories = [];
 //var categorySet = ($.cookie('categorySet') != null)
 //    ? $.cookie('categorySet')
 //    : false;
@@ -56,8 +57,6 @@ function processPublications(allText) {
         }
         arrData[ arrData.length - 1 ].push( strMatchedValue );
     }
-    
-    var categories = [];
     
     var rowNum = -1;
     for (var i=1; i<arrData.length; i++) {
