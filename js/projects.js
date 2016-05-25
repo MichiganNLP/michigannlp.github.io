@@ -35,7 +35,7 @@ function processProjects(allText) {
             var data = arrData[i];
             var project;
             if(data[0] == currentProject) {
-                project = {name:data[0], people:data[1], data:data[2]};
+                project = {name:data[0], people:data[1], description:data[2]};
                 break;
             }
         }
@@ -43,7 +43,7 @@ function processProjects(allText) {
         $('#projects').append('<h2 class="featurette-heading">' + project.name + '</h2>');
         $('#projects').append('<p class="lead">' + project.description + '</p>');
         $('#projects').append('<p class="lead">People involved: ' + project.people + '</p>');
-        $('#projects').append('<p class="lead">Relevant publications:</p>');
+        $('#projects').append('<p class="lead"><b>Relevant publications:</b></p>');
         
         $.ajax({
             type: "GET",
@@ -62,8 +62,10 @@ function processPublications(allText) {
         
         var publication = {citation:data[1], link:data[2], category:data[3], demo:data[4], data: data[5], software:data[6]};
 
-        entry = showPublication(publication);
-        $('#projects').append('<p class="lead">' + entry + '</p>');
+        if(publication.category == currentProject) {
+            entry = showPublication(publication);
+            $('#projects').append('<p class="lead">' + entry + '</p>');
+        }
     }
 }
 
