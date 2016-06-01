@@ -26,7 +26,7 @@ function processPublications(allText) {
     for (var i=1; i<arrData.length; i++) {
         var data = arrData[i];
         
-        var publication = {citation:data[1], link:data[2], category:data[3], demo:data[4], data: data[5], software:data[6]};
+        var publication = {title:data[1], authors:data[2], publication:data[3], link:data[4], category:data[5], demo:data[6], data:data[7], software:data[8]};
         
         var allCats = publication.category.split(',');
         //Is this category already in the array?

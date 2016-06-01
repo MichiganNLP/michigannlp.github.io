@@ -29,6 +29,29 @@ p.lead {
     font-size: 17px;
 }
 
+p.lead-slim {
+  margin-bottom: 5px;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+p.lead-slim-indent {
+  margin-bottom: 5px;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.2;
+  text-indent: 2em;
+}
+
+p.lead-slim-indent-bottom {
+  margin-bottom: 20px;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.2;
+  text-indent: 2em;
+}
+
 #recent_news_heading {
     font-size: 30px;
 }
