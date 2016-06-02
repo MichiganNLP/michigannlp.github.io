@@ -32,6 +32,8 @@ function processPublications(allText) {
         //Is this category already in the array?
         for(var j=0; j<allCats.length; ++j) {
             if($.inArray(allCats[j], categories) < 0) {
+                alert("adding to categories");
+                alert(allCats[j]);
                 categories.push(allCats[j]);
             }
         }
