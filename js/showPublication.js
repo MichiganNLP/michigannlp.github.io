@@ -6,9 +6,9 @@
 //<p class="lead-slim-indent"><em>30th AAAI Conference on Artificial Intelligence, 2016</em></p>
 //<p class="lead-slim-indent-bottom"><a href="">pdf</a>, <a href="">demo</a>, <a href="">data</a>, <a href="">software</a></p>
 function showPublication(publication) {
-    var entry = '<p class="lead-slim"><b>' + publication.title + '</b></p><p class="lead-slim-indent">' + publication.authors + '</p>';
+    var entry = '<p class="lead-slim"><b>' + publication.title + '</b>
     if(publication.link || publication.demo || publication.data || publication.software) {
-        entry = entry + '<p class="lead-slim-indent"><em>' + publication.publication + '</em></p><p class="lead-slim-indent-bottom">';
+        entry = entry + ' ('
         if(publication.link) {
             entry = entry + '<a href="' + publication.link + '">pdf</a>';
             if(publication.demo || publication.data || publication.software) {
@@ -30,10 +30,9 @@ function showPublication(publication) {
         if(publication.software) {
             entry = entry + '<a href="' + publication.software + '">software</a>';
         }
-        entry = entry + '</p>';
-    } else { //no link, demo, data, or software
-        entry = entry + '<p class="lead-slim-indent-bottom"><em>' + publication.publication + '</em></p>';
+        entry = entry + ')';
     }
+    entry = entry + '</p><p class="lead-slim-indent">' + publication.authors + '</p><p class="lead-slim-indent-bottom"><em>' + publication.publication + '</em></p>';
 
     return entry;
 }
