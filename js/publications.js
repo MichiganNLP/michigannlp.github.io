@@ -20,7 +20,6 @@ $(document).ready(function() {
 });
 
 function processPublications(allText) {
-    alert("processPublications");
     arrData = parseCsv(allText);
     
     var rowNum = -1;
