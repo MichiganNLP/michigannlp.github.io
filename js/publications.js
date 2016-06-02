@@ -31,10 +31,13 @@ function processPublications(allText) {
         var allCats = publication.category.split(',');
         //Is this category already in the array?
         for(var j=0; j<allCats.length; ++j) {
-            if($.inArray(allCats[j], categories) < 0) {
-                alert("adding to categories");
-                alert(allCats[j]);
-                alert(categories);
+            var found = 0;
+            for(var i=0; i<categories.length; ++i) {
+                if(categories[i]==allCats[j]) {
+                    found = 1;
+                }
+            }
+            if(found == 0) {
                 categories.push(allCats[j]);
             }
         }
