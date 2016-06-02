@@ -28,6 +28,7 @@ function processPublications(allText) {
         var data = arrData[i];
         
         var publication = {title:data[1], authors:data[2], publication:data[3], link:data[4], category:data[5], demo:data[6], data:data[7], software:data[8]};
+        alert(publication.title);
         
         var allCats = publication.category.split(',');
         //Is this category already in the array?
@@ -35,7 +36,7 @@ function processPublications(allText) {
             alert("looking for this in the array");
             alert(j);
             alert(allCats[j]);
-            /*var found = 0;
+            var found = 0;
             for(var k=0; k<categories.length; k++) {
                 if(categories[k]==allCats[j]) {
                     found = 1;
@@ -47,7 +48,7 @@ function processPublications(allText) {
                 alert("adding category");
                 alert(allCats[j]);
                 categories.push(allCats[j]);
-            }*/
+            }
         }
         
         //Is this year already in the array?
