@@ -31,12 +31,12 @@ function processPublications(allText) {
         
         var allCats = publication.category.split(',');
         //Is this category already in the array?
-        for(var j=0; j<allCats.length; ++j) {
+        for(var j=0; j<allCats.length; j++) {
             alert("looking for this in the array");
             alert(j);
             alert(allCats[j]);
             var found = 0;
-            for(var i=0; i<categories.length; ++i) {
+            for(var i=0; i<categories.length; i++) {
                 if(categories[i]==allCats[j]) {
                     found = 1;
                     alert("found it");
@@ -52,7 +52,7 @@ function processPublications(allText) {
         
         //Is this year already in the array?
         var found = false;
-        for(var j=0; j<years.length; ++j) {
+        for(var j=0; j<years.length; j++) {
             if(years[j].name==data[0]) {
                 found = true;
                 years[j].publications.push(publication);
