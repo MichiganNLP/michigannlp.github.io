@@ -34,6 +34,7 @@ function processPublications(allText) {
             if($.inArray(allCats[j], categories) < 0) {
                 alert("adding to categories");
                 alert(allCats[j]);
+                alert(categories);
                 categories.push(allCats[j]);
             }
         }
