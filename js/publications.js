@@ -37,7 +37,8 @@ function processPublications(allText) {
         }
         
         //Is this year already in the array?
-        index = $.inArray(data[0], years)
+        index = $.inArray(data[0], years);
+        alert(data[0],years);
         if(index > -1) {
             years[index].publications.push(publication);
         } else {
