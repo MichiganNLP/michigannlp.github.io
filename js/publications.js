@@ -38,6 +38,8 @@ function processPublications(allText) {
                 }
             }
             if(found == 0) {
+                alert("adding category");
+                alert(allCats[j]);
                 categories.push(allCats[j]);
             }
         }
