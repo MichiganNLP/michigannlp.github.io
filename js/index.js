@@ -28,7 +28,7 @@ function processRecentNews(allText) {
         if(news.category==category) {
             var entry = '<p class="recent-news-date">' + news.date + '</p><p class="lead">' + news.description;
             if(news.link) {
-                entry = entry + ' (see more <a href="' + news.link + '">here</a>)</p>');
+                entry = entry + ' (see more <a href="' + news.link + '">here</a>)</p>';
             }
             entry = entry + '</p>';
         
