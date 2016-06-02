@@ -31,17 +31,21 @@ function processPublications(allText) {
         var allCats = publication.category.split(',');
         //Is this category already in the array?
         for(var j=0; j<allCats.length; ++j) {
-            if(!$.inArray(allCats[j], categories)) {
+            if($.inArray(allCats[j], categories) < 0) {
                 categories.push(allCats[j]);
             }
         }
         
         //Is this year already in the array?
-        index = $.inArray(data[0], years);
-        alert(data[0],years);
-        if(index > -1) {
-            years[index].publications.push(publication);
-        } else {
+        var found = false;
+        for(var j=0; j<years.length; ++j) {
+            if(years[j].name==data[0]) {
+                found = true;
+                years[j].publications.push(publication);
+                break;
+            }
+        }
+        if(!found) {
             var year = {name:data[0], publications:[publication]};
             years.push(year);
         }
