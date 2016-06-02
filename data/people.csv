@@ -1,15 +1,15 @@
-;image;name;description;uniqname;link
-0;rada.jpg;Rada Mihalcea;Associate Professor;mihalcea;https://web.eecs.umich.edu/~mihalcea/
-1;mohamed.jpg;Mohamed Abouelenien;Post-Doctoral Researcher;zmohamed;http://web.eecs.umich.edu/~zmohamed/
-2;mahmoud.jpg;Mahmoud Azab;PhD Student, Computer Science and Engineering;mazab;http://web.eecs.umich.edu/~mazab/
-3;carmen.jpg;Carmen Banea;Post-Doctoral Researcher;carmennb;http://www.carmenbanea.com/
-4;jessica.jpg;Jessica Xi Chen;Undergraduate Student, Computer Science and Engineering;chenxicx;
-5;hogene.jpg;Ho-gene Choe;Masters Student, Computer Science and Engineering;hgchoe;
-6;aparna.jpg;Aparna Garimella;PhD Student, Computer Science and Engineering;gaparna;
-7;shibamouli.jpg;Shibamouli Lahiri;PhD Student, Computer Science and Engineering;shibamoulilahiri;http://web.eecs.umich.edu/~lahiri/
-8;konstantinos.jpg;Konstantinos Pappas;PhD Student, Computer Science and Engineering;pappus;
-9;veronica.jpg;Veronica Perez Rosas;Post-Doctoral Researcher;vrncapr;
-10;charlie.jpg;Charlie Welch;PhD Student, Computer Science and Engineering;cfwelch;http://web.eecs.umich.edu/~cfwelch/
-11;laura.jpg;Laura Wendlandt;PhD Student, Computer Science and Engineering;wenlaura;
-12;steve.jpg;Steven Wilson;PhD Student, Computer Science and Engineering;steverw;http://nlp.eecs.umich.edu/~steverw/
-13;renhan.jpg;Renhan Zhang;Masters Student, Computer Science and Engineering;rhzhang;
+image,name,description,uniqname,link,category
+rada.jpg,Rada Mihalcea,Associate Professor,mihalcea,https://web.eecs.umich.edu/~mihalcea/,"LIT, Girls Encoded"
+mohamed.jpg,Mohamed Abouelenien,Post-Doctoral Researcher,zmohamed,http://web.eecs.umich.edu/~zmohamed/,LIT
+mahmoud.jpg,Mahmoud Azab,"PhD Student, Computer Science and Engineering",mazab,http://web.eecs.umich.edu/~mazab/,LIT
+carmen.jpg,Carmen Banea,Post-Doctoral Researcher,carmennb,http://www.carmenbanea.com/,LIT
+jessica.jpg,Jessica Xi Chen,"Undergraduate Student, Computer Science and Engineering",chenxicx,,LIT
+hogene.jpg,Ho-gene Choe,"Masters Student, Computer Science and Engineering",hgchoe,,LIT
+aparna.jpg,Aparna Garimella,"PhD Student, Computer Science and Engineering",gaparna,,LIT
+shibamouli.jpg,Shibamouli Lahiri,"PhD Student, Computer Science and Engineering",shibamoulilahiri,http://web.eecs.umich.edu/~lahiri/,LIT
+konstantinos.jpg,Konstantinos Pappas,"PhD Student, Computer Science and Engineering",pappus,,LIT
+veronica.jpg,Veronica Perez Rosas,Post-Doctoral Researcher,vrncapr,,"LIT, Girls Encoded"
+charlie.jpg,Charlie Welch,"PhD Student, Computer Science and Engineering",cfwelch,http://web.eecs.umich.edu/~cfwelch/,LIT
+laura.jpg,Laura Wendlandt,"PhD Student, Computer Science and Engineering",wenlaura,,"LIT, Girls Encoded"
+steve.jpg,Steven Wilson,"PhD Student, Computer Science and Engineering",steverw,http://nlp.eecs.umich.edu/~steverw/,LIT
+renhan.jpg,Renhan Zhang,"Masters Student, Computer Science and Engineering",rhzhang,,LIT

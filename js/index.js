@@ -19,7 +19,6 @@ $(document).ready(function() {
 function processRecentNews(allText) {
     arrData = parseCsv(allText);
     
-    var rowNum = -1;
     for (var i=1; i<arrData.length; i++) {
         var data = arrData[i];
         
