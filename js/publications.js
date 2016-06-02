@@ -33,6 +33,7 @@ function processPublications(allText) {
         //Is this category already in the array?
         for(var j=0; j<allCats.length; ++j) {
             alert("looking for this in the array");
+            alert(j);
             alert(allCats[j]);
             var found = 0;
             for(var i=0; i<categories.length; ++i) {
