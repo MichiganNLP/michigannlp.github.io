@@ -31,7 +31,7 @@ function processPublications(allText) {
         
         var publication = {title:data[1], authors:data[2], publication:data[3], link:data[4], category:data[5], demo:data[6], data:data[7], software:data[8], pageCategory:data[9]};
         
-        var allCats = news.category.split(',');
+        var allCats = publication.pageCategory.split(',');
         var found = 0;
         //Is the document category in this array?
         for(var j=0; j<allCats.length; j++) {
