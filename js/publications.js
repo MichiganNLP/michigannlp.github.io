@@ -31,29 +31,15 @@ function processPublications(allText) {
         var allCats = publication.category.split(',');
         //Is this category already in the array?
         for(var j=0; j<allCats.length; ++j) {
-            var found = false;
-            for(var k=0; k<categories.length; ++k) {
-                alert(categories[k],allCats[j],categories[k]==allCats[j]);
-                if(categories[k] == allCats[j]) {
-                    found = true;
-                    break;
-                }
-            }
-            if(!found) {
+            if(!$.inArray(allCats[j], categories)) {
                 categories.push(allCats[j]);
             }
         }
         
         //Is this year already in the array?
-        var found = false;
-        for(var j=0; j<years.length; ++j) {
-            if(years[j].name==data[0]) {
-                found = true;
-                years[j].publications.push(publication);
-                break;
-            }
-        }
-        if(!found) {
+        if($.inArray(data[0], years)) {
+            years[j].publications.push(publication);
+        } else {
             var year = {name:data[0], publications:[publication]};
             years.push(year);
         }
