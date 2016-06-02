@@ -75,6 +75,9 @@ function processPublications(allText) {
                 $('#publications').append(entry);
             }
         }
+        if(categorySet==0) {
+            $('#publications').append('<p class="lead"><a href="#">Back to top</a></p>');
+        }
     }
 }
 
