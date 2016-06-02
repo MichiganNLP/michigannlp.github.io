@@ -36,8 +36,8 @@ function processPublications(allText) {
             alert(j);
             alert(allCats[j]);
             var found = 0;
-            for(var i=0; i<categories.length; i++) {
-                if(categories[i]==allCats[j]) {
+            for(var k=0; k<categories.length; k++) {
+                if(categories[k]==allCats[j]) {
                     found = 1;
                     alert("found it");
                     break;
