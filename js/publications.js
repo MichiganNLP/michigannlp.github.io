@@ -35,7 +35,7 @@ function processPublications(allText) {
             alert("looking for this in the array");
             alert(j);
             alert(allCats[j]);
-            var found = 0;
+            /*var found = 0;
             for(var k=0; k<categories.length; k++) {
                 if(categories[k]==allCats[j]) {
                     found = 1;
@@ -47,7 +47,7 @@ function processPublications(allText) {
                 alert("adding category");
                 alert(allCats[j]);
                 categories.push(allCats[j]);
-            }
+            }*/
         }
         
         //Is this year already in the array?
