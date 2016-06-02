@@ -29,6 +29,9 @@ function processPublications(allText) {
         var publication = {title:data[1], authors:data[2], publication:data[3], link:data[4], category:data[5], demo:data[6], data:data[7], software:data[8]};
         
         var allCats = publication.category.split(',');
+        if(allCats.length > 1) {
+            alert(allCats);
+        }
         //Is this category already in the array?
         for(var j=0; j<allCats.length; ++j) {
             var found = false;
