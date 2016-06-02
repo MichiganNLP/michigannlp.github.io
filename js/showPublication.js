@@ -6,7 +6,7 @@
 //<p class="lead-slim-indent"><em>30th AAAI Conference on Artificial Intelligence, 2016</em></p>
 //<p class="lead-slim-indent-bottom"><a href="">pdf</a>, <a href="">demo</a>, <a href="">data</a>, <a href="">software</a></p>
 function showPublication(publication) {
-    var entry = '<p class="lead-slim"><b>' + publication.title + '</b>
+    var entry = '<p class="lead-slim"><b>' + publication.title + '</b>';
     if(publication.link || publication.demo || publication.data || publication.software) {
         entry = entry + ' ('
         if(publication.link) {
