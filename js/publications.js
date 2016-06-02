@@ -32,10 +32,14 @@ function processPublications(allText) {
         var allCats = publication.category.split(',');
         //Is this category already in the array?
         for(var j=0; j<allCats.length; ++j) {
+            alert("looking for this in the array");
+            alert(allCats[j]);
             var found = 0;
             for(var i=0; i<categories.length; ++i) {
                 if(categories[i]==allCats[j]) {
                     found = 1;
+                    alert("found it");
+                    break;
                 }
             }
             if(found == 0) {
