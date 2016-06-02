@@ -37,8 +37,9 @@ function processPublications(allText) {
         }
         
         //Is this year already in the array?
-        if($.inArray(data[0], years)) {
-            years[j].publications.push(publication);
+        index = $.inArray(data[0], years)
+        if(index > -1) {
+            years[index].publications.push(publication);
         } else {
             var year = {name:data[0], publications:[publication]};
             years.push(year);
