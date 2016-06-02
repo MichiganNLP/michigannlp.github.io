@@ -24,9 +24,13 @@ function processProjects(allText) {
         $('#projects').append('<p class="lead">Click below to learn more about different projects.</p>');
         for (var i=1; i<arrData.length; i++) {
             var data = arrData[i];
-            var project = {name:data[0], people:data[1], data:data[2]};
+            var project = {name:data[0], people:data[1], data:data[2], link:data[3]};
             projects.push(project);
-            $('#projects').append('<p class="lead"><a onclick="loadProject(\'' + project.name + '\')" href="#">' + project.name + '</a></p>')
+            if(project.link) {
+                $('#projects').append('<p class="lead"><a href="' + project.link + '">' + project.name + '</a></p>')
+            } else {
+                $('#projects').append('<p class="lead"><a onclick="loadProject(\'' + project.name + '\')" href="#">' + project.name + '</a></p>')
+            }
         }
     } else {
         $('#projects').append('<p class="lead"><a onclick="allProjects()" href="">Go back to all projects</a></p>');
