@@ -26,6 +26,10 @@ function processRecentNews(allText) {
         var news = {date:data[0], description:data[1], link:data[2], category:data[3]};
 
         var allCats = news.category.split(',');
+        alert("page category");
+        alert(category);
+        alert("allCats");
+        alert(allCats);
         var found = 0;
         //Is the document category in this array?
         for(var j=0; j<allCats.length; j++) {
