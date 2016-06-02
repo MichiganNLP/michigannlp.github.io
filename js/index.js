@@ -3,6 +3,8 @@ var category; //the category of the page (ie. LIT, Girls Encoded)
 
 $(document).ready(function() {
     category = $('meta[name=category]').attr("content");
+    alert("category");
+    alert(category);
 
     //Dynamically load recent news
      $.ajax({
@@ -25,7 +27,19 @@ function processRecentNews(allText) {
         
         var news = {date:data[0], description:data[1], link:data[2], category:data[3]};
 
-        if(news.category==category) {
+        var allCats = news.category.split(',');
+        var found = 0;
+        //Is the document category in this array?
+        for(var j=0; j<allCats.length; j++) {
+            if(allCats[j][0]==' ') {
+                allCats[j] = allCats[j].substr(1);
+            }
+            if(category==allCats[j]) {
+                found = 1;
+                break;
+            }
+        }
+        if(found==1) {
             var entry = '<p class="recent-news-date">' + news.date + '</p><p class="lead">' + news.description;
             if(news.link) {
                 entry = entry + ' (see more <a href="' + news.link + '">here</a>)</p>';
