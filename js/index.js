@@ -1,8 +1,8 @@
 //global variables
-var category; //the category of the page (ie. LIT, Girls Encoded)
+var pageCategory; //the category of the page (ie. LIT, Girls Encoded)
 
 $(document).ready(function() {
-    category = $('meta[name=category]').attr("content");
+    pageCategory = $('meta[name=category]').attr("content");
 
     //Dynamically load recent news
      $.ajax({
@@ -32,7 +32,7 @@ function processRecentNews(allText) {
             if(allCats[j][0]==' ') {
                 allCats[j] = allCats[j].substr(1);
             }
-            if(category==allCats[j]) {
+            if(pageCategory==allCats[j]) {
                 found = 1;
                 break;
             }

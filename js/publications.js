@@ -8,8 +8,11 @@ var categorySet = ($.cookie('categorySet') != null)
 var category = ($.cookie('category') != null)
     ? $.cookie('category')
     : 'nothing';
+var pageCategory; //the category of the page (ie. LIT, Girls Encoded)
 
 $(document).ready(function() {
+    pageCategory = $('meta[name=category]').attr("content");
+    
     //Dynamically load recent news
      $.ajax({
         type: "GET",
@@ -26,45 +29,61 @@ function processPublications(allText) {
     for (var i=1; i<arrData.length; i++) {
         var data = arrData[i];
         
-        var publication = {title:data[1], authors:data[2], publication:data[3], link:data[4], category:data[5], demo:data[6], data:data[7], software:data[8]};
+        var publication = {title:data[1], authors:data[2], publication:data[3], link:data[4], category:data[5], demo:data[6], data:data[7], software:data[8], pageCategory:data[9]};
         
-        var allCats = publication.category.split(',');
-        //Is this category already in the array?
+        var allCats = news.category.split(',');
+        var found = 0;
+        //Is the document category in this array?
         for(var j=0; j<allCats.length; j++) {
             if(allCats[j][0]==' ') {
                 allCats[j] = allCats[j].substr(1);
             }
-            var found = 0;
-            for(var k=0; k<categories.length; k++) {
-                if(categories[k]==allCats[j]) {
-                    found = 1;
-                    break;
-                }
-            }
-            if(found == 0) {
-                categories.push(allCats[j]);
-            }
-        }
-        
-        //Is this year already in the array?
-        var found = false;
-        for(var j=0; j<years.length; j++) {
-            if(years[j].name==data[0]) {
-                found = true;
-                years[j].publications.push(publication);
+            if(pageCategory==allCats[j]) {
+                found = 1;
                 break;
             }
         }
-        if(!found) {
-            var year = {name:data[0], publications:[publication]};
-            years.push(year);
+        if(found==1) {
+            var allCats = publication.category.split(',');
+            //Is this category already in the array?
+            for(var j=0; j<allCats.length; j++) {
+                if(allCats[j][0]==' ') {
+                    allCats[j] = allCats[j].substr(1);
+                }
+                var found = 0;
+                for(var k=0; k<categories.length; k++) {
+                    if(categories[k]==allCats[j]) {
+                        found = 1;
+                        break;
+                    }
+                }
+                if(found == 0) {
+                    categories.push(allCats[j]);
+                }
+            }
+            
+            //Is this year already in the array?
+            var found = false;
+            for(var j=0; j<years.length; j++) {
+                if(years[j].name==data[0]) {
+                    found = true;
+                    years[j].publications.push(publication);
+                    break;
+                }
+            }
+            if(!found) {
+                var year = {name:data[0], publications:[publication]};
+                years.push(year);
+            }
         }
     }
     
-    showCategories();
+    if(pageCategory=="LIT") {
+        showCategories();
     
-    if(categorySet==1) {
-        $('#categories').append('<p class="lead"><a onclick="allPublications()" href="">Go back to all publications</a></p>');
+        if(categorySet==1) {
+            $('#categories').append('<p class="lead"><a onclick="allPublications()" href="">Go back to all publications</a></p>');
+        }
     }
     
     for(var i=0; i<years.length; ++i) {
