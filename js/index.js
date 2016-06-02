@@ -1,4 +1,9 @@
+//global variables
+var category; //the category of the page (ie. LIT, Girls Encoded)
+
 $(document).ready(function() {
+    category = $('meta[name=category]').attr("content");
+
     //Dynamically load recent news
      $.ajax({
         type: "GET",
@@ -17,8 +22,17 @@ function processRecentNews(allText) {
     var rowNum = -1;
     for (var i=1; i<arrData.length; i++) {
         var data = arrData[i];
+        
+        var news = {date:data[0], description:data[1], link:data[2], category:data[3]};
 
-        $('#recent_news').append('<p class="recent-news-date">' + data[1] + '</p>');
-        $('#recent_news').append('<p class="lead">' + data[2] + ' (see more <a href="' + data[3] + '">here</a>)</p>');
+        if(news.category==category) {
+            var entry = '<p class="recent-news-date">' + news.date + '</p><p class="lead">' + news.description;
+            if(news.link) {
+                entry = entry + ' (see more <a href="' + news.link + '">here</a>)</p>');
+            }
+            entry = entry + '</p>';
+        
+            $('#recent_news').append(entry);
+        }
     }
 }

@@ -1,4 +1,4 @@
-/* Home Page */
+/* LIT Home Page */
 
 .recent-news-date {
     font-size: 20px;
@@ -56,7 +56,7 @@ p.lead-slim-indent-bottom {
     font-size: 30px;
 }
 
-/* People Page */
+/* LIT People Page */
 
 .profile_pic {
     display: block;
@@ -68,4 +68,18 @@ p.lead-slim-indent-bottom {
 
 #people {
     text-align: center;
+}
+
+/* Girls Encoded Home Page */
+#about_girls_encoded {
+    margin-top: 20px;
+    margin-left: 20px;
+    float: left;
+    width: 50%;
+    text-align: justify;
+}
+
+#copyright {
+    clear: both;
+    margin-left: 20px;
 }

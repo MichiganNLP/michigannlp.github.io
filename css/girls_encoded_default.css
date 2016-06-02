@@ -588,7 +588,7 @@ ul.contact li a.icon-rss:before
 #copyright a
 {
 	text-decoration: none;
-	color: rgba(255,255,255,0.6);
+	/*color: rgba(255,255,255,0.6);*/
 }
 
 /*********************************************************************************/
@@ -681,7 +681,7 @@ ul.contact li a.icon-rss:before
 
 	#header-featured
 	{
-		height: 25em;
+		height: 18em;
 		background-image: url(../images/logo.png);
 		background-position: center;
 		background-size: 60%;
