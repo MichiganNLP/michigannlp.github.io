@@ -28,32 +28,21 @@ function processPublications(allText) {
         var data = arrData[i];
         
         var publication = {title:data[1], authors:data[2], publication:data[3], link:data[4], category:data[5], demo:data[6], data:data[7], software:data[8]};
-        //alert("publication");
-        alert(data[1]);
         
         var allCats = publication.category.split(',');
-        //alert("allCats");
-        //alert(allCats);
         //Is this category already in the array?
         for(var j=0; j<allCats.length; j++) {
             if(allCats[j][0]==' ') {
-                //alert("found space");
                 allCats[j] = allCats[j].substr(1);
             }
-            //alert("looking for this in the array");
-            //alert(j);
-            //alert(allCats[j]);
             var found = 0;
             for(var k=0; k<categories.length; k++) {
                 if(categories[k]==allCats[j]) {
                     found = 1;
-                    //alert("found it");
                     break;
                 }
             }
             if(found == 0) {
-                //alert("adding category");
-                alert(allCats[j]);
                 categories.push(allCats[j]);
             }
         }
