@@ -56,7 +56,55 @@ p.lead-slim-indent-bottom {
     font-size: 30px;
 }
 
-/* LIT People Page */
+/* LIT Event PAGE */
+
+#sub_navbar {
+    background-color: transparent;
+    display: table;
+    margin: 0 auto;
+    margin-bottom: 2em;
+}
+
+#sub_navbar_ul {
+    min-width: 100%;
+	list-style: none;
+}
+
+#sub_navbar_ul li {
+    display: inline;
+}
+
+#sub_navbar_ul li.active {
+    background-color: transparent;
+}
+
+/* LIT NLP Reading Group Page */
+
+.centered {
+    text-align: center;
+}
+
+.underlined {
+    text-decoration: underline;
+}
+
+#reading-group-table {
+    height: 415px;
+    width: 878px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5em;
+}
+
+#reading-group-table tr th, #reading-group-table tr td {
+    padding: 1em 1em 1em 1em;
+}
+
+#reading-group-table tr {
+    border-bottom: 1px solid #B8B8B8;
+}
+
+/* Girls Encoded People Page */
 
 .profile_pic {
     display: block;
