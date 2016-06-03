@@ -56,7 +56,33 @@ p.lead-slim-indent-bottom {
     font-size: 30px;
 }
 
-/* LIT Event PAGE */
+/* LIT Projects Page */
+
+#project-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 auto 0 auto;
+    width: 70%;
+}
+
+#project-list li {
+    border: 2px solid #797979;
+    background-color: #e7e7e7;
+    margin: 1em;
+    padding: 1em;
+    border-radius: 4px;
+    
+    text-align: center;
+    font-size: 25px;
+    font-weight: 300;
+    line-height: 1;
+}
+
+#project-list a {
+    color: #000;
+}
+
+/* LIT Event Page */
 
 #sub_navbar {
     background-color: transparent;

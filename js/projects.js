@@ -17,21 +17,29 @@ $(document).ready(function() {
     });
 });
 
+//Template
+//<ul id="project-list">
+//<li><a onclick="" href="#">Deception Detection</a></li>
+//<li><a onclick="" href="#">Computational Social Science</a></li>
+//<li><a onclick="" href="#">Girls Encoded</a></li>
+//</ul>
 function processProjects(allText) {
     arrData = parseCsv(allText);
     
     if(projectSet==0) {
-        $('#projects').append('<p class="lead">Click below to learn more about different projects.</p>');
+        entry = '<p class="lead">Click below to learn more about different projects the LIT group is currently working on.</p><ul id="project-list">';
         for (var i=1; i<arrData.length; i++) {
             var data = arrData[i];
             var project = {name:data[0], people:data[1], data:data[2], link:data[3]};
             projects.push(project);
             if(project.link) {
-                $('#projects').append('<p class="lead"><a href="' + project.link + '">' + project.name + '</a></p>')
+                entry = entry + '<li><p class="lead"><a href="' + project.link + '">' + project.name + '</a></p></li>';
             } else {
-                $('#projects').append('<p class="lead"><a onclick="loadProject(\'' + project.name + '\')" href="#">' + project.name + '</a></p>')
+                entry = entry + '<li><p class="lead"><a onclick="loadProject(\'' + project.name + '\')" href="#">' + project.name + '</a></p></li>';
             }
         }
+        entry = entry + '</ul>';
+        $('#projects').append(entry);
     } else {
         $('#projects').append('<p class="lead"><a onclick="allProjects()" href="">Go back to all projects</a></p>');
         
