@@ -47,9 +47,14 @@ function processPeople(allText) {
             }
         }
         if(found==1) {
-            $('#row' + rowNum).append('<div class="col-md-3"><img src="images/'+ person.image + '" class="profile_pic" alt="' + person.name + '">' +
-                '<p class="lead"><b>' + person.name + '</b></p>' + '<p class="lead">' + person.description + '</p>' +
-                '<p class="lead">' + person.uniqname + ' at umich.edu</p>' + '</div>');
+            entry = '<div class="col-md-3"><img src="images/'+ person.image + '" class="profile_pic" alt="' + person.name + '"><p class="lead"><b>';
+            if(person.link) {
+                entry = entry + '<a href="' + person.link + '">' + person.name + '</a>';
+            } else {
+                entry = entry + person.name;
+            }
+            entry = entry + '</b></p>' + '<p class="lead">' + person.description + '</p><p class="lead">' + person.uniqname + ' at umich.edu</p>' + '</div>';
+            $('#row' + rowNum).append(entry);
         }
     }
 }
