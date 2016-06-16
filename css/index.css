@@ -154,7 +154,6 @@ p.lead-slim-indent-bottom {
 }
 
 /* Girls Encoded Sponsors Page */
-#sponsors {
-    background-color: #e7e7e7
-    border-radius: 15px;
+#sponsors_row0 {
+    top-margin: 10px;
 }

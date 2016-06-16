@@ -41,12 +41,12 @@ function processRecentNews(allText) {
         if(found==1) {
             if(index % 4 == 1) { //append new row
                 rowNum = rowNum + 1;
-                $('#sponsors').append('<div class="row" id="row' + rowNum +'">');
+                $('#sponsors').append('<div class="row" id="sponsors_row' + rowNum +'">');
             }
             index = index + 1;
             
             entry = '<div class="col-md-3"><img src="images/sponsors/'+ sponsor.image + '" class="profile_pic"><p class="lead"><b></div>';
-            $('#row' + rowNum).append(entry);
+            $('#sponsors_row' + rowNum).append(entry);
         }
     }
 }
