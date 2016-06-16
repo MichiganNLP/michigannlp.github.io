@@ -1,23 +1,19 @@
-//global variables
-var pageCategory; //the category of the page (ie. LIT, Girls Encoded)
-
 $(document).ready(function() {
-    pageCategory = $('meta[name=category]').attr("content");
+    var pageCategory = $('meta[name=category]').attr("content");
 
     //Dynamically load recent news
      $.ajax({
         type: "GET",
         url: "../data/recent_news.csv",
         dataType: "text",
-        success: function(data) {processRecentNews(data);}
+        success: function(data) {processRecentNews(data,pageCategory);}
     });
 });
 
 //Template:
 //<p class="recent-news-date">Sample date0</p>
 //<p class="lead">This is a description of what's happening0 (see more <a href="">here</a>)</p>
-function processRecentNews(allText) {
-    alert("Process recent news");
+function processRecentNews(allText,pageCategory) {
     arrData = parseCsv(allText);
     
     for (var i=1; i<arrData.length; i++) {

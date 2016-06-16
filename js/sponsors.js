@@ -1,15 +1,12 @@
-//global variables
-var pageCategory; //the category of the page (ie. LIT, Girls Encoded)
-
 $(document).ready(function() {
-    pageCategory = $('meta[name=category]').attr("content");
+    var pageCategory = $('meta[name=category]').attr("content");
 
     //Dynamically load recent news
      $.ajax({
         type: "GET",
         url: "../data/recent_news.csv",
         dataType: "text",
-        success: function(data) {processRecentNews(data);}
+        success: function(data) {processRecentNews(data,pageCategory);}
     });
 
     //Dynamically load sponsors
@@ -17,11 +14,11 @@ $(document).ready(function() {
         type: "GET",
         url: "../data/sponsors.csv",
         dataType: "text",
-        success: function(data) {processSponsors(data);}
+        success: function(data) {processSponsors(data,pageCategory);}
     });
 });
 
-function processSponsors(allText) {
+function processSponsors(allText,pageCategory) {
     arrData = parseCsv(allText);
     
     var rowNum = -1;
