@@ -17,6 +17,7 @@ $(document).ready(function() {
 //<p class="recent-news-date">Sample date0</p>
 //<p class="lead">This is a description of what's happening0 (see more <a href="">here</a>)</p>
 function processRecentNews(allText) {
+    alert("Process recent news");
     arrData = parseCsv(allText);
     
     for (var i=1; i<arrData.length; i++) {
