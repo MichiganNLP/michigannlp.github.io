@@ -140,9 +140,8 @@ p.lead-slim-indent-bottom {
 .profile_pic {
     display: block;
     margin: 0 auto;
-    width: 60%;
+    width: 80%;
     border-radius: 15px;
-    margin-bottom: 10px;
 }
 
 #people {
@@ -151,4 +150,5 @@ p.lead-slim-indent-bottom {
 
 #copyright {
     clear: both;
+    margin-bottom: 10px;
 }
