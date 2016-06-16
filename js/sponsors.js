@@ -1,14 +1,6 @@
 $(document).ready(function() {
     var pageCategory = $('meta[name=category]').attr("content");
 
-    //Dynamically load recent news
-     $.ajax({
-        type: "GET",
-        url: "../data/recent_news.csv",
-        dataType: "text",
-        success: function(data) {processRecentNews(data,pageCategory);}
-    });
-
     //Dynamically load sponsors
      $.ajax({
         type: "GET",
