@@ -4,19 +4,24 @@ var pageCategory; //the category of the page (ie. LIT, Girls Encoded)
 $(document).ready(function() {
     pageCategory = $('meta[name=category]').attr("content");
 
+    //Dynamically load recent news
+     $.ajax({
+        type: "GET",
+        url: "../data/recent_news.csv",
+        dataType: "text",
+        success: function(data) {processRecentNews(data);}
+    });
+
     //Dynamically load sponsors
      $.ajax({
         type: "GET",
         url: "../data/sponsors.csv",
         dataType: "text",
-        success: function(data) {processRecentNews(data);}
+        success: function(data) {processSponsors(data);}
     });
 });
 
-//Template:
-//<p class="recent-news-date">Sample date0</p>
-//<p class="lead">This is a description of what's happening0 (see more <a href="">here</a>)</p>
-function processRecentNews(allText) {
+function processSponsors(allText) {
     arrData = parseCsv(allText);
     
     var rowNum = -1;
