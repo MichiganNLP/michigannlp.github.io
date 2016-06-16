@@ -135,6 +135,11 @@ p.lead-slim-indent-bottom {
     clear: both;
 }
 
+.girls_encoded_recent_news {
+    background-color: #e7e7e7;
+    border-radius: 15px;
+}
+
 /* Girls Encoded People Page */
 
 .profile_pic {
