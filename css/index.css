@@ -130,6 +130,11 @@ p.lead-slim-indent-bottom {
     border-bottom: 1px solid #B8B8B8;
 }
 
+/* Girls Encoded Main Page */
+#sponsors-heading {
+    clear: both;
+}
+
 /* Girls Encoded People Page */
 
 .profile_pic {
