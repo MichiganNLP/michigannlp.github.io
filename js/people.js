@@ -43,7 +43,7 @@ function processPeople(allText) {
             }
         }
         if(found==1) {
-            entry = '<div class="col-md-3"><img src="images/'+ person.image + '" class="profile_pic" alt="' + person.name + '"><p class="lead"><b>';
+            entry = '<div class="col-md-2"><img src="images/'+ person.image + '" class="profile_pic" alt="' + person.name + '"><p class="lead"><b>';
             if(person.link) {
                 entry = entry + '<a href="' + person.link + '">' + person.name + '</a>';
             } else {
@@ -52,7 +52,7 @@ function processPeople(allText) {
             entry = entry + '</b></p>' + '<p class="lead">' + person.description + '</p><p class="lead">' + person.uniqname + ' at umich.edu</p>' + '</div>';
             
             entriesAdded = entriesAdded + 1;
-            if(entriesAdded % 4 == 1) { //append new row
+            if(entriesAdded % 6 == 1) { //append new row
                 rowNum = rowNum + 1;
                 $('#people').append('<div class="row" id="row' + rowNum +'">');
             }
