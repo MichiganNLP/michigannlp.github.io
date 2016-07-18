@@ -144,8 +144,7 @@ p.lead-slim-indent-bottom {
 
 #myCarousel .carousel-inner > .item > img {
     height: 300px;
-    min-width: 70%;
-    max-width: 80%;
+    min-width: 50%;
     margin-left: auto;
     margin-right: auto;
     position: relative;
