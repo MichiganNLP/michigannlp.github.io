@@ -23,7 +23,7 @@ $(document).ready(function() {
 function processPeople(allText) {
     arrData = parseCsv(allText);
     
-    var rowNum = -1;
+    var rowNum = 1;
     for (var i=1; i<arrData.length; i++) {
         var data = arrData[i];
         
