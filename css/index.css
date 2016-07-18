@@ -130,6 +130,7 @@ p.lead-slim-indent-bottom {
 
 /* Girls Encoded Main Page */
 #sponsors-heading {
+    clear: both;
     margin-top: 30px;
 }
 
