@@ -150,6 +150,7 @@ p.lead-slim-indent-bottom {
     margin-right: auto;
     position: relative;
     border-radius: 15px;
+    object-fit: cover;
 }
 
 #myCarousel .carousel-control.left {
