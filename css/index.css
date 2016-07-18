@@ -14,13 +14,15 @@
 
 #about_lit {
     float: left;
-    width: 50%;
+    width: 46%;
     text-align: justify;
+    margin-left: 2%;
 }
 
 #recent_news {
     float: right;
-    width: 50%;
+    width: 46%;
+    margin-right: 2%;
 }
 
 p.lead {
