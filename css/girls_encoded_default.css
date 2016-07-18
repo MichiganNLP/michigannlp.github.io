@@ -15,7 +15,7 @@ body
 	
 #header-wrapper
 {
-	background: #1dadac;
+	background: #00274c;
 }
 
 #header
@@ -42,13 +42,13 @@ body
 	font-size: 2.5em;
 	text-transform: uppercase;
 	font-weight: 700;
-	color: #FFF;
+	color: #7a121c;
 }
 
 #logo a
 {
 	text-decoration: none;
-	color: #FFF;
+	color: #e4e1df;
 }
 
 /*********************************************************************************/
@@ -85,7 +85,7 @@ body
 	font-weight: 600;
 	text-transform: uppercase;
 	outline: 0;
-	color: #FFF;
+	color: #ffcb05;
 }
 
 #menu li:hover a, #menu li.active a, #menu li.active span
@@ -94,8 +94,8 @@ body
 
 #menu .current_page_item a
 {
-	background: #f89b4f;
-	color: #FFF;
+	background: #ffcb05;
+	color: #00274c;
 }
 
 #menu .icon
