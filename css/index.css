@@ -132,13 +132,14 @@ p.lead-slim-indent-bottom {
 
 /* Girls Encoded Main Page */
 #sponsors-heading {
-    clear: both;
+    margin-top: 10px;
 }
 
 .girls_encoded_recent_news {
     background-color: #e7e7e7;
     border-radius: 15px;
     padding: 10px;
+    margin-bottom: 10px;
 }
 
 /* Girls Encoded People Page */
