@@ -23,13 +23,15 @@ $(document).ready(function() {
 function processPeople(allText) {
     arrData = parseCsv(allText);
     
-    var rowNum = 1;
+    var rowNum = -1;
     for (var i=1; i<arrData.length; i++) {
         var data = arrData[i];
         
         if(i % 4 == 1) { //append new row
             rowNum = rowNum + 1;
             $('#people').append('<div class="row" id="row' + rowNum +'">');
+            alert("adding new row");
+            alert(i);
         }
     
         var person = {image:data[0], name:data[1], description:data[2], uniqname:data[3], link:data[4], category:data[5]};
