@@ -131,6 +131,35 @@ p.lead-slim-indent-bottom {
 }
 
 /* Girls Encoded Main Page */
+#myCarousel {
+    height: 300px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+#myCarousel .item {
+    height: 300px;
+    background-color: #FFF;
+}
+
+#myCarousel .carousel-inner > .item > img {
+    height: 300px;
+    min-width: 70%;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    border-radius: 15px;
+}
+
+#myCarousel .carousel-control.left {
+    background-image: none;
+}
+
+#myCarousel .carousel-control.right {
+    background-image: none;
+}
+
 #two_col_container {
     overflow: hidden;
 }
