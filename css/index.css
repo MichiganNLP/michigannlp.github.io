@@ -129,6 +129,10 @@ p.lead-slim-indent-bottom {
 }
 
 /* Girls Encoded Main Page */
+#two_col_container {
+    overflow: hidden;
+}
+
 #sponsors-heading {
     clear: both;
     margin-top: 30px;
