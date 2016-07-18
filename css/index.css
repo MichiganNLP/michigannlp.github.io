@@ -135,7 +135,7 @@ p.lead-slim-indent-bottom {
     overflow: hidden;
 }
 
-#sponsors-heading {
+#people-involved {
     clear: both;
     margin-top: 30px;
     margin-bottom: 20px;
@@ -163,9 +163,4 @@ p.lead-slim-indent-bottom {
 #copyright {
     clear: both;
     margin-bottom: 30px;
-}
-
-/* Girls Encoded Sponsors Page */
-#sponsors-heading {
-    bottom-margin: 20px;
 }
