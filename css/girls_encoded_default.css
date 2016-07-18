@@ -111,6 +111,6 @@ body
     height: 18em;
     background-image: url(../images/logo.png);
     background-position: center;
-    background-size: 60%;
+    background-size: auto 90%;
     background-repeat: no-repeat;
 }
