@@ -180,4 +180,34 @@ p.lead-slim-indent-bottom {
     padding: 10px;
 }
 
+.profile_pic {
+    display: block;
+    margin: 0 auto;
+    width: 80%;
+    border-radius: 15px;
+}
+
+#people {
+    text-align: center;
+}
+
+#copyright {
+    clear: both;
+    margin-bottom: 30px;
+}
+
 /* Girls Encoded Events Page */
+#event_panels {
+    margin-top: 10px;
+}
+
+#event_panels .panel-heading {
+    background-color: #83b2a8;
+}
+
+#events-left-image {
+    float: left;
+    border-radius: 15px;
+    margin: 10px 10px 10px 0;
+    width: 30%;
+}
