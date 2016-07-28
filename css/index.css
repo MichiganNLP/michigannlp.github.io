@@ -197,7 +197,41 @@ p.lead-slim-indent-bottom {
 }
 
 /* Girls Encoded Get Involved Page */
+#get-involved-row {
+    margin-top: 20px;
+}
 
+#call-for-ideas {
+    background-color: #cc6600;
+}
+
+p.lead-nomargin {
+    font-size: 17px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+#sponsor-heading-gold {
+    background-color: #ffcb05;
+    padding: 10px;
+    color: #444;
+}
+
+#sponsor-heading-silver {
+    background-color: #C0C0C0;
+    padding: 10px;
+    color: #444;
+}
+
+#sponsor-heading-bronze {
+    background-color: #cc6600;
+    padding: 10px;
+    color: #444;
+}
+
+#italics {
+    font-style: italic;
+}
 
 /* Girls Encoded Events Page */
 #event_panels {
