@@ -44,5 +44,5 @@ function processRecentNews(allText,pageCategory) {
         }
     }
     
-    $('#recent_news').append('<p class="lead">See more <a href="girls_encoded_events.html">here</a>.</p>');
+    $('#recent_news').append('<p id="italics" class="lead">See more <a href="girls_encoded_events.html">here</a>.</p>');
 }
