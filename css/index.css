@@ -254,3 +254,7 @@ p.lead-nomargin {
     margin: 10px 10px 10px 0;
     width: 30%;
 }
+
+#featured-events-heading {
+    margin-top: 20px;
+}
