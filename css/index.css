@@ -187,6 +187,12 @@ p.lead-slim-indent-bottom {
     border-radius: 15px;
 }
 
+.profile_pic_nonrounded {
+    display: block;
+    margin: 0 auto;
+    width: 80%;
+}
+
 #people {
     text-align: center;
 }
