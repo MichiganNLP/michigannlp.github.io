@@ -18,7 +18,7 @@ function processSponsors(allText,pageCategory) {
     for (var i=1; i<arrData.length; i++) {
         var data = arrData[i];
         
-        var sponsor = {image:data[0], category:data[1]};
+        var sponsor = {image:data[0], name:data[1], category:data[2]};
 
         var allCats = sponsor.category.split(',');
         var found = 0;
@@ -39,7 +39,7 @@ function processSponsors(allText,pageCategory) {
             }
             index = index + 1;
             
-            entry = '<div class="col-md-3"><img src="images/sponsors/'+ sponsor.image + '" class="profile_pic"><p class="lead"><b></div>';
+            entry = '<div class="col-md-3"><img src="../images/sponsors/'+ sponsor.image + '" class="profile_pic" alt="' + sponsor.name + '"><p class="lead"><b></div>';
             $('#sponsors_row' + rowNum).append(entry);
         }
     }
