@@ -76,6 +76,7 @@ function processDownloads(allText,pageCategory) {
             publication = categories[i].publications[j];
             
             entry = '';
+            alert(j)
             if(j % 2 == 0) {
                 if(j != 0) {
                     alert("end row");
