@@ -20,7 +20,7 @@ function processDownloads(allText,pageCategory) {
         
         var categories = []; //each category has a name and a list of publications
 
-        var allCats = event.category.split(',');
+        var allCats = publication.pageCategory.split(',');
         var found = 0;
         //Is the document category in this array?
         for(var j=0; j<allCats.length; j++) {
