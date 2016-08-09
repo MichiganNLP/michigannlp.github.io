@@ -49,10 +49,10 @@ function processDownloads(allText,pageCategory) {
     }
     
     for(var i=0; i<categories.length; ++i) {
-        $('#downloads-outline').append('<p class="lead"><b>'+categories[i].name+'</b></p>');
+        $('#downloads-outline').append('<p class="lead-nomargin"><b>'+categories[i].name+'</b></p>');
         for(var j=0; j<categories[i].publications.length; ++j) {
             publication = categories[i].publications[j];
-            $('#downloads-outline').append('<p class="lead"><a href="#' + publication.downloadName + '">' + publication.downloadName + '</a></p>');
+            $('#downloads-outline').append('<p class="lead-nomargin"><a href="#' + publication.downloadName + '">' + publication.downloadName + '</a></p>');
         }
     }
 }
