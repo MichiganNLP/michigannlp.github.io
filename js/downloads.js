@@ -45,8 +45,6 @@ function processDownloads(allText,pageCategory) {
                 category = {name:publication.category, publications:[publication]}
                 categories.push(category);
             }
-            
-            $('#reading-group-tbody').append(entry);
         }
     }
     
