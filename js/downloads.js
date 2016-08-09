@@ -51,11 +51,25 @@ function processDownloads(allText,pageCategory) {
         }
     }
     
+    categories.sort();
+    
+    //Outline at the top of the page
     for(var i=0; i<categories.length; ++i) {
-        $('#downloads-outline').append('<p id="top-margin" class="lead-nomargin"><b>'+categories[i].name+'</b></p>');
+        categories.publications.sort();
+        
+        if(i==0) {
+            $('#downloads-outline').append('<p class="lead-nomargin"><b>'+categories[i].name+'</b></p>');
+        } else {
+            $('#downloads-outline').append('<p id="top-margin" class="lead-nomargin"><b>'+categories[i].name+'</b></p>');
+        }
         for(var j=0; j<categories[i].publications.length; ++j) {
             publication = categories[i].publications[j];
             $('#downloads-outline').append('<p class="lead-nomargin"><a href="#' + publication.downloadName + '">' + publication.downloadName + '</a></p>');
         }
+    }
+    
+    //All of the download information
+    for(var i=0; i<categories.length; ++i) {
+        $('#all-downloads').append('<h2 class="featurette-heading">' + categories[i].name + '</h2>');
     }
 }
