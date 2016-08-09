@@ -70,7 +70,7 @@ function processDownloads(allText,pageCategory) {
     
     //All of the download information
     for(var i=0; i<categories.length; ++i) {
-        $('#all-downloads').append('<a id="hidden-link" name="' + categories[i].name + '"><h2 class="featurette-heading">' + categories[i].name + '</h2></a>');
+        $('#all-downloads').append('<h2 class="featurette-heading"><a name="' + categories[i].name + '">' + categories[i].name + '</a></h2>');
         
         entry = '';
         for(var j=0; j<categories[i].publications.length; ++j) {
