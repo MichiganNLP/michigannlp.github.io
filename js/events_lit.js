@@ -54,25 +54,22 @@ function processRecentNews(allText,pageCategory) {
             if(!dateFound) {
                 var date = {month:currentMonth, year:currentYear, news:[news]};
                 dates.push(date);
-                alert("Adding")
-                alert(currentMonth)
-                alert(currentYear)
             }
         }
-        
-        for(var j=0; j<dates.length; j++) {
-            $('#lit_events_recent_news').append('<h2 class="featurette-heading">' + allMonths[dates[j].month-1] + ' ' + dates[j].year + '</h2>');
-            for (var k=0; k<dates[j].news.length; k++) {
-                news = dates[j].news[k];
+    }
+    
+    for(var j=0; j<dates.length; j++) {
+        $('#lit_events_recent_news').append('<h2 class="featurette-heading">' + allMonths[dates[j].month-1] + ' ' + dates[j].year + '</h2>');
+        for (var k=0; k<dates[j].news.length; k++) {
+            news = dates[j].news[k];
             
-                var entry = '<p class="recent-news-date">' + news.date + '</p><p class="lead">' + news.description;
-                if(news.link) {
-                    entry = entry + ' (<a href="' + news.link + '">link</a>)</p>';
-                }
-                entry = entry + '</p>';
-        
-                $('#lit_events_recent_news').append(entry);
+            var entry = '<p class="recent-news-date">' + news.date + '</p><p class="lead">' + news.description;
+            if(news.link) {
+                entry = entry + ' (<a href="' + news.link + '">link</a>)</p>';
             }
+            entry = entry + '</p>';
+        
+            $('#lit_events_recent_news').append(entry);
         }
     }
 }
