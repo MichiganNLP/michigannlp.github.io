@@ -162,6 +162,7 @@ p.lead-slim-indent-bottom {
 
 #two_col_container {
     overflow: hidden;
+    margin-bottom: 10px;
 }
 
 #people-involved {

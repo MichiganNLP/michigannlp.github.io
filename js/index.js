@@ -38,7 +38,7 @@ function processRecentNews(allText,pageCategory) {
         if(found==1) {
             var entry = '<p class="recent-news-date">' + news.date + '</p><p class="lead">' + news.description;
             if(news.link) {
-                entry = entry + ' (see more <a href="' + news.link + '">here</a>)</p>';
+                entry = entry + ' (<a href="' + news.link + '">link</a>)</p>';
             }
             entry = entry + '</p>';
         
@@ -49,5 +49,5 @@ function processRecentNews(allText,pageCategory) {
         }
     }
     
-    $('#recent_news').append('<p id="italics" class="lead">See more <a href="girls_encoded_events.html">here</a>.</p>');
+    $('#recent_news').append('<p id="italics" class="lead">See more news <a href="girls_encoded_events.html">here</a>.</p>');
 }
