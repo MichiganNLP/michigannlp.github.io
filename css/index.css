@@ -164,6 +164,11 @@ p.lead-slim-indent-bottom {
     margin-top: 10px;
 }
 
+#all-downloads a {
+    color: inherit;
+    text-decoration: none;
+}
+
 /* Girls Encoded Main Page */
 
 #myCarousel {
