@@ -160,6 +160,10 @@ p.lead-slim-indent-bottom {
     column-count: 2;
 }
 
+p.top-margin {
+    margin-top: 5px;
+}
+
 /* Girls Encoded Main Page */
 
 #myCarousel {
