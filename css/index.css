@@ -160,8 +160,8 @@ p.lead-slim-indent-bottom {
     column-count: 2;
 }
 
-p.top-margin {
-    margin-top: 10px;
+#top-margin {
+    margin-top: 50px;
 }
 
 /* Girls Encoded Main Page */
