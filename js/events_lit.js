@@ -40,7 +40,7 @@ function processRecentNews(allText,pageCategory) {
             }
             entry = entry + '</p>';
         
-            $('#events_recent_news').append(entry);
+            $('#lit_events_recent_news').append(entry);
         }
     }
 }
