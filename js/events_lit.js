@@ -40,7 +40,7 @@ function processRecentNews(allText,pageCategory) {
         if(found==1) {
             var news_date = news.date.split('/');
             var currentMonth = news_date[0];
-            var currentYear = news_date[1];
+            var currentYear = news_date[2];
             
             //is this month and year already in the dates array?
             var dateFound = 0;
@@ -59,7 +59,7 @@ function processRecentNews(allText,pageCategory) {
         
         for(var j=0; j<dates.length; j++) {
             $('#lit_events_recent_news').append('<h2 class="featurette-heading">' + allMonths[dates[j].month-1] + ' ' + dates[j].year + '</h2>');
-            for (var k=0; k<dates.news.length; k++) {
+            for (var k=0; k<dates[j].news.length; k++) {
                 news = dates[j][k];
             
                 var entry = '<p class="recent-news-date">' + news.date + '</p><p class="lead">' + news.description;
