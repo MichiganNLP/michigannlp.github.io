@@ -247,8 +247,7 @@ p.lead-nomargin {
 
 #event_panels {
     float: left;
-    width: 60%;
-    margin-top: 10px;
+    width: 67%;
 }
 
 #event_panels .panel-heading {
@@ -264,6 +263,6 @@ p.lead-nomargin {
 
 #events_recent_news {
     float: right;
-    width: 40%;
-    margin-top: 10px;
+    width: 32%;
+    margin-left: 1%;
 }
