@@ -64,13 +64,13 @@ function processDownloads(allText,pageCategory) {
         }
         for(var j=0; j<categories[i].publications.length; ++j) {
             publication = categories[i].publications[j];
-            $('#downloads-outline').append('<p class="lead-nomargin"><a href="#' + publication.downloadName + '">' + publication.downloadName + '</a></p>');
+            $('#downloads-outline').append('<p class="lead-nomargin"><a href="#' + publication.categories[i].name + '">' + publication.downloadName + '</a></p>');
         }
     }
     
     //All of the download information
     for(var i=0; i<categories.length; ++i) {
-        $('#all-downloads').append('<h2 class="featurette-heading">' + categories[i].name + '</h2>');
+        $('#all-downloads').append('<a name="' + categories[i].name + '"><h2 class="featurette-heading">' + categories[i].name + '</h2></a>');
         
         entry = '';
         for(var j=0; j<categories[i].publications.length; ++j) {
@@ -94,5 +94,7 @@ function processDownloads(allText,pageCategory) {
         
         entry = entry + '</div>'; //close row div
         $('#all-downloads').append(entry);
+        $('#all-downloads').append('<p class="lead"><a href="#">Back to top</a></p>');
+
     }
 }
