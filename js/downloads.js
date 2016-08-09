@@ -96,7 +96,7 @@ function processDownloads(allText,pageCategory) {
             $('#all-downloads').append(entry);
         }
         
-        alert("end row");
+        alert("end row final");
         $('#all-downloads').append('</div>'); //close row div
     }
 }
