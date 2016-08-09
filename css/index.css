@@ -131,6 +131,22 @@ p.lead-slim-indent-bottom {
     border-bottom: 1px solid #B8B8B8;
 }
 
+#col1 {
+    width: 10%;
+}
+
+#col2 {
+    width: 10%;
+}
+
+#col3 {
+    width: 10%;
+}
+
+#col4 {
+    width: 10%;
+}
+
 /* Girls Encoded Main Page */
 #myCarousel {
     height: 300px;
