@@ -38,13 +38,13 @@ function processDownloads(allText,pageCategory) {
                 //is this category already in the categories array?
                 var categoryFound = false;
                 for(var k=0; k<categories.length; ++k) {
-                    if(categories[k] == allCategories[j].substr(1)) {
+                    if(categories[k] == allCategories[j]) {
                         categories[k].publications.push(publication);
                         categoryFound = true;
                     }
                 }
                 if(!categoryFound) {
-                    category = {name:allCategories[j].substr(1), publications:[publication]}
+                    category = {name:allCategories[j], publications:[publication]}
                     categories.push(category);
                 }
             }
