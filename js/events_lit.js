@@ -45,10 +45,12 @@ function processRecentNews(allText,pageCategory) {
             //is this month and year already in the dates array?
             var dateFound = 0;
             for(var j=1; j<dates.length; j++) {
-                if(dates[j].month == currentMonth && dates[j].year == currentYear) {
-                    dates[j].news.push(news);
-                    dateFound = 1;
-                    break;
+                if(dates[j].month == currentMonth) {
+                    if(dates[j].year == currentYear) {
+                        dates[j].news.push(news);
+                        dateFound = 1;
+                        break;
+                    }
                 }
             }
             if(dateFound == 0) {
