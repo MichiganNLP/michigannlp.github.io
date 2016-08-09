@@ -32,7 +32,7 @@ function processDownloads(allText,pageCategory) {
                 break;
             }
         }
-        if(found==1 and download=='TRUE') {
+        if(found==1 and publication.download=='TRUE') {
             //is this category already in the categories array?
             var categoryFound = false;
             for(var j=0; j<categories.length; ++j) {

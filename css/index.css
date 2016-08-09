@@ -152,7 +152,16 @@ p.lead-slim-indent-bottom {
     width: 10%;
 }
 
+/* LIT Downloads Page */
+
+#downloads-outline {
+    -webkit-column-count: 3; /* Chrome, Safari, Opera */
+    -moz-column-count: 3; /* Firefox */
+    column-count: 3;
+}
+
 /* Girls Encoded Main Page */
+
 #myCarousel {
     height: 300px;
     margin-top: 20px;
