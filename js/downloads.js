@@ -87,6 +87,7 @@ function processDownloads(allText,pageCategory) {
             if(publication.downloadLink) {
                 entry = entry + ' (<a href="' + publication.downloadLink + '" target="_blank">download</a>)';
             }
+            entry = entry + showPublication(publication);
             entry = entry + '</p>';
             entry = entry + '</div></div></div>';
         }
