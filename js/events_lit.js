@@ -60,7 +60,7 @@ function processRecentNews(allText,pageCategory) {
         for(var j=0; j<dates.length; j++) {
             $('#lit_events_recent_news').append('<h2 class="featurette-heading">' + allMonths[dates[j].month-1] + ' ' + dates[j].year + '</h2>');
             for (var k=0; k<dates[j].news.length; k++) {
-                news = dates[j][k];
+                news = dates[j].news[k];
             
                 var entry = '<p class="recent-news-date">' + news.date + '</p><p class="lead">' + news.description;
                 if(news.link) {
