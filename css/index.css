@@ -241,7 +241,13 @@ p.lead-nomargin {
 }
 
 /* Girls Encoded Events Page */
+#events_content {
+    margin-top: 20px;
+}
+
 #event_panels {
+    float: left;
+    width: 60%;
     margin-top: 10px;
 }
 
@@ -253,9 +259,11 @@ p.lead-nomargin {
     float: left;
     border-radius: 15px;
     margin: 10px 10px 10px 0;
-    width: 30%;
+    width: 45%;
 }
 
-#featured-events-heading {
-    margin-top: 20px;
+#events_recent_news {
+    float: right;
+    width: 40%;
+    margin-top: 10px;
 }
