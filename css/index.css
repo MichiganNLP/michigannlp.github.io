@@ -121,9 +121,14 @@ p.lead-slim-indent-bottom {
 #reading-group-table {
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 10px;
 }
 
-#reading-group-table tr th, #reading-group-table tr td {
+#reading-group-table tr th {
+    padding: 1em 1em 0 1em;
+}
+
+#reading-group-table tr td {
     padding: 1em 1em 1em 1em;
 }
 
