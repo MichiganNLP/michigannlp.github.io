@@ -164,7 +164,7 @@ p.lead-slim-indent-bottom {
     margin-top: 10px;
 }
 
-#all-downloads a {
+.hidden-link {
     color: inherit;
     text-decoration: none;
 }
