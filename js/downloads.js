@@ -78,8 +78,10 @@ function processDownloads(allText,pageCategory) {
             entry = '';
             if(j % 2 == 0) {
                 if(j != 0) {
+                    $('#all-downloads').append('end of row');
                     entry = entry + '</div>'; //end of row
                 }
+                $('#all-downloads').append('start of row');
                 entry = entry + '<div class="row">'; //start of row
             }
             alert(publication.downloadName);
@@ -91,6 +93,7 @@ function processDownloads(allText,pageCategory) {
             entry = entry + '</p>';
             entry = entry + '</div></div></div>';
             
+            $('#all-downloads').append('end of row final');
             $('#all-downloads').append(entry);
         }
         
