@@ -1,18 +1,18 @@
-Name,LongName,Link,Location,Date,Type,
-WMDD,ACM Workshop on Multimodal Deception Detection,wmdd2015.html,Seattle,November 2015,Workshop,
-SemEval-2,Evaluation Exercises on Semantic Evaluation - ACL SigLex event,http://semeval2.fbk.eu/semeval2.php,Uppsala,July 2010,Workshop,
-TextGraphs-4,"Graph-based Algorithms for Natural Language Processing, ACL-IJCNLP",http://www.textgraphs.org/ws09,Singapore,August 2009,Workshop,
-User-Contributed Knowledge and Artificial Intelligence: An Evolving Synergy,IJCAI,http://lit.csci.unt.edu/~wikiai09,Pasadena,July 2009,Workshop,
-WIKIAI-08,"Wikipedia and Artificial Intelligence: An Evolving Synergy, AAAI",http://www.aaai.org/Library/Workshops/ws08-15.php,Chicago,July 2008,Workshop,
-TextGraphs-2,"Graph-based Algorithms for Natural Language Processing, NAACL",http://www.textgraphs.org/ws07,Rochester,April 2007,Workshop,
-SemEval-2007,"Affective Text, SemEval",http://nlp.cs.swarthmore.edu/semeval,Prague,June 2007,Workshop,
-Computational Aesthetics: Artificial Intelligence Approaches to Beauty and Happiness,AAAI,https://www.aaai.org/Papers/Workshops/2006/WS-06-04/WS06-04-000.pdf,Boston,July 2006,Workshop,
-TextGraphs,"Graph-based Algorithms for Natural Language Processing, NAACL",http://www.textgraphs.org/ws06,New York City,April 2007,Workshop,
-Building and Using Parallel Texts: Data Driven Machine Translation and Beyond,ACL,http://www.statmt.org/wpt05,Ann Arbor,June 2005,Workshop,
-Senseval 3,Evaluation Exercises for Word Sense Disambiguation - ACL SigLex Event,http://www.senseval.org/senseval3,Barcelone,July 2004,Workshop,
-Building and Using Parallel Texts: Data Driven Machine Translation and Beyond,HLT / NAACL,http://web.eecs.umich.edu/~mihalcea/wpt,Edmonton,May 2003,Workshop,
-ACL-HLT 2011,The 49th Annual Meeting of the Association for Computational Linguistics: Human Language Technologies,http://aclweb.org/mirror/acl2011,Portland,June 2011,Conference,
-EMNLP 2009,Conference on Empirical Methods in Natural Language Processing,http://conferences.inf.ed.ac.uk/emnlp09,Singapore,August 2009,Conference,
+Name,LongName,Link,Location,Date,Type,Category
+WMDD,ACM Workshop on Multimodal Deception Detection,wmdd2015.html,Seattle,November 2015,Workshop,LIT
+SemEval-2,Evaluation Exercises on Semantic Evaluation - ACL SigLex event,http://semeval2.fbk.eu/semeval2.php,Uppsala,July 2010,Workshop,LIT
+TextGraphs-4,"Graph-based Algorithms for Natural Language Processing, ACL-IJCNLP",http://www.textgraphs.org/ws09,Singapore,August 2009,Workshop,LIT
+User-Contributed Knowledge and Artificial Intelligence: An Evolving Synergy,IJCAI,http://lit.csci.unt.edu/~wikiai09,Pasadena,July 2009,Workshop,LIT
+WIKIAI-08,"Wikipedia and Artificial Intelligence: An Evolving Synergy, AAAI",http://www.aaai.org/Library/Workshops/ws08-15.php,Chicago,July 2008,Workshop,LIT
+TextGraphs-2,"Graph-based Algorithms for Natural Language Processing, NAACL",http://www.textgraphs.org/ws07,Rochester,April 2007,Workshop,LIT
+SemEval-2007,"Affective Text, SemEval",http://nlp.cs.swarthmore.edu/semeval,Prague,June 2007,Workshop,LIT
+Computational Aesthetics: Artificial Intelligence Approaches to Beauty and Happiness,AAAI,https://www.aaai.org/Papers/Workshops/2006/WS-06-04/WS06-04-000.pdf,Boston,July 2006,Workshop,LIT
+TextGraphs,"Graph-based Algorithms for Natural Language Processing, NAACL",http://www.textgraphs.org/ws06,New York City,April 2007,Workshop,LIT
+Building and Using Parallel Texts: Data Driven Machine Translation and Beyond,ACL,http://www.statmt.org/wpt05,Ann Arbor,June 2005,Workshop,LIT
+Senseval 3,Evaluation Exercises for Word Sense Disambiguation - ACL SigLex Event,http://www.senseval.org/senseval3,Barcelone,July 2004,Workshop,LIT
+Building and Using Parallel Texts: Data Driven Machine Translation and Beyond,HLT / NAACL,http://web.eecs.umich.edu/~mihalcea/wpt,Edmonton,May 2003,Workshop,LIT
+ACL-HLT 2011,The 49th Annual Meeting of the Association for Computational Linguistics: Human Language Technologies,http://aclweb.org/mirror/acl2011,Portland,June 2011,Conference,LIT
+EMNLP 2009,Conference on Empirical Methods in Natural Language Processing,http://conferences.inf.ed.ac.uk/emnlp09,Singapore,August 2009,Conference,LIT
 ,,,,,,
 ,,,,,,
 ,,,,,,
