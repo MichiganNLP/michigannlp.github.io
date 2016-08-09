@@ -77,9 +77,10 @@ function processDownloads(allText,pageCategory) {
             
             entry = '';
             if(j % 2 == 0) {
+                if(j != 0) {
+                    entry = entry + '</div>'; //end of row
+                }
                 entry = entry + '<div class="row">'; //start of row
-            } else {
-                entry = entry + '</div>'; //end of row
             }
             entry = entry + '<div class="col-sm-6"><div class="panel panel-default"><div class="panel-heading"><h3 class="panel-title">' + publication.downloadName + '</h3></div><div class="panel-body">';
             entry = entry + '<p class="lead">' + publication.downloadDescription;
