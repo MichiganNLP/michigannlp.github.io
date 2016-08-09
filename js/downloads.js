@@ -44,6 +44,8 @@ function processDownloads(allText,pageCategory) {
             if(!categoryFound) {
                 category = {name:publication.category, publications:[publication]}
                 categories.push(category);
+                alert("Adding category")
+                alert(publication.category)
             }
         }
     }
