@@ -19,7 +19,7 @@ function processConferences(allText,pageCategory) {
     for (var i=1; i<arrData.length; i++) {
         var data = arrData[i];
         
-        var event = {name:data[0], longName:data[1], link:data[2], location:data[3], date:data[4], type:date[5]};
+        var event = {name:data[0], longName:data[1], link:data[2], location:data[3], date:data[4], type:data[5]};
 
         var allCats = event.category.split(',');
         var found = 0;
