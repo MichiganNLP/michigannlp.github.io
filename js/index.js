@@ -42,7 +42,7 @@ function processRecentNews(allText,pageCategory) {
             }
             entry = entry + '</p>';
         
-            if(appended < 5) {
+            if(appended < 4) { //Only show the four most recent entries on the home page
                 $('#recent_news').append(entry);
                 appended = appended + 1;
             }
