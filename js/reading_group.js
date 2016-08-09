@@ -32,16 +32,16 @@ function processReadingGroup(allText,pageCategory) {
         }
         if(found==1) {
             //date/time
-            var entry = '<tr><td>' + event.date + ', ' + event.time + '</td>';
+            var entry = '<tr><td><p class="lead">' + event.date + ', ' + event.time + '</p></td>';
             
             //presenters
             var presenters = event.presenters.split(';');
             var presentersWebsites = event.presentersWebsites.split(';');
 
-            entry = entry + '<td class="centered">';
+            entry = entry + '<td class="centered"><p class="lead">';
             for(var j=0; j<presenters.length; ++j) {
                 if(presentersWebsites[j]) {
-                    entry = entry + '<a href="' + presentersWebsites[j] + '" target="_blank">' + presenters[j] + '</a></td>';
+                    entry = entry + '<a href="' + presentersWebsites[j] + '" target="_blank">' + presenters[j] + '</a>';
                 } else {
                     entry = entry + presenters[j];
                 }
@@ -49,7 +49,7 @@ function processReadingGroup(allText,pageCategory) {
                     entry = entry + ', ';
                 }
             }
-            entry = entry + '</td>';
+            entry = entry + '</p></td>';
             
             //papers
             paperAuthors = event.paperAuthors.split(';');
@@ -58,7 +58,7 @@ function processReadingGroup(allText,pageCategory) {
             paperLinks = event.paperLinks.split(';');
             slides = event.slides.split(';');
             
-            entry = entry + '<td class="centered">';
+            entry = entry + '<td class="centered"><p class="lead">';
             for(var j=0; j<paperAuthors.length; ++j) {
                 entry = entry + paperAuthors[j] + '. "';
                 if(paperLinks[j]) {
@@ -75,10 +75,10 @@ function processReadingGroup(allText,pageCategory) {
                     entry = entry + '\n';
                 }
             }
-            entry = entry + '</td>';
+            entry = entry + '</p></td>';
             
             //location
-            entry = entry + '<td class="centered">' + event.location + '</td></tr>';
+            entry = entry + '<td class="centered"><p class="lead">' + event.location + '</p></td></tr>';
             
             $('#reading-group-tbody').append(entry);
         }
