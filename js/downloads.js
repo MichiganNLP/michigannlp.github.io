@@ -78,25 +78,21 @@ function processDownloads(allText,pageCategory) {
             entry = '';
             if(j % 2 == 0) {
                 if(j != 0) {
-                    $('#all-downloads').append('end of row');
-                    entry = entry + '</div>'; //end of row
+                    entry = entry + '</div id="div1">'; //end of row
                 }
-                $('#all-downloads').append('start of row');
                 entry = entry + '<div class="row">'; //start of row
             }
-            alert(publication.downloadName);
-            entry = entry + '<div class="col-sm-4"><div class="panel panel-default"><div class="panel-heading"><h3 class="panel-title">' + publication.downloadName + '</h3></div><div class="panel-body">';
+            entry = entry + '<div class="col-sm-4"><div class="panel panel-default"><div class="panel-heading"><h3 class="panel-title">' + publication.downloadName + '</h3></div id="div2"><div class="panel-body">';
             entry = entry + '<p class="lead">' + publication.downloadDescription;
             if(publication.downloadLink) {
                 entry = entry + ' (<a href="' + publication.downloadLink + '" target="_blank">download</a>)';
             }
             entry = entry + '</p>';
-            entry = entry + '</div></div></div>';
+            entry = entry + '</div id="div3"></div id="div4"></div id="div5">';
             
             $('#all-downloads').append(entry);
         }
         
-        $('#all-downloads').append('end of row final');
         $('#all-downloads').append('</div>'); //close row div
     }
 }
