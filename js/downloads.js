@@ -71,5 +71,26 @@ function processDownloads(allText,pageCategory) {
     //All of the download information
     for(var i=0; i<categories.length; ++i) {
         $('#all-downloads').append('<h2 class="featurette-heading">' + categories[i].name + '</h2>');
+        
+        for(var j=0; j<categories[i].publications.length; ++j) {
+            publication = categories[i].publications[j];
+            
+            entry = '';
+            if(j % 2 == 0) {
+                entry = entry + '<div class="row">';
+            }
+            entry = entry + '<div class="col-sm-6"><div class="panel panel-default"><div class="panel-heading"><h3 class="panel-title">' + publication.downloadName + '</h3></div><div class="panel-body">';
+            entry = entry + '<p class="lead">' + publication.downloadDescription;
+            if(publication.downloadLink) {
+                entry = entry + ' (<a href="' + publication.downloadLink + '" target="_blank">download</a>)';
+            }
+            entry = entry + '</p>';
+            entry = entry + '</div></div></div>';
+            if(j % 2 == 1) {
+                entry = entry + '</div>';
+            }
+            
+            $('#all-downloads').append(entry);
+        }
     }
 }
