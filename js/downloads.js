@@ -37,9 +37,9 @@ function processDownloads(allText,pageCategory) {
             for(var j=0; j<allCategories.length; ++j) {
                 //is this category already in the categories array?
                 var categoryFound = false;
-                for(var j=0; j<categories.length; ++j) {
-                    if(categories[j] == allCategories[j].substr(1)) {
-                        categories[j].publications.push(publication);
+                for(var k=0; k<categories.length; ++k) {
+                    if(categories[k] == allCategories[j].substr(1)) {
+                        categories[k].publications.push(publication);
                         categoryFound = true;
                     }
                 }
