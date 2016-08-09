@@ -32,7 +32,7 @@ function processReadingGroup(allText,pageCategory) {
         }
         if(found==1) {
             //date/time
-            var entry = '<tr><td><p class="lead">' + event.date + '\n' + event.time + '</p></td>';
+            var entry = '<tr><td><p class="lead">' + event.date + '<br />' + event.time + '</p></td>';
             
             //presenters
             var presenters = event.presenters.split(';');
@@ -72,7 +72,7 @@ function processReadingGroup(allText,pageCategory) {
                     entry = entry + ' [<a href="' + slides[j] + '" target="_blank">slides</a>]'
                 }
                 if(j != paperAuthors.length-1) {
-                    entry = entry + '\n';
+                    entry = entry + '<br />';
                 }
             }
             entry = entry + '</p></td>';
