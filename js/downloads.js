@@ -33,17 +33,20 @@ function processDownloads(allText,pageCategory) {
             }
         }
         if(found==1 && publication.download=='TRUE') {
-            //is this category already in the categories array?
-            var categoryFound = false;
-            for(var j=0; j<categories.length; ++j) {
-                if(categories[j] == publication.category) {
-                    categories[j].publications.push(publication);
-                    categoryFound = true;
+            var allCategories = publication.category.split(',');
+            for(var j=0; j<allCategories.length; ++j) {
+                //is this category already in the categories array?
+                var categoryFound = false;
+                for(var j=0; j<categories.length; ++j) {
+                    if(categories[j] == allCategories[j].substr(1)) {
+                        categories[j].publications.push(publication);
+                        categoryFound = true;
+                    }
                 }
-            }
-            if(!categoryFound) {
-                category = {name:publication.category, publications:[publication]}
-                categories.push(category);
+                if(!categoryFound) {
+                    category = {name:allCategories[j].substr(1), publications:[publication]}
+                    categories.push(category);
+                }
             }
         }
     }
