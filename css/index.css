@@ -126,6 +126,7 @@ p.lead-slim-indent-bottom {
 #reading-group-table tr th, #reading-group-table tr td {
     padding: 1em 1em 1em 1em;
     white-space: pre;
+    word-wrap:break-word;
 }
 
 #reading-group-table tr {
