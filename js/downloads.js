@@ -60,7 +60,7 @@ function processDownloads(allText,pageCategory) {
         if(i==0) {
             $('#downloads-outline').append('<p class="lead-nomargin"><b>'+categories[i].name+'</b></p>');
         } else {
-            $('#downloads-outline').append('<p id="top-margin" class="lead-nomargin"><a href="#' + categories[i].name + '">' +categories[i].name+'</a></p>');
+            $('#downloads-outline').append('<p id="top-margin" class="lead-nomargin"><a href="#' + categories[i].name + '"><b>' +categories[i].name+'</b></a></p>');
         }
         for(var j=0; j<categories[i].publications.length; ++j) {
             publication = categories[i].publications[j];
@@ -70,7 +70,7 @@ function processDownloads(allText,pageCategory) {
     
     //All of the download information
     for(var i=0; i<categories.length; ++i) {
-        $('#all-downloads').append('<a class="hidden-link" name="' + categories[i].name + '"><h2 class="featurette-heading">' + categories[i].name + '</h2></a>');
+        $('#all-downloads').append('<a id="hidden-link" name="' + categories[i].name + '"><h2 class="featurette-heading">' + categories[i].name + '</h2></a>');
         
         entry = '';
         for(var j=0; j<categories[i].publications.length; ++j) {
