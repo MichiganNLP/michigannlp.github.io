@@ -19,7 +19,7 @@ function processDownloads(allText,pageCategory) {
         var data = arrData[i];
         
         var publication = {title:data[1], authors:data[2], publication:data[3], link:data[4], category:data[5], demo:data[6], data:data[7], software:data[8], pageCategory:data[9], download:data[10], downloadName:data[11], downloadDescription:data[12], downloadLink:data[13], downloadDate:data[14]};
-                
+        
         var allCats = publication.pageCategory.split(',');
         var found = 0;
         //Is the document category in this array?
@@ -49,10 +49,10 @@ function processDownloads(allText,pageCategory) {
     }
     
     for(var i=0; i<categories.length; ++i) {
-        $('#downloads-outline').append('<b>'+categories[i].name+'</b>');
+        $('#downloads-outline').append('<p class="lead"><b>'+categories[i].name+'</b></p>');
         for(var j=0; j<categories[i].publications.length; ++j) {
             publication = categories[i].publications[j];
-            $('#downloads-outline').append('<a href="#' + publication.downloadName + '">' + publication.downloadName + '</a>');
+            $('#downloads-outline').append('<p class="lead"><a href="#' + publication.downloadName + '">' + publication.downloadName + '</a></p>');
         }
     }
 }
