@@ -32,7 +32,7 @@ function processReadingGroup(allText,pageCategory) {
         }
         if(found==1) {
             //date/time
-            var entry = '<tr><td><p class="lead">' + event.date + ', ' + event.time + '</p></td>';
+            var entry = '<tr><td><p class="lead">' + event.date + '\n' + event.time + '</p></td>';
             
             //presenters
             var presenters = event.presenters.split(';');
