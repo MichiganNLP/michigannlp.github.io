@@ -37,8 +37,6 @@ function processReadingGroup(allText,pageCategory) {
             //presenters
             var presenters = event.presenters.split('; ');
             var presentersWebsites = event.presentersWebsites.split('; ');
-            alert(presenters)
-            alert(presentersWebsites)
 
             entry = entry + '<td class="centered"><p class="lead">';
             for(var j=0; j<presenters.length; ++j) {
@@ -59,6 +57,7 @@ function processReadingGroup(allText,pageCategory) {
             paperConferences = event.paperConferences.split('; ');
             paperLinks = event.paperLinks.split('; ');
             slides = event.slides.split('; ');
+            alert(slides)
             
             entry = entry + '<td class="centered"><p class="lead">';
             for(var j=0; j<paperAuthors.length; ++j) {
