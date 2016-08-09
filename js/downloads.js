@@ -64,7 +64,7 @@ function processDownloads(allText,pageCategory) {
         }
         for(var j=0; j<categories[i].publications.length; ++j) {
             publication = categories[i].publications[j];
-            $('#downloads-outline').append('<p class="lead-nomargin"><a href="#' + publication.categories[i].name + '">' + publication.downloadName + '</a></p>');
+            $('#downloads-outline').append('<p class="lead-nomargin"><a href="#' + categories[i].name + '">' + publication.downloadName + '</a></p>');
         }
     }
     
