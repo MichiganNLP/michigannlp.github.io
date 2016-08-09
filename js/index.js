@@ -49,5 +49,11 @@ function processRecentNews(allText,pageCategory) {
         }
     }
     
-    $('#recent_news').append('<p id="italics" class="lead">See more news <a href="girls_encoded_events.html">here</a>.</p>');
+    var pageCategory = $('meta[name=category]').attr("content");
+    if(pageCategory == "LIT") {
+        $('#recent_news').append('<p id="italics" class="lead">See more news <a href="news.html">here</a>.</p>');
+    }
+    if(pageCategory == "Girls Encoded") {
+        $('#recent_news').append('<p id="italics" class="lead">See more news <a href="girls_encoded_events.html">here</a>.</p>');
+    }
 }

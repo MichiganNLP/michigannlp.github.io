@@ -12,6 +12,10 @@
     border-radius: 15px;
 }
 
+#index_content {
+    margin-top: 20px;
+}
+
 #about_lit {
     float: left;
     width: 46%;
