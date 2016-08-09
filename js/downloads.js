@@ -33,7 +33,7 @@ function processDownloads(allText,pageCategory) {
             }
         }
         if(found==1 && publication.download=='TRUE') {
-            var allCategories = publication.category.split(',');
+            var allCategories = publication.category.split(', ');
             for(var j=0; j<allCategories.length; ++j) {
                 //is this category already in the categories array?
                 var categoryFound = false;
