@@ -16,7 +16,7 @@ $(document).ready(function() {
 function processRecentNews(allText,pageCategory) {
     arrData = parseCsv(allText);
     
-    var appended = 0; //Only append the first five recent events
+    var appended = 0; //Only append the first four recent events
     
     for (var i=1; i<arrData.length; i++) {
         var data = arrData[i];
