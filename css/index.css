@@ -119,11 +119,8 @@ p.lead-slim-indent-bottom {
 }
 
 #reading-group-table {
-    height: 415px;
-    width: 878px;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 5em;
 }
 
 #reading-group-table tr th, #reading-group-table tr td {
