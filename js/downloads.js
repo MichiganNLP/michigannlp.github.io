@@ -93,10 +93,10 @@ function processDownloads(allText,pageCategory) {
             entry = entry + '</p>';
             entry = entry + '</div></div></div>';
             
-            $('#all-downloads').append('end of row final');
             $('#all-downloads').append(entry);
         }
         
+        $('#all-downloads').append('end of row final');
         $('#all-downloads').append('</div>'); //close row div
     }
 }
