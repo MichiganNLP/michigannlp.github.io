@@ -83,6 +83,7 @@ function processDownloads(allText,pageCategory) {
                 alert("end row")
                 entry = entry + '</div>'; //end of row
             }
+            alert(publication.downloadName)
             entry = entry + '<div class="col-sm-6"><div class="panel panel-default"><div class="panel-heading"><h3 class="panel-title">' + publication.downloadName + '</h3></div><div class="panel-body">';
             entry = entry + '<p class="lead">' + publication.downloadDescription;
             if(publication.downloadLink) {
