@@ -55,7 +55,7 @@ function processDownloads(allText,pageCategory) {
     
     //Outline at the top of the page
     for(var i=0; i<categories.length; ++i) {
-        categories.publications.sort();
+        categories[i].publications.sort();
         
         if(i==0) {
             $('#downloads-outline').append('<p class="lead-nomargin"><b>'+categories[i].name+'</b></p>');
