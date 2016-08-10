@@ -39,7 +39,7 @@ function showPublication(publication,includeDownloadLink) {
 
     if(includeDownloadLink && publication.download=="TRUE") {
         entry = entry + '<p class="lead-slim-indent"><em>' + publication.publication + '</em></p>';
-        entry = entry + '<p class="lead-slim-bottom">*More detailed resources for this paper can be found on the <a href="downloads.html#' + publication.category + '">downloads</a> page.</p>';
+        entry = entry + '<p class="lead-slim-bottom">**More detailed resources for this paper can be found on the <a href="downloads.html#' + publication.category + '">downloads</a> page.</p>';
     } else {
         entry = entry + '<p class="lead-slim-indent-bottom"><em>' + publication.publication + '</em></p>';
     }
