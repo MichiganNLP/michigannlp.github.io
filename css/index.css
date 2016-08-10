@@ -93,6 +93,11 @@ p.lead-slim-indent-bottom {
     color: #000;
 }
 
+.image-centered {
+    left: auto;
+    right: auto;
+}
+
 /* LIT Event Page */
 
 #sub_navbar {

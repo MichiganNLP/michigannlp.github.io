@@ -50,8 +50,50 @@
                     </div><!--/.nav-collapse -->
                 </div><!--/.container-fluid -->
             </nav>
+                    
+            <img class="image-centered" src="images/musenet.png" alt="MuSeNet" />
             
-            <p class="lead">This page is a work in progress.</p>
+            <p class="lead-nomargin centered"><a href="#about">About</a></p>
+            <p class="lead-nomargin centered"><a href="#people">People</a></p>
+            <p class="lead-nomargin centered"><a href="#data">Data</a></p>
+            <p class="lead-nomargin centered"><a href="#publications">Publications</a></p>
+            
+            <div id="wmdd">
+            <h3><a name="about">About</a></h3>
+            <p class="lead">This project is devoted to building a large multilingual semantic network through the application of novel techniques for semantic analysis specifically targeted at the Wikipedia corpus. The driving hypothesis of the project is that the structure of Wikipedia can be effectively used to create a highly structured graph of world knowledge in which nodes correspond to entities and concepts described in Wikipedia, while edges capture ontological relations such as hypernymy and meronymy. Special emphasis is given to exploiting the multilingual information available in Wikipedia in order to improve the performance of each semantic analysis tool. Significant research effort is therefore aimed at developing tools for word sense disambiguation, reference resolution and the extraction of ontological relations that use multilingual reinforcement and the consistent structure and focused content of Wikipedia to solve these tasks accurately. An additional research challenge is the effective integration of inherently noisy evidence from multiple Wikipedia articles in order to increase the reliability of the overall knowledge encoded in the global Wikipedia graph. Computing probabilistic confidence values for every piece of structural information added to the network is an important step in this integration, and it is also meant to provide increased utility for downstream applications. The proposed highly structured semantic network complements existing semantic resources and is expected to have a broad impact on a wide range of natural language processing applications in need of large scale world knowledge.</p>
+            <p class="lead">The project is a collaboration between the Language and Information Technologies group at University of Michigan and the Natural Language Processing group at Ohio University. The project is sponsored by the <a href="http://www.nsf.gov/" target="_blank">National Science Foundation</a>, under awards #1018613 and #1018590.</p>
+            
+            <p class="lead"><a href="#">Back to top</a></p>
+            
+            <h3><a name="people">People</a></h3>
+            <p class="lead-nomargin"><a href="http://ace.cs.ohiou.edu/~razvan/" target="_blank">Razvan Bunescu</a> (PI)</p>
+            <p class="lead-nomargin"><a href="http://web.eecs.umich.edu/~mihalcea" target="_blank">Rada Mihalcea</a> (PI)</p>
+            <p class="lead-nomargin">Mike Chen</p>
+            <p class="lead-nomargin">Jincheng Chen</p>
+            <p class="lead-nomargin">Bharath Dandala</p>
+            <p class="lead-nomargin">Samer Hassan</p>
+            <p class="lead-nomargin"><a href="https://www.linkedin.com/in/yunfeng-huang-72435527" target="_blank">Yunfeng Huang</a></p>
+            <p class="lead-nomargin">Kevin Janowiecki</p>
+            <p class="lead">Hui Shen</p>
+
+            <p class="lead"><a href="#">Back to top</a></p>
+            
+            <h3><a name="data">Data</a></h3>
+            <ul>
+                <li><p class="lead"><b>WPGraphDB</b> — This is a Neo4j graph database that contains taxonomic relations extracted automatically from the Wikipedia category graph. The taxonomic relation extraction system and the database are described in Shen et al., “Wikipedia Taxonomic Relation Extraction using Wikipedia Distant Supervision”, 2014. [<a href="http://florida.cs.ohio.edu/wpgraphdb" target="_blank">download</a>]</p></li>
+                <li><p class="lead"><b>WPCoarse2Fine-Data</b> — A disambiguation dataset containing Wikipedia links and their contexts for 6 ambiguous words. Occurrences with coarse sense annotations have been manually annotated with finer senses, in order to evaluate the WSD approaches described in: Shen, Bunescu, and Mihalcea, “Coarse To fine Word Sense Disambiguation in Wikipedia”, 2013. [<a href="http://ace.cs.ohio.edu/~razvan/data/wpcoarse2fine-data.tar.gz" target="_blank">download</a>]</p></li>
+                <li><p class="lead"><b>WPCoarse2Fine-Code</b> — This package contains the implementation of the semi- supervised learning approaches to WSD in Wikipedia, as described in: Shen, Bunescu, and Mihalcea, “Coarse To fine Word Sense Disambiguation in Wikipedia”, 2013. [<a href="http://ace.cs.ohio.edu/~razvan/code/wpcoarse2fine-code.tar.gz" target="_blank">download</a>]</p></li>
+                <li><p class="lead"><b>WikiSenseClusters</b> — This package contains several datasets built to evaluate the automatic sense clustering method: two that are generated automatically through a set of heuristics applied on clusters extracted from existing disambiguation pages in English or Spanish, and two that are obtained through manual annotations. Additionally, a dataset was also constructed by clustering a set of Semeval word senses. All datasets follow the same format, and consist of pairs of articles annotated as either positive or negative, depending on whether they should be grouped together under one sense or not. [<a href="http://lit.eecs.umich.edu/research/projects/musenet/available%20soon" target="_blank">download</a>]</p></li>
+                <li><p class="lead"><b>WPInterlingua</b> — A resource containing 195 pairs of articles in Wikipedia, covering four language pairs, manually annotated for translation equivalence. The metafile, containing all the candidate interlingual links for ten language pairs, is also available. More details can be found in Dandala, Mihalcea, and Bunescu, “Towards Building a Multilingual Semantic Network: Identifying Interlingual Links in Wikipedia,” June 2012. [<a href="http://lit.csci.unt.edu/~rada/downloads/WikipediaInterlingualEvalDataset.tar.gz" target="_blank">download</a>].The metafile, containing all the candidate interlingual links for ten language pairs can also be [<a href="http://lit.csci.unt.edu/~rada/downloads/Wikipedia.2012.10languages.MetaFile.tar.gz" target="_blank">downloaded</a>].</p></li>
+                <li><p class="lead"><b>WPSenseReference</b> — A disambiguation dataset containing links extracted from Wikipedia for four ambiguous words. Occurrences with inconsistent sense annotations have been manually annotated with more specific senses or references. More details can be found in: Shen, Bunescu, and Mihalcea, “Sense and Reference Disambiguation in Wikipedia”, August 2012. [<a href="http://ace.cs.ohio.edu/~razvan/data/data.wpsensereference.tar.gz" target="_blank">download</a>]</p></li>
+                <li><p class="lead"><b>AdaptiveHAC</b> — Source code of Java package that implements the adaptive clustering algorithm used for extending the state-of-the-art Stanford deterministic coreference system with semantic compatibility features. Detailed description is given in in: Razvan Bunescu, “An Adaptive Clustering Model that Integrates Expert Rules and N-gram Statistics for Coreference Resolution”, ECAI 2012. [<a href="http://ace.cs.ohio.edu/~razvan/code/adaptivehac.tar.gz">download</a>]</p></li>
+                <li><p class="lead"><b>WPCat</b> — a Wikipedia taxonomic relation dataset. It contains ten text files, each corresponding to one root category from Wikipedia. Each file contains a directed acyclic graph of categories and titles sampled automatically from the Wikipedia category graph as descendants of the corresponding root category. Node-to-parent and node-to-root pairs have been manually annotated for is-a and instance-of relations. More details can be found in: Mike Chen and Razvan Bunescu, Taxonomic Relation Extraction from Wikipedia: Datasets and Algorithms, Technical Report, June 2011. [<a href="http://lit.eecs.umich.edu/research/projects/musenet/data/wpcat-data.tar.gz" target="_blank">download</a>]</p></li>
+                <li><p class="lead"><b>WPCoref</b> — a Wikipedia (co)reference dataset. It contains three large Wikipedia articles (John Williams, Barack Obama, and The New York Times) that were manually annotated with coreference and reference information. Coreference relations were annotated for all markable noun phrases, similar to the MUC guidelines. Furthermore, each coreference chain was manually linked to the Wikipedia title that describes the corresponding entity, if such a title exists. The files are in the AIF format recognized by the Callisto annotation interface. More details can be found in: Razvan Bunescu, (Co)Reference Resolution in Wikipedia, Technical Report, August 2011. [<a href="http://lit.eecs.umich.edu/research/projects/musenet/data/wpcoref-data.tar.gz" target="_blank">download</a>]</p></li>
+            </ul>
+            
+            <p class="lead"><a href="#">Back to top</a></p>
+            
+            </div>
     
         </div><!-- /.container -->
 
