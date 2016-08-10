@@ -141,12 +141,12 @@ function processDownloads(allText,pageCategory) {
 }
 
 function compareCategories(a, b) {
-    if(a.name == "Other") { //Other should always be the last category
-        return true;
-    }
-    if(b.name == "Other") {
-        return false;
-    }
+    //if(a.name == "Other") { //Other should always be the last category
+    //    return true;
+    //}
+    //if(b.name == "Other") {
+    //    return false;
+    //}
     return a.name > b.name;
 }
 
