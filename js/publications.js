@@ -97,7 +97,7 @@ function processPublications(allText) {
                 entry = showPublication(publication,true);
                 $('#publications').append(entry);
             } else { //only show publication if it's in the proper category
-                var pubCategories = pubCategories.category.split(', ');
+                var pubCategories = publication.category.split(', ');
                 for(var k=0; k<pubCategories.length; ++k) {
                     if(pubCategories[k]==category) {
                         entry = showPublication(publication,true);
