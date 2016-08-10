@@ -65,6 +65,9 @@ function processDownloads(allText,pageCategory) {
         for(var j=0; j<categories[i].publications.length; ++j) {
             publication = categories[i].publications[j];
             $('#downloads-outline').append('<p class="lead-nomargin">' + publication.downloadName + '</p>');
+            if(j != 0 && publication.downloadName == categories[i].publications[j-1].downloadName) {
+                //duplicate, don't do anything
+            }
         }
     }
     
