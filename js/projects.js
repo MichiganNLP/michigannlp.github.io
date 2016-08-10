@@ -19,8 +19,7 @@ function processProjects(allText,pageCategory) {
     for (var i=1; i<arrData.length; i++) {
         var data = arrData[i];
         
-        var project = {name:data[1], description:data[2], link:data[3], current:data[4], category:data[5]};
-        alert(project.current);
+        var project = {name:data[0], description:data[1], link:data[2], current:data[3], category:data[4]};
         
         var allCats = project.category.split(',');
         var found = 0;
