@@ -60,4 +60,23 @@ function processProjects(allText,pageCategory) {
     }
     entry = entry + '</div>'; //close row div
     $('#current-projects').append(entry);
+    
+    entry = '';
+    for(var i=0; i<past.length; ++i) {
+        if(i % 2 == 0) {
+            if(i != 0) {
+                entry = entry + '</div>'; //end of row
+            }
+            entry = entry + '<div class="row">'; //start of row
+        }
+            
+        entry = entry + '<div class="col-sm-6"><div class="panel panel-default"><div class="panel-heading"><h3 class="panel-title">' + past[i].name + '</h3></div><div class="panel-body"><p class="lead">' + past[i].description + '</p>';
+        if(current[i].link) {
+            entry = entry + '<p class="lead">Please see more <a href="' + past[i].link + '" target="_blank">here</a></p>';
+        }
+        
+        entry = entry + '</div></div></div>';
+    }
+    entry = entry + '</div>'; //close row div
+    $('#past-projects').append(entry);
 }
