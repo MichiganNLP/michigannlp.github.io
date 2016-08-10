@@ -97,21 +97,23 @@ function processDownloads(allText,pageCategory) {
                 entry = entry + '<div class="row">'; //start of row
             }
             
-            //name and description
+            //name
             entry = entry + '<div class="col-sm-6"><div class="panel panel-default"><div class="panel-heading"><h3 class="panel-title">' + publication.downloadName + '</h3></div><div class="panel-body">';
-            entry = entry + '<p class="lead">' + publication.downloadDescription;
             
             //dates
             var dates = publication.downloadDate.split('; ');
             if(dates.length > 0) {
-                entry = entry + '<p class="lead">';
+                entry = entry + '<p class="lead"><em>';
             }
             for(var k=0; k<dates.length; ++k) {
                 entry = entry + dates[k];
             }
             if(dates.length > 0) {
-                entry = entry + '</p>';
+                entry = entry + '</em></p>';
             }
+            
+            //description
+            entry = entry + '<p class="lead">' + publication.downloadDescription;
             
             //download links
             var links = publication.downloadLink.split('; ');
