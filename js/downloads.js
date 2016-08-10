@@ -107,7 +107,7 @@ function processDownloads(allText,pageCategory) {
                 entry = entry + ' (';
             }
             for(var k=0; k<links.length; ++k) {
-                entry = entry + '<a href="' + publication.downloadLink + '" target="_blank">download' + k + '</a>';
+                entry = entry + '<a href="' + links[k] + '" target="_blank">download' + k + '</a>';
                 if(k != links.length - 1) {
                     entry = entry + ', ';
                 }
