@@ -53,7 +53,7 @@ function processProjects(allText,pageCategory) {
             
         entry = entry + '<div class="col-sm-6"><div class="panel panel-default"><div class="panel-heading"><h3 class="panel-title">' + current[i].name + '</h3></div><div class="panel-body"><p class="lead">' + current[i].description + '</p>';
         if(current[i].link) {
-            entry = entry + '<p class="lead">Please see more <a href="' + current[i].link + '" target="_blank">here</a></p>';
+            entry = entry + '<p class="lead">Please see more <a href="' + current[i].link + '" target="_blank">here</a>.</p>';
         }
         
         entry = entry + '</div></div></div>';
