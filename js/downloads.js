@@ -51,7 +51,7 @@ function processDownloads(allText,pageCategory) {
         }
     }
     
-    categories.sort();
+    categories.sort(compareCategories);
     
     //Outline at the top of the page
     for(var i=0; i<categories.length; ++i) {
@@ -97,4 +97,8 @@ function processDownloads(allText,pageCategory) {
         $('#all-downloads').append('<p class="lead"><a href="#">Back to top</a></p>');
 
     }
+}
+
+function compareCategories(a, b) {
+  return a.name < b.name;
 }
