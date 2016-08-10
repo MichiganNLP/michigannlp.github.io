@@ -1,93 +1,63 @@
-//global variables
-var projects = []
-var projectSet = ($.cookie('projectSet') != null)
-    ? $.cookie('projectSet')
-    : 0;
-var currentProject = ($.cookie('currentProject') != null)
-    ? $.cookie('currentProject')
-    : 'nothing';
-
 $(document).ready(function() {
+    var pageCategory = $('meta[name=category]').attr("content");
+
     //Dynamically load recent news
      $.ajax({
         type: "GET",
         url: "../data/projects.csv",
         dataType: "text",
-        success: function(data) {processProjects(data);}
+        success: function(data) {processProjects(data,pageCategory);}
     });
 });
 
-//Template
-//<ul id="project-list">
-//<li><a onclick="" href="#">Deception Detection</a></li>
-//<li><a onclick="" href="#">Computational Social Science</a></li>
-//<li><a onclick="" href="#">Girls Encoded</a></li>
-//</ul>
-function processProjects(allText) {
+function processProjects(allText,pageCategory) {
     arrData = parseCsv(allText);
     
-    if(projectSet==0) {
-        entry = '<p class="lead">Click below to learn more about different projects the LIT group is currently working on.</p><ul id="project-list">';
-        for (var i=1; i<arrData.length; i++) {
-            var data = arrData[i];
-            var project = {name:data[0], people:data[1], data:data[2], link:data[3]};
-            projects.push(project);
-            if(project.link) {
-                entry = entry + '<li><p class="lead"><a href="' + project.link + '">' + project.name + '</a></p></li>';
-            } else {
-                entry = entry + '<li><p class="lead"><a onclick="loadProject(\'' + project.name + '\')" href="#">' + project.name + '</a></p></li>';
-            }
-        }
-        entry = entry + '</ul>';
-        $('#projects').append(entry);
-    } else {
-        $('#projects').append('<p class="lead"><a onclick="allProjects()" href="">Go back to all projects</a></p>');
-        
-        for(var i=1; i<arrData.length; i++) {
-            var data = arrData[i];
-            var project;
-            if(data[0] == currentProject) {
-                project = {name:data[0], people:data[1], description:data[2]};
-                break;
-            }
-        }
-        
-        $('#projects').append('<h2 class="featurette-heading">' + project.name + '</h2>');
-        $('#projects').append('<p class="lead">' + project.description + '</p>');
-        $('#projects').append('<p class="lead">People involved: ' + project.people + '</p>');
-        $('#projects').append('<p class="lead"><b>Relevant publications:</b></p>');
-        
-        $.ajax({
-            type: "GET",
-            url: "../data/publications.csv",
-            dataType: "text",
-            success: function(data) {processPublications(data);}
-        });
-    }
-}
+    var current = [];
+    var past = [];
 
-function processPublications(allText) {
-    arrData = parseCsv(allText);
-    
     for (var i=1; i<arrData.length; i++) {
         var data = arrData[i];
         
-        var publication = {citation:data[1], link:data[2], category:data[3], demo:data[4], data: data[5], software:data[6]};
-
-        if(publication.category == currentProject) {
-            entry = showPublication(publication);
-            $('#projects').append('<p class="lead">' + entry + '</p>');
+        var project = {name:data[1], description:data[2], link:data[3], current:data[4], category:data[5]};
+        
+        var allCats = project.category.split(',');
+        var found = 0;
+        //Is the document category in this array?
+        for(var j=0; j<allCats.length; j++) {
+            if(allCats[j][0]==' ') {
+                allCats[j] = allCats[j].substr(1);
+            }
+            if(pageCategory==allCats[j]) {
+                found = 1;
+                break;
+            }
+        }
+        if(found==1) {
+            if(project.current=="TRUE") {
+                current.push(project);
+            } else {
+                past.push(project);
+            }
         }
     }
-}
-
-function allProjects() {
-    $.cookie('projectSet',0);
-    location.reload();
-}
-
-function loadProject(project) {
-    $.cookie('projectSet', 1);
-    $.cookie('currentProject',project);
-    location.reload();
+    
+    entry = '';
+    for(var i=0; i<current.length; ++i) {
+        if(i % 2 == 0) {
+            if(i != 0) {
+                entry = entry + '</div>'; //end of row
+            }
+            entry = entry + '<div class="row">'; //start of row
+        }
+            
+        entry = entry + '<div class="col-sm-6"><div class="panel panel-default"><div class="panel-heading"><h3 class="panel-title">' + current[i].name + '</h3></div><div class="panel-body"><p class="lead">' + current[i].description + '</p>';
+        if(current[i].link) {
+            entry = entry + '<p class="lead">Please see more <a href="' + current[i].link + '" target="_blank">here</a></p>';
+        }
+        
+        entry = entry + '</div></div></div>';
+    }
+    entry = entry + '</div>'; //close row div
+    $('#current-projects').append(entry);
 }
