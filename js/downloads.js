@@ -55,7 +55,9 @@ function processDownloads(allText,pageCategory) {
     
     var temp = [{name:'Computational Social Science'},{name:'Romanian Resources'},{name:'Sentiment Analysis'},{name:'Images and Text'},{name:'Graph-based NLP'},{name:'Education'},{name:'Word Sense Disambiguation'},{name:'Deception Detection'},{name:'Summarization'},{name:'Semantics'},{name:'Other'}];
     temp.sort(compareCategories);
-    $('#downloads-outline').append(temp);
+    for(var i=0; i<temp.length; ++i) {
+        $('#downloads-outline').append(temp[i].name + ', ');
+    }
     
     //Outline at the top of the page
     for(var i=0; i<categories.length; ++i) {
