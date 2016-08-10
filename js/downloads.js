@@ -53,6 +53,7 @@ function processDownloads(allText,pageCategory) {
         }
     }
     
+    $('#downloads-outline').append(categoryNames + '</br>');
     categoryNames.sort(compareCategories);
     $('#downloads-outline').append(categoryNames);
     
