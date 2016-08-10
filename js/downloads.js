@@ -144,10 +144,10 @@ function processDownloads(allText,pageCategory) {
             
             //citations
             if(publication.title) {
-                entry = entry + showPublication(publication);
+                entry = entry + showPublication(publication,false);
             }
             if(secondPub && secondPub.title) {
-                entry = entry + showPublication(secondPublication);
+                entry = entry + showPublication(secondPublication,false);
             }
             
             entry = entry + '</p>';

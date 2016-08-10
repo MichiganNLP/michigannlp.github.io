@@ -4,7 +4,11 @@
 //<p class="lead-slim"><b>What’s Hot in Human Language Technology: Highlights from NAACL HLT 2015</b>(<a href="">pdf</a>, <a href="">demo</a>, <a href="">data</a>, <a href="">software</a>)</p>
 //<p class="lead-slim-indent">Joyce Y. Chai, Anoop Sarkar, Rada Mihalcea</p>
 //<p class="lead-slim-indent"><em>30th AAAI Conference on Artificial Intelligence, 2016</em></p>
-function showPublication(publication) {
+
+//@param includeDownloadLink
+//  Boolean - should you link to the downloads page? (if you're already on the downloads page, no; if not, maybe?)
+
+function showPublication(publication,includeDownloadLink) {
     var entry = '<p class="lead-slim"><b>' + publication.title + '</b>';
     if(publication.link || publication.demo || publication.data || publication.software) {
         entry = entry + ' ('
@@ -32,6 +36,10 @@ function showPublication(publication) {
         entry = entry + ')';
     }
     entry = entry + '</p><p class="lead-slim-indent">' + publication.authors + '</p><p class="lead-slim-indent-bottom"><em>' + publication.publication + '</em></p>';
+    
+    if(includeDownloadLink) {
+        entry = entry + '<p class="lead-slim-indent">More detailed resources for this paper can be found on the <a href="downloads.html#"' + publication.category + '>downloads</a> page.</p>';
+    }
 
     return entry;
 }
