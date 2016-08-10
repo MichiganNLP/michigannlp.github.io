@@ -96,17 +96,34 @@ function processDownloads(allText,pageCategory) {
                 }
                 entry = entry + '<div class="row">'; //start of row
             }
+            
+            //name and description
             entry = entry + '<div class="col-sm-6"><div class="panel panel-default"><div class="panel-heading"><h3 class="panel-title">' + publication.downloadName + '</h3></div><div class="panel-body">';
             entry = entry + '<p class="lead">' + publication.downloadDescription;
-            if(publication.downloadLink) {
-                entry = entry + ' (<a href="' + publication.downloadLink + '" target="_blank">download</a>, ' + publication.downloadDate + ')';
+            
+            //download links
+            var links = publication.downloadLink.split('; ');
+            if(links.length > 0) {
+                entry = entry + ' (';
             }
+            for(var k=0; k<links.length; ++k) {
+                entry = entry + '<a href="' + publication.downloadLink + '" target="_blank">download' + k + '</a>';
+                if(k != links.length - 1) {
+                    entry = entry + ', ';
+                }
+            }
+            if(links.length > 0) {
+                entry = entry + ')';
+            }
+            
+            //citations
             if(publication.title) {
                 entry = entry + showPublication(publication);
             }
             if(secondPub && secondPub.title) {
                 entry = entry + showPublication(secondPublication);
             }
+            
             entry = entry + '</p>';
             entry = entry + '</div></div></div>';
             
