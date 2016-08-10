@@ -44,6 +44,9 @@ function processDownloads(allText,pageCategory) {
                     }
                 }
                 if(!categoryFound) {
+                    if(allCategories[j][0]==' ') {
+                        allCategories[j] = allCategories[j].substr(1);
+                    }
                     category = {name:allCategories[j], publications:[publication]}
                     categories.push(category);
                 }
