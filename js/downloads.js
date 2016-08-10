@@ -103,6 +103,9 @@ function compareCategories(a, b) {
     if(a.name == "Other") {
         return true;
     }
+    if(b.name == "Other") {
+        return false;
+    }
     return a.name > b.name;
 }
 
