@@ -92,9 +92,18 @@ function processPublications(allText) {
         }
         for(var j=0; j<years[i].publications.length; ++j) {
             publication = years[i].publications[j];
-            if(categorySet==0 || publication.category==category) {
+            
+            if(categorySet==0) { //show all publications
                 entry = showPublication(publication,true);
                 $('#publications').append(entry);
+            } else { //only show publication if it's in the proper category
+                pubCategories = pubCategories.category.split(', ');
+                for(var k=0; k<pubCategories.length; ++k) {
+                    if(pubCategories[k]==category) {
+                        entry = showPublication(publication,true);
+                        $('#publications').append(entry);
+                    }
+                }
             }
         }
         if(pageCategory=="LIT" && categorySet==0) {
