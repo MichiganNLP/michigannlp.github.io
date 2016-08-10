@@ -54,7 +54,7 @@ function processDownloads(allText,pageCategory) {
     //categories.sort(compareCategories);
     
     var temp = [{name:'Education'},{name:'Computational Social Science'}];
-    temp.sort(compareCategories);
+    temp = temp.sort(compareCategories);
     for(var i=0; i<temp.length; ++i) {
         $('#downloads-outline').append(temp[i].name + ', ');
     }
