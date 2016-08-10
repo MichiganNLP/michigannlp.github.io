@@ -60,7 +60,7 @@ function processDownloads(allText,pageCategory) {
         if(i==0) {
             $('#downloads-outline').append('<p class="lead-nomargin"><a href="#' + categories[i].name + '"><b>*'+categories[i].name+'*</b></a></p>');
         } else {
-            $('#downloads-outline').append('<p id="top-margin" class="lead-nomargin"><a href="#' + categories[i].name + '"><b>' +categories[i].name+'</b></a></p>');
+            $('#downloads-outline').append('<p id="top-margin" class="lead-nomargin"><a href="#' + categories[i].name + '"><b>*' +categories[i].name+'*</b></a></p>');
         }
         for(var j=0; j<categories[i].publications.length; ++j) {
             publication = categories[i].publications[j];
