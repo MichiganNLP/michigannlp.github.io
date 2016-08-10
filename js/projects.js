@@ -11,6 +11,7 @@ $(document).ready(function() {
 });
 
 function processProjects(allText,pageCategory) {
+    alert('processProjects');
     arrData = parseCsv(allText);
     
     var current = [];
