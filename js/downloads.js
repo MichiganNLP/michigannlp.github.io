@@ -104,6 +104,18 @@ function processDownloads(allText,pageCategory) {
             entry = entry + '<div class="col-sm-6"><div class="panel panel-default"><div class="panel-heading"><h3 class="panel-title">' + publication.downloadName + '</h3></div><div class="panel-body">';
             entry = entry + '<p class="lead">' + publication.downloadDescription;
             
+            //dates
+            var dates = publication.downloadDates.split('; ');
+            if(dates.length > 0) {
+                entry = entry + '<p class="lead">';
+            }
+            for(var k=0; k<dates.length; ++k) {
+                entry = entry + dates[k];
+            }
+            if(dates.length > 0) {
+                entry = entry + '</p>';
+            }
+            
             //download links
             var links = publication.downloadLink.split('; ');
             if(links.length > 0) {
@@ -144,13 +156,12 @@ function processDownloads(allText,pageCategory) {
 }
 
 function compareCategories(a, b) {
-    //if(a.name == "Other") { //Other should always be the last category
-    //    return true;
-    //}
-    //if(b.name == "Other") {
-    //    return false;
-    //}
-    $('#downloads-outline').append(a.name + ' v. ' + b.name + ' - ' + a.name > b.name + '</br>');
+    if(a.name == "Other") { //Other should always be the last category
+        return true;
+    }
+    if(b.name == "Other") {
+        return false;
+    }
     return a.name > b.name;
 }
 
