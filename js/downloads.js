@@ -105,7 +105,7 @@ function processDownloads(allText,pageCategory) {
             entry = entry + '<p class="lead">' + publication.downloadDescription;
             
             //dates
-            var dates = publication.downloadDates.split('; ');
+            var dates = publication.downloadDate.split('; ');
             if(dates.length > 0) {
                 entry = entry + '<p class="lead">';
             }
