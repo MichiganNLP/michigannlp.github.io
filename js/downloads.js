@@ -73,11 +73,21 @@ function processDownloads(allText,pageCategory) {
         $('#all-downloads').append('<h2 class="featurette-heading"><a name="' + categories[i].name + '">' + categories[i].name + '</a></h2>');
         
         entry = '';
+        var index = 0; //keep track of how many downloads you've added
         for(var j=0; j<categories[i].publications.length; ++j) {
             publication = categories[i].publications[j];
             
-            if(j % 2 == 0) {
-                if(j != 0) {
+            var secondPub = false;
+            //Check to see if this is the same as the next download in the array (then combine the citations)
+            if(j < categories[i].publications.length-1 && publication.downloadName == categories[i].publications[j+1].downloadName) {
+                secondPublication = categories[i].publications[j+1];
+                secondPub = true;
+                
+                j = j+1; //now skip the next download
+            }
+            
+            if(index % 2 == 0) {
+                if(index != 0) {
                     entry = entry + '</div>'; //end of row
                 }
                 entry = entry + '<div class="row">'; //start of row
@@ -88,6 +98,9 @@ function processDownloads(allText,pageCategory) {
                 entry = entry + ' (<a href="' + publication.downloadLink + '" target="_blank">download</a>)';
             }
             entry = entry + showPublication(publication);
+            if(secondPub) {
+                entry = entry + showPublication(secondPublication);
+            }
             entry = entry + '</p>';
             entry = entry + '</div></div></div>';
         }
@@ -95,12 +108,13 @@ function processDownloads(allText,pageCategory) {
         entry = entry + '</div>'; //close row div
         $('#all-downloads').append(entry);
         $('#all-downloads').append('<p class="lead"><a href="#">Back to top</a></p>');
-
+        
+        index = index + 1;
     }
 }
 
 function compareCategories(a, b) {
-    if(a.name == "Other") {
+    if(a.name == "Other") { //Other should always be the last category
         return true;
     }
     if(b.name == "Other") {
