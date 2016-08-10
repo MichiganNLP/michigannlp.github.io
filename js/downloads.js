@@ -14,7 +14,6 @@ function processDownloads(allText,pageCategory) {
     arrData = parseCsv(allText);
     
     var categories = []; //each category has a name and a list of publications
-    var categoryNames = []; //strings for sorting purposes
 
     for (var i=1; i<arrData.length; i++) {
         var data = arrData[i];
@@ -47,7 +46,6 @@ function processDownloads(allText,pageCategory) {
                 if(!categoryFound) {
                     category = {name:allCategories[j], publications:[publication]}
                     categories.push(category);
-                    categoryNames.push(allCategories[j]);
                 }
             }
         }
@@ -171,11 +169,17 @@ function compareCategories(a, b) {
 }
 
 function comparePublications(a, b) {
-    if(a.name == "Other") { //Other should always be the last category
-        return true;
+    if(a.downloadName == "Other") { //Other should always be the last category
+        return 1;
     }
-    if(b.name == "Other") {
-        return false;
+    if(b.downloadName == "Other") {
+        return -1;
     }
-    return a.downloadName > b.downloadName;
+    if(a.downloadName > b.downloadName) {
+        return 1;
+    } else if(a.downloadName < b.downloadName) {
+        return -1;
+    } else {
+        return 0;
+    }
 }
