@@ -53,6 +53,10 @@ function processDownloads(allText,pageCategory) {
     
     categories.sort(compareCategories);
     
+    var temp = ['Computational Social Science','Romanian Resources','Sentiment Analysis','Images and Text','Graph-based NLP','Education','Word Sense Disambiguation','Deception Detection','Summarization','Semantics'];
+    temp.sort();
+    $('#downloads-outline').append(temp);
+    
     //Outline at the top of the page
     for(var i=0; i<categories.length; ++i) {
         categories[i].publications.sort(comparePublications);
@@ -159,7 +163,6 @@ function compareCategories(a, b) {
     if(b.name == "Other") {
         return false;
     }
-    $('#downloads-outline').append('*'  + a.name + '*' + b.name + '* ' + (a.name > b.name) + '</br>');
     return a.name > b.name;
 }
 
