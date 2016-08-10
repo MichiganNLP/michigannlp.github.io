@@ -52,9 +52,6 @@ function processDownloads(allText,pageCategory) {
     }
     
     categories.sort(compareCategories);
-    for(var i=0; i<categories.length; ++i) {
-        $('#downloads-outline').append(categories[i].name);
-    }
     
     //Outline at the top of the page
     for(var i=0; i<categories.length; ++i) {
@@ -162,6 +159,7 @@ function compareCategories(a, b) {
     if(b.name == "Other") {
         return false;
     }
+    $('#downloads-outline').append(a.name + ' ' b.name + ' ' + (a.name > b.name) + '</br>');
     return a.name > b.name;
 }
 
