@@ -14,6 +14,7 @@ function processDownloads(allText,pageCategory) {
     arrData = parseCsv(allText);
     
     var categories = []; //each category has a name and a list of publications
+    var categoryNames = []; //strings for sorting purposes
 
     for (var i=1; i<arrData.length; i++) {
         var data = arrData[i];
@@ -46,18 +47,14 @@ function processDownloads(allText,pageCategory) {
                 if(!categoryFound) {
                     category = {name:allCategories[j], publications:[publication]}
                     categories.push(category);
+                    categoryNames.push(allCategories[j]);
                 }
             }
         }
     }
     
-    //categories.sort(compareCategories);
-    
-    var temp = [{name:'Education'},{name:'Computational Social Science'}];
-    temp = temp.sort(compareCategories);
-    for(var i=0; i<temp.length; ++i) {
-        $('#downloads-outline').append(temp[i].name + ', ');
-    }
+    categoryNames.sort(compareCategories);
+    $('#downloads-outline').append(categoryNames);
     
     //Outline at the top of the page
     for(var i=0; i<categories.length; ++i) {
@@ -159,14 +156,13 @@ function processDownloads(allText,pageCategory) {
 }
 
 function compareCategories(a, b) {
-    if(a.name == "Other") { //Other should always be the last category
+    if(a == "Other") { //Other should always be the last category
         return true;
     }
-    if(b.name == "Other") {
+    if(b == "Other") {
         return false;
     }
-    $('#downloads-outline').append(a.name + ' ' + b.name + ' ' + (a.name > b.name) + '</br>');
-    return (a.name > b.name);
+    return a > b;
 }
 
 function comparePublications(a, b) {
