@@ -18,7 +18,7 @@ function processDownloads(allText,pageCategory) {
     for (var i=1; i<arrData.length; i++) {
         var data = arrData[i];
         
-        var publication = {title:data[1], authors:data[2], publication:data[3], link:data[4], category:data[5], demo:data[6], data:data[7], software:data[8], pageCategory:data[9], download:data[10], downloadName:data[11], downloadDescription:data[12], downloadLink:data[13], downloadDate:data[14]};
+        var publication = {title:data[1], authors:data[2], publication:data[3], link:data[4], category:data[5], demo:data[6], data:data[7], software:data[8], pageCategory:data[9], download:data[10], downloadName:data[11], downloadDescription:data[12], downloadLink:data[13], downloadDate:data[14], downloadLinkNames:data[15]};
         
         var allCats = publication.pageCategory.split(',');
         var found = 0;
@@ -120,14 +120,17 @@ function processDownloads(allText,pageCategory) {
             
             //download links
             var links = publication.downloadLink.split('; ');
+            var linkNames = publication.downloadLinkNames.split('; ');
             if(links.length > 0 && links[0]) {
                 entry = entry + ' (';
             }
             for(var k=0; k<links.length; ++k) {
                 if(links[k]) {
-                    entry = entry + '<a href="' + links[k] + '" target="_blank">download';
-                    if(links.length > 1) {
-                        entry = entry + k; //number the download links
+                    entry = entry + '<a href="' + links[k] + '" target="_blank">';
+                    if(linkNames.length > k-1) {
+                        entry = entry + linkNames[k];
+                    } else {
+                        entry = entry + 'download';
                     }
                     entry = entry + '</a>';
                     if(k != links.length - 1) {
