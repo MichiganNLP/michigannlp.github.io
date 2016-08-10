@@ -100,5 +100,5 @@ function processDownloads(allText,pageCategory) {
 }
 
 function compareCategories(a, b) {
-  return a.name < b.name;
+  return a.name > b.name;
 }
