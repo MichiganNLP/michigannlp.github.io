@@ -159,7 +159,7 @@ function compareCategories(a, b) {
     if(b.name == "Other") {
         return false;
     }
-    $('#downloads-outline').append(a.name + ' ' b.name + ' ' + (a.name > b.name) + '</br>');
+    $('#downloads-outline').append(a.name + ' ' + b.name + ' ' + (a.name > b.name) + '</br>');
     return a.name > b.name;
 }
 
