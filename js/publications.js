@@ -43,7 +43,7 @@ function processPublications(allText) {
                 break;
             }
         }
-        if(found==1) {
+        if(found==1 && publication.title) { //don't include if it's just a download and doesn't have a publication title
             var allCats = publication.category.split(',');
             //Is this category already in the array?
             for(var j=0; j<allCats.length; j++) {
@@ -118,7 +118,7 @@ function loadCategory(category) {
 //<p class="lead">View publications by category: <a href="">Word Sense Disambiguation</a>, <a
 //href="">Semantic Similarity</a>, <a href="">Romanian Texts</a></p>
 function showCategories() {
-    categories.sort();
+    categories.sort(compareCategories);
     entry = "";
     for(var i=0; i<categories.length; ++i) {
         if(categorySet==1 && category==categories[i]) {
@@ -131,4 +131,20 @@ function showCategories() {
         }
     }
     $('#categories').append('<p class="lead">View publications by category: ' + entry + '</p>');
+}
+
+function compareCategories(a, b) {
+    if(a == "Other") { //Other should always be the last category
+        return 1;
+    }
+    if(b == "Other") {
+        return -1;
+    }
+    if(a > b) {
+        return 1;
+    } else if(a < b) {
+        return -1;
+    } else {
+        return 0;
+    }
 }
