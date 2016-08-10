@@ -165,7 +165,8 @@ function compareCategories(a, b) {
     if(b.name == "Other") {
         return false;
     }
-    return a.name > b.name;
+    $('#downloads-outline').append(a.name + ' ' + b.name + ' ' + (a.name > b.name));
+    return (a.name > b.name);
 }
 
 function comparePublications(a, b) {
