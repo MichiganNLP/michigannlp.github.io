@@ -51,9 +51,9 @@ function processDownloads(allText,pageCategory) {
         }
     }
     
-    categories.sort(compareCategories);
+    //categories.sort(compareCategories);
     
-    var temp = [{name:'Computational Social Science'},{name:'Education'}];
+    var temp = [{name:'Education'},{name:'Computational Social Science'}];
     temp.sort(compareCategories);
     for(var i=0; i<temp.length; ++i) {
         $('#downloads-outline').append(temp[i].name + ', ');
