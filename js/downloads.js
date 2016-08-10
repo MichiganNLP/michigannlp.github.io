@@ -55,7 +55,7 @@ function processDownloads(allText,pageCategory) {
     
     //Outline at the top of the page
     for(var i=0; i<categories.length; ++i) {
-        categories[i].publications.sort();
+        categories[i].publications.sort(comparePublications);
         
         if(i==0) {
             $('#downloads-outline').append('<p class="lead-nomargin"><a href="#' + categories[i].name + '"><b>'+categories[i].name+'</b></a></p>');
@@ -101,4 +101,8 @@ function processDownloads(allText,pageCategory) {
 
 function compareCategories(a, b) {
   return a.name > b.name;
+}
+
+function comparePublications(a, b) {
+    return a.downloadName > b.downloadName;
 }
