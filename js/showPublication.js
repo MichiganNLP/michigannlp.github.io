@@ -35,10 +35,10 @@ function showPublication(publication,includeDownloadLink) {
         }
         entry = entry + ')';
     }
-    entry = entry + '</p><p class="lead-slim-indent">' + publication.authors + '</p><p class="lead-slim-indent-bottom"><em>' + publication.publication + '</em></p>';
+    entry = entry + '</p><p class="lead-slim-indent">' + publication.authors + '</p><p class="lead-slim-indent"><em>' + publication.publication + '</em></p>';
     
     if(includeDownloadLink) {
-        entry = entry + '<p class="lead-slim-indent">More detailed resources for this paper can be found on the <a href="downloads.html#"' + publication.category + '>downloads</a> page.</p>';
+        entry = entry + '<p class="lead-slim-indent-bottom">*More detailed resources for this paper can be found on the <a href="downloads.html#' + publication.category + '">downloads</a> page.</p>';
     }
 
     return entry;
