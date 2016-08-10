@@ -150,12 +150,8 @@ function compareCategories(a, b) {
     //if(b.name == "Other") {
     //    return false;
     //}
-    //return a.name > b.name;
-    var index = 0;
-    while(a[index] == b[index]) {
-        index = index + 1;
-    }
-    return a[index] > b[index];
+    $('#downloads-outline').append(a.name + ' v. ' + b.name);
+    return a.name > b.name;
 }
 
 function comparePublications(a, b) {
