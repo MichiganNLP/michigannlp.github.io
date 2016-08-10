@@ -53,9 +53,7 @@ function processDownloads(allText,pageCategory) {
         }
     }
     
-    $('#downloads-outline').append(categoryNames + '</br>');
-    categoryNames.sort(compareCategories);
-    $('#downloads-outline').append(categoryNames);
+    categories.sort(compareCategories);
     
     //Outline at the top of the page
     for(var i=0; i<categories.length; ++i) {
@@ -157,15 +155,15 @@ function processDownloads(allText,pageCategory) {
 }
 
 function compareCategories(a, b) {
-    if(a == "Other") { //Other should always be the last category
+    if(a.name == "Other") { //Other should always be the last category
         return 1;
     }
-    if(b == "Other") {
+    if(b.name == "Other") {
         return -1;
     }
-    if(a > b) {
+    if(a.name > b.name) {
         return 1;
-    } else if(a < b) {
+    } else if(a.name < b.name) {
         return -1;
     } else {
         return 0;
