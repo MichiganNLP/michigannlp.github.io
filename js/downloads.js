@@ -44,9 +44,6 @@ function processDownloads(allText,pageCategory) {
                     }
                 }
                 if(!categoryFound) {
-                    if(allCategories[j][0]==' ') {
-                        allCategories[j] = allCategories[j].substr(1);
-                    }
                     category = {name:allCategories[j], publications:[publication]}
                     categories.push(category);
                 }
@@ -58,6 +55,7 @@ function processDownloads(allText,pageCategory) {
     
     //Outline at the top of the page
     for(var i=0; i<categories.length; ++i) {
+        alert('*' + categories[i].name + '*');
         categories[i].publications.sort(comparePublications);
         
         if(i==0) {
