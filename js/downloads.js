@@ -120,7 +120,7 @@ function processDownloads(allText,pageCategory) {
             
             //download links
             var links = publication.downloadLink.split('; ');
-            if(links.length > 0) {
+            if(links.length > 0 && links[0]) {
                 entry = entry + ' (';
             }
             for(var k=0; k<links.length; ++k) {
@@ -133,7 +133,7 @@ function processDownloads(allText,pageCategory) {
                     entry = entry + ', ';
                 }
             }
-            if(links.length > 0) {
+            if(links.length > 0 && links[0]) {
                 entry = entry + ')';
             }
             
