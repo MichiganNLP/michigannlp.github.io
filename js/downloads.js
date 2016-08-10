@@ -108,7 +108,7 @@ function processDownloads(allText,pageCategory) {
             }
             for(var k=0; k<links.length; ++k) {
                 entry = entry + '<a href="' + links[k] + '" target="_blank">download';
-                if(links.length > 0) {
+                if(links.length > 1) {
                     entry = entry + k; //number the download links
                 }
                 entry = entry + '</a>';
