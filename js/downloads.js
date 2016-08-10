@@ -158,10 +158,10 @@ function processDownloads(allText,pageCategory) {
 
 function compareCategories(a, b) {
     if(a == "Other") { //Other should always be the last category
-        return true;
+        return -1;
     }
     if(b == "Other") {
-        return false;
+        return 1;
     }
     return a > b;
 }
