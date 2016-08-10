@@ -124,13 +124,15 @@ function processDownloads(allText,pageCategory) {
                 entry = entry + ' (';
             }
             for(var k=0; k<links.length; ++k) {
-                entry = entry + '<a href="' + links[k] + '" target="_blank">download';
-                if(links.length > 1) {
-                    entry = entry + k; //number the download links
-                }
-                entry = entry + '</a>';
-                if(k != links.length - 1) {
-                    entry = entry + ', ';
+                if(links[k]) {
+                    entry = entry + '<a href="' + links[k] + '" target="_blank">download';
+                    if(links.length > 1) {
+                        entry = entry + k; //number the download links
+                    }
+                    entry = entry + '</a>';
+                    if(k != links.length - 1) {
+                        entry = entry + ', ';
+                    }
                 }
             }
             if(links.length > 0 && links[0]) {
