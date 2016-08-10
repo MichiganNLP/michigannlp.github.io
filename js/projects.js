@@ -11,7 +11,6 @@ $(document).ready(function() {
 });
 
 function processProjects(allText,pageCategory) {
-    alert('processProjects');
     arrData = parseCsv(allText);
     
     var current = [];
@@ -21,6 +20,7 @@ function processProjects(allText,pageCategory) {
         var data = arrData[i];
         
         var project = {name:data[1], description:data[2], link:data[3], current:data[4], category:data[5]};
+        alert(project.current);
         
         var allCats = project.category.split(',');
         var found = 0;
