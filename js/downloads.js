@@ -55,11 +55,10 @@ function processDownloads(allText,pageCategory) {
     
     //Outline at the top of the page
     for(var i=0; i<categories.length; ++i) {
-        alert('*' + categories[i].name + '*');
         categories[i].publications.sort(comparePublications);
         
         if(i==0) {
-            $('#downloads-outline').append('<p class="lead-nomargin"><a href="#' + categories[i].name + '"><b>'+categories[i].name+'</b></a></p>');
+            $('#downloads-outline').append('<p class="lead-nomargin"><a href="#' + categories[i].name + '"><b>*'+categories[i].name+'*</b></a></p>');
         } else {
             $('#downloads-outline').append('<p id="top-margin" class="lead-nomargin"><a href="#' + categories[i].name + '"><b>' +categories[i].name+'</b></a></p>');
         }
