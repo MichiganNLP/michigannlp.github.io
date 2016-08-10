@@ -52,6 +52,9 @@ function processDownloads(allText,pageCategory) {
     }
     
     categories.sort(compareCategories);
+    for(var i=0; i<categories.length; ++i) {
+        $('#downloads-outline').append(categories[i].name);
+    }
     
     //Outline at the top of the page
     for(var i=0; i<categories.length; ++i) {
