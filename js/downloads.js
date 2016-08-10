@@ -151,5 +151,11 @@ function compareCategories(a, b) {
 }
 
 function comparePublications(a, b) {
+    if(a.name == "Other") { //Other should always be the last category
+        return true;
+    }
+    if(b.name == "Other") {
+        return false;
+    }
     return a.downloadName > b.downloadName;
 }
