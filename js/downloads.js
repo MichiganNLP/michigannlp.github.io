@@ -100,7 +100,10 @@ function processDownloads(allText,pageCategory) {
 }
 
 function compareCategories(a, b) {
-  return a.name > b.name;
+    if(a.name == "Other") {
+        return true;
+    }
+    return a.name > b.name;
 }
 
 function comparePublications(a, b) {
