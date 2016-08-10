@@ -158,12 +158,18 @@ function processDownloads(allText,pageCategory) {
 
 function compareCategories(a, b) {
     if(a == "Other") { //Other should always be the last category
-        return -1;
-    }
-    if(b == "Other") {
         return 1;
     }
-    return a > b;
+    if(b == "Other") {
+        return -1;
+    }
+    if(a > b) {
+        return 1;
+    } else if(a < b) {
+        return -1;
+    } else {
+        return 0;
+    }
 }
 
 function comparePublications(a, b) {
