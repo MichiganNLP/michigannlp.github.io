@@ -102,13 +102,16 @@ function processDownloads(allText,pageCategory) {
             
             //dates
             var dates = publication.downloadDate.split('; ');
-            if(dates.length > 0) {
+            if(dates.length > 0 && dates[0]) {
                 entry = entry + '<p class="lead"><em>';
             }
             for(var k=0; k<dates.length; ++k) {
                 entry = entry + dates[k];
+                if(k != dates.length-1 && dates[k]) {
+                    entry = entry + '</br>';
+                }
             }
-            if(dates.length > 0) {
+            if(dates.length > 0 && dates[0]) {
                 entry = entry + '</em></p>';
             }
             
