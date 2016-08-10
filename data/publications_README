@@ -18,8 +18,10 @@ PageCategory (required) - which website this publication should appear on (ie. "
 
 Download (required) - either TRUE or FALSE; is there a separate download associated with this publication? (The download will appear on the "Downloads" page of the website; you can include downloads that don't have papers associated with them by leaving the year, title, authors, and publication fields blank)
 
-DownloadName (optional) - name of the download
-DownloadDescription (optional) - description of the download
+DownloadName (optional) - name of the download (treat demos like downloads)
+DownloadDescription (optional) - description of the download (feel free to use HTML markup, just make sure to use the straight quotes, rather than the curved ones)
 DownloadLink (optional) - link to the download (you can include multiple links by separating them with a semi-colon and a space)
 DownloadDate (optional) - the date the download was put on the website (you can include multiple dates by separating them with a semi-colon and a space)
 DownloadLinkNames (optional) - if you have multiple download links, include names for each of them; separate names by a semi-colon and a space
+
+New (required) - either TRUE or FALSE; should this download be flagged as a new download?
