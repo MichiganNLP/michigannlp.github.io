@@ -150,7 +150,12 @@ function compareCategories(a, b) {
     //if(b.name == "Other") {
     //    return false;
     //}
-    return a.name > b.name;
+    //return a.name > b.name;
+    index = 0;
+    while(a[index] == b[index]) {
+        index = index + 1;
+    }
+    return a[index] > b[index];
 }
 
 function comparePublications(a, b) {
