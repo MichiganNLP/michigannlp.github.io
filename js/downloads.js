@@ -107,13 +107,13 @@ function processDownloads(allText,pageCategory) {
             }
             entry = entry + '</p>';
             entry = entry + '</div></div></div>';
+            
+            index = index + 1;
         }
         
         entry = entry + '</div>'; //close row div
         $('#all-downloads').append(entry);
         $('#all-downloads').append('<p class="lead"><a href="#">Back to top</a></p>');
-        
-        index = index + 1;
     }
 }
 
