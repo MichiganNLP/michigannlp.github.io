@@ -48,6 +48,13 @@ p.lead-slim-indent {
   text-indent: 2em;
 }
 
+p.lead-slim-bottom {
+  margin-bottom: 20px;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.2;
+}
+
 p.lead-slim-indent-bottom {
   margin-bottom: 20px;
   font-size: 16px;
