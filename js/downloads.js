@@ -151,7 +151,7 @@ function compareCategories(a, b) {
     //    return false;
     //}
     //return a.name > b.name;
-    index = 0;
+    var index = 0;
     while(a[index] == b[index]) {
         index = index + 1;
     }
