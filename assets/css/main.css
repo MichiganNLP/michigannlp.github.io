@@ -1500,8 +1500,14 @@ fa-linkedin:before {
 		}
 
 	h1 {
-		font-size: 1.75em;
+		font-size: 2em;
 	}
+
+    #laura {
+        font-size: 3.5em;
+        font-family: 'Bilbo Swash Caps', cursive;
+        margin-bottom: 20px;
+        }
 
 		@media screen and (max-width: 980px) {
 
@@ -1619,7 +1625,7 @@ fa-linkedin:before {
 	}
 
 	header p {
-		color: rgba(255, 255, 255, 0.45);
+		color: rgba(255, 255, 255);
 		position: relative;
 		margin: 0 0 1.5em 0;
 	}
@@ -2605,7 +2611,7 @@ fa-linkedin:before {
 		}
 
         #header h2 {
-            color: rgba(255, 255, 255, 0.65);
+            color: rgba(255, 255, 255);
         }
 
 		#header .avatar {
