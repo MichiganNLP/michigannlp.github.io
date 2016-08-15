@@ -58,7 +58,7 @@ function processDownloads(allText,pageCategory) {
         categories[i].publications.sort(comparePublications);
         
         if(i==0) {
-            $('#downloads-outline').append('<p class="lead-nomargin"><<b>'+categories[i].name+'</b></p>');
+            $('#downloads-outline').append('<p class="lead-nomargin"><b>'+categories[i].name+'</b></p>');
         } else {
             $('#downloads-outline').append('<p id="top-margin" class="lead-nomargin"><b>' +categories[i].name+'</b></p>');
         }
