@@ -8,6 +8,15 @@ $(document).ready(function() {
         dataType: "text",
         success: function(data) {processDownloads(data,pageCategory);}
     });
+    
+    //Dynamically load people
+     $.ajax({
+        type: "GET",
+        url: "../data/people.csv",
+        dataType: "text",
+        success: function(data) {processPeople(data,pageCategory);}
+    });
+
 });
 
 function processDownloads(allText,pageCategory) {
