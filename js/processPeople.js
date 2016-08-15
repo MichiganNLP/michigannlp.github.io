@@ -13,7 +13,7 @@ function processPeople(allText,pageCategory) {
     for (var i=1; i<arrData.length; i++) {
         var data = arrData[i];
     
-        var person = {image:data[0], name:data[1], description:data[2], uniqname:data[3], link:data[4], category:data[5]};
+        var person = {image:data[0], name:data[1], description:data[2], uniqname:data[3], e-mail_domain:data[4], link:data[5], category:data[6]};
 
         var allCats = person.category.split(',');
         var found = 0;
@@ -34,7 +34,7 @@ function processPeople(allText,pageCategory) {
             } else {
                 entry = entry + person.name;
             }
-            entry = entry + '</b></p>' + '<p class="lead">' + person.description + '</p><p class="lead">' + person.uniqname + ' at umich.edu</p>' + '</div>';
+            entry = entry + '</b></p>' + '<p class="lead">' + person.description + '</p><p class="lead">' + person.uniqname + ' at ' + person.e-mail_domain + '</p>' + '</div>';
             
             entriesAdded = entriesAdded + 1;
             if(entriesAdded % 6 == 1) { //append new row
