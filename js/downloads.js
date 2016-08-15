@@ -58,25 +58,25 @@ function processDownloads(allText,pageCategory) {
         categories[i].publications.sort(comparePublications);
         
         if(i==0) {
-            $('#downloads-outline').append('<p class="lead-nomargin"><a href="#' + categories[i].name + '"><b>'+categories[i].name+'</b></a></p>');
+            $('#downloads-outline').append('<p class="lead-nomargin"><<b>'+categories[i].name+'</b></p>');
         } else {
-            $('#downloads-outline').append('<p id="top-margin" class="lead-nomargin"><a href="#' + categories[i].name + '"><b>' +categories[i].name+'</b></a></p>');
+            $('#downloads-outline').append('<p id="top-margin" class="lead-nomargin"><b>' +categories[i].name+'</b></p>');
         }
         for(var j=0; j<categories[i].publications.length; ++j) {
             publication = categories[i].publications[j];
             if(j != 0 && publication.downloadName == categories[i].publications[j-1].downloadName) {
                 //duplicate, don't do anything
             } else if(publication.new=="TRUE") {
-                $('#downloads-outline').append('<p class="lead-nomargin"><span class="red">NEW</span> ' + publication.downloadName + '</p>');
+                $('#downloads-outline').append('<p class="lead-nomargin"><span class="red">NEW</span> <a href="#' + publication.downloadName + '">' + publication.downloadName + '</a></p>');
             } else {
-                $('#downloads-outline').append('<p class="lead-nomargin">' + publication.downloadName + '</p>');
+                $('#downloads-outline').append('<p class="lead-nomargin"><a href="#' + publication.downloadName + '">' + publication.downloadName + '</a></p>');
             }
         }
     }
     
     //All of the download information
     for(var i=0; i<categories.length; ++i) {
-        $('#all-downloads').append('<h2 class="featurette-heading"><a name="' + categories[i].name + '">' + categories[i].name + '</a></h2>');
+        $('#all-downloads').append('<h2 class="featurette-heading">' + categories[i].name + '</h2>');
         
         entry = '';
         var index = 0; //keep track of how many downloads you've added
@@ -100,7 +100,7 @@ function processDownloads(allText,pageCategory) {
             }
             
             //name
-            entry = entry + '<div class="col-sm-6"><div class="panel panel-default"><div class="panel-heading"><h3 class="panel-title">' + publication.downloadName + '</h3></div><div class="panel-body">';
+            entry = entry + '<div class="col-sm-6"><div class="panel panel-default"><div class="panel-heading"><h3 class="panel-title"><a name="' + publication.downloadName + '">' + publication.downloadName + '</a></h3></div><div class="panel-body">';
             
             //dates
             var dates = publication.downloadDate.split('; ');
