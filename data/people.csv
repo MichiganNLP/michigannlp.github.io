@@ -1,15 +1,18 @@
-image,name,description,uniqname,link,category
-rada.jpg,Rada Mihalcea,Associate Professor,mihalcea,https://web.eecs.umich.edu/~mihalcea/,"LIT, Girls Encoded"
-mohamed.jpg,Mohamed Abouelenien,Post-Doctoral Researcher,zmohamed,http://web.eecs.umich.edu/~zmohamed/,LIT
-mahmoud.jpg,Mahmoud Azab,"PhD Student, Computer Science and Engineering",mazab,http://web.eecs.umich.edu/~mazab/,LIT
-carmen.jpg,Carmen Banea,Post-Doctoral Researcher,carmennb,http://www.carmenbanea.com/,LIT
-jessica.jpg,Jessica Xi Chen,"Undergraduate Student, Computer Science and Engineering",chenxicx,,LIT
-hogene.jpg,Ho-gene Choe,"Masters Student, Computer Science and Engineering",hgchoe,,LIT
-aparna.jpg,Aparna Garimella,"PhD Student, Computer Science and Engineering",gaparna,,LIT
-shibamouli.jpg,Shibamouli Lahiri,"PhD Student, Computer Science and Engineering",shibamoulilahiri,http://web.eecs.umich.edu/~lahiri/,LIT
-konstantinos.jpg,Konstantinos Pappas,"PhD Student, Computer Science and Engineering",pappus,,LIT
-veronica.jpg,Veronica Perez Rosas,Post-Doctoral Researcher,vrncapr,,"LIT, Girls Encoded"
-charlie.jpg,Charlie Welch,"PhD Student, Computer Science and Engineering",cfwelch,http://web.eecs.umich.edu/~cfwelch/,LIT
-laura.jpg,Laura Wendlandt,"PhD Student, Computer Science and Engineering",wenlaura,http://www.laurawendlandt.com,"LIT, Girls Encoded"
-steve.jpg,Steven Wilson,"PhD Student, Computer Science and Engineering",steverw,http://nlp.eecs.umich.edu/~steverw/,LIT
-renhan.jpg,Renhan Zhang,"Masters Student, Computer Science and Engineering",rhzhang,,LIT
+image,name,description,uniqname,e-mail_domain,link,category
+rada.jpg,Rada Mihalcea,Associate Professor,mihalcea,umich.edu,https://web.eecs.umich.edu/~mihalcea/,"LIT, Girls Encoded, Computational Social Science"
+mohamed.jpg,Mohamed Abouelenien,Post-Doctoral Researcher,zmohamed,umich.edu,http://web.eecs.umich.edu/~zmohamed/,LIT
+mahmoud.jpg,Mahmoud Azab,"PhD Student, Computer Science and Engineering",mazab,umich.edu,http://web.eecs.umich.edu/~mazab/,LIT
+carmen.jpg,Carmen Banea,Post-Doctoral Researcher,carmennb,umich.edu,http://www.carmenbanea.com/,LIT
+jessica.jpg,Jessica Xi Chen,"Undergraduate Student, Computer Science and Engineering",chenxicx,umich.edu,,LIT
+hogene.jpg,Ho-gene Choe,"Masters Student, Computer Science and Engineering",hgchoe,umich.edu,,LIT
+aparna.jpg,Aparna Garimella,"PhD Student, Computer Science and Engineering",gaparna,umich.edu,,LIT
+shibamouli.jpg,Shibamouli Lahiri,"PhD Student, Computer Science and Engineering",shibamoulilahiri,umich.edu,http://web.eecs.umich.edu/~lahiri/,LIT
+konstantinos.jpg,Konstantinos Pappas,"PhD Student, Computer Science and Engineering",pappus,umich.edu,,LIT
+veronica.jpg,Veronica Perez Rosas,Post-Doctoral Researcher,vrncapr,umich.edu,,"LIT, Girls Encoded"
+charlie.jpg,Charlie Welch,"PhD Student, Computer Science and Engineering",cfwelch,umich.edu,http://web.eecs.umich.edu/~cfwelch/,LIT
+laura.jpg,Laura Wendlandt,"PhD Student, Computer Science and Engineering",wenlaura,umich.edu,http://www.laurawendlandt.com,"LIT, Girls Encoded"
+steve.jpg,Steven Wilson,"PhD Student, Computer Science and Engineering",steverw,umich.edu,http://nlp.eecs.umich.edu/~steverw/,"LIT, Computational Social Science"
+renhan.jpg,Renhan Zhang,"Masters Student, Computer Science and Engineering",rhzhang,umich.edu,,LIT
+pennebaker.jpg,James Pennebaker,"Regents Centennial Chair of Psychology, University of Texas at Austin",pennebaker,mail.utexas.edu,https://liberalarts.utexas.edu/psychology/faculty/pennebak,Computational Social Science
+,Ryan Boyd,"PhD Student, Psychology, University of Texas at Austin",ryanb,ryanb.cc,http://ryanb.cc/,Computational Social Science
+,Xianzhi Ruan,,rxianzhi,umich.edu,,"LIT, Computational Social Science"
