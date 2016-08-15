@@ -28,7 +28,11 @@ function processPeople(allText,pageCategory) {
             }
         }
         if(found==1) {
-            entry = '<div class="col-md-2"><img src="images/'+ person.image + '" class="profile_pic" alt="' + person.name + '"><p class="lead"><b>';
+            if(person.image) {
+                entry = '<div class="col-md-2"><img src="images/'+ person.image + '" class="profile_pic" alt="' + person.name + '"><p class="lead"><b>';
+            } else {
+                entry = '<div class="col-md-2"><img src="images/none.png" class="profile_pic" alt="No image available"><p class="lead"><b>';
+            }
             if(person.link) {
                 entry = entry + '<a href="' + person.link + '">' + person.name + '</a>';
             } else {
