@@ -9,6 +9,9 @@
 //  Boolean - should you link to the downloads page? (if you're already on the downloads page, no; if not, maybe?)
 
 function showPublication(publication,includeDownloadLink) {
+    if(!publication.title) {
+        return '';
+    }
     var entry = '<p class="lead-slim"><b>' + publication.title + '</b>';
     if(publication.link || publication.demo || publication.data || publication.software) {
         entry = entry + ' ('
