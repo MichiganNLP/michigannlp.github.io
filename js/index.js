@@ -4,7 +4,7 @@ $(document).ready(function() {
     //Dynamically load recent news
      $.ajax({
         type: "GET",
-        url: "../data/recent_news.csv",
+        url: "wendlandt.github.io/data/recent_news.csv",
         dataType: "text",
         success: function(data) {processRecentNews(data,pageCategory);}
     });
