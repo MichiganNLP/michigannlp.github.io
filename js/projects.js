@@ -19,7 +19,7 @@ function processProjects(allText,pageCategory) {
     for (var i=1; i<arrData.length; i++) {
         var data = arrData[i];
         
-        var project = {name:data[0], description:data[1], link:data[2], current:data[3], category:data[4]};
+        var project = {name:data[0], description:data[1], link:data[2], newTab:data[3], current:data[4], category:data[5]};
         
         var allCats = project.category.split(',');
         var found = 0;
@@ -52,8 +52,11 @@ function processProjects(allText,pageCategory) {
         }
             
         entry = entry + '<div class="col-sm-6"><div class="panel panel-default"><div class="panel-heading"><h3 class="panel-title">' + current[i].name + '</h3></div><div class="panel-body"><p class="lead">' + current[i].description + '</p>';
-        if(current[i].link) {
+        if(current[i].link && current[i].newTab=='TRUE') {
             entry = entry + '<p class="lead">Please see more <a href="' + current[i].link + '" target="_blank">here</a>.</p>';
+        }
+        if(current[i].link && current[i].newTab!='TRUE') {
+            entry = entry + '<p class="lead">Please see more <a href="' + current[i].link + '">here</a>.</p>';
         }
         
         entry = entry + '</div></div></div>';
