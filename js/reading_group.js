@@ -121,15 +121,13 @@ function processReadingGroup(allText,pageCategory) {
 function compareSemesters(a, b) {
     a_components = a.name.split(' ');
     b_components = b.name.split(' ');
-    alert(a_components);
-    alert(b_components);
     
     //If the years are different, show the most recent year first
     if(a_components[1] != b_components[1]) {
         return b_components[1] - a_components[1];
-    } else if(a_components[1] == "Winter") {
+    } else if(a_components[0] == "Winter") {
         return 1;
-    } else if(a_components[1] == "Fall") {
+    } else if(a_components[0] == "Fall") {
         return -1;
     } else {
         return 0;
