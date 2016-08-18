@@ -4,7 +4,7 @@ Here are the descriptions of what columns are included in people.csv (refer to w
 
 ----------
 
-Image (optional) - filename of the image for this person (This image should be formatted as a square image and placed in the images folder in the repository)
+Image (optional) - filename of the image for this person (This image should be formatted as a square image and placed in the images/people folder in the repository)
 
 Name (required) - name of the person
 
