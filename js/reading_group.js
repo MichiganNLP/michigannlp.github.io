@@ -89,21 +89,21 @@ function processReadingGroup(allText,pageCategory) {
             slides = event.slides.split('; ');
             
             entry = entry + '<td class="centered"><p class="lead">';
-            for(var j=0; j<paperAuthors.length; ++j) {
-                entry = entry + paperAuthors[j] + '. "';
-                if(paperLinks[j]) {
-                    entry = entry + '<a href="' + paperLinks[j] + '" target="_blank">' + paperTitles[j] + '</a>" ';
+            for(var k=0; k<paperAuthors.length; ++k) {
+                entry = entry + paperAuthors[k] + '. "';
+                if(paperLinks[k]) {
+                    entry = entry + '<a href="' + paperLinks[k] + '" target="_blank">' + paperTitles[k] + '</a>" ';
                 } else {
-                    entry = entry + paperTitles[j] + '" ';
+                    entry = entry + paperTitles[k] + '" ';
                 }
-                entry = entry + paperConferences[j] + '.'
+                entry = entry + paperConferences[k] + '.'
                 if(slides.length > 1 && paperAuthors.length > 1) {
-                    entry = entry + ' [<a href="' + slides[j] + '" target="_blank">slides</a>]';
+                    entry = entry + ' [<a href="' + slides[k] + '" target="_blank">slides</a>]';
                 }
-                if(slides.length == 1 && j == paperAuthors.length-1 && slides[0]) {
+                if(slides.length == 1 && k == paperAuthors.length-1 && slides[0]) {
                     entry = entry + ' [<a href="' + slides[0] + '" target="_blank">slides</a>]';
                 }
-                if(j != paperAuthors.length-1) {
+                if(k != paperAuthors.length-1) {
                     entry = entry + '<br />';
                 }
             }
@@ -126,9 +126,9 @@ function compareSemesters(a, b) {
     if(a_components[1] != b_components[1]) {
         return b_components[1] - a_components[1];
     } else if(a_components[1] == "Winter") {
-        return 1;
-    } else if(a_components[1] == "Fall") {
         return -1;
+    } else if(a_components[1] == "Fall") {
+        return 1;
     } else {
         return 0;
     }
