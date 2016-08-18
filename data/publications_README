@@ -2,26 +2,40 @@ Please contact Laura Wendlandt (wenlaura@umich.edu) with questions, clarificatio
 
 Here are the descriptions of what columns are included in publications.csv (refer to when adding a new row to the datafile):
 
+----------
+
 Year (optional) - year the publication was published
+
 Title (optional) - title of the publication
-Authors (optional) - list of comma-separated authors of the publicatoin
+
+Authors (optional) - list of authors of the publication (separated by a comma and a space)
+
 Publication (optional) - venue that the publication was published in
+
 Link (optional) - link to pdf of the publication
 
 Category (required) - what category this publication falls under (refer to categories already used on LIT website; if publication doesn't fall under any of them, choose "Other"; avoid making categories with only one or two publications in them)
 
 Demo (optional) - link to demo of publication
+
 Data (optional) - link to data used in publication
+
 Software (optional) - link to software described in publication
 
-PageCategory (required) - which website this publication should appear on (ie. "LIT")
+PageCategory (required) - which website this publication should appear on (ie. "LIT","Girls Encoded"; Multiple categories should be separated by a comma and a space)
 
 Download (required) - either TRUE or FALSE; is there a separate download associated with this publication? (The download will appear on the "Downloads" page of the website; you can include downloads that don't have papers associated with them by leaving the year, title, authors, and publication fields blank)
 
 DownloadName (optional) - name of the download (treat demos like downloads)
-DownloadDescription (optional) - description of the download (feel free to use HTML markup, just make sure to use the straight quotes, rather than the curved ones)
+
+DownloadDescription (optional) - description of the download (feel free to use HTML markup, just make sure to use the straight quotes, rather than the curved ones for links)
+
 DownloadLink (optional) - link to the download (you can include multiple links by separating them with a semi-colon and a space)
+
 DownloadDate (optional) - the date the download was put on the website (you can include multiple dates by separating them with a semi-colon and a space)
+
 DownloadLinkNames (optional) - if you have multiple download links, include names for each of them; separate names by a semi-colon and a space
 
 New (required) - either TRUE or FALSE; should this download be flagged as a new download?
+
+----------

@@ -1,0 +1,17 @@
+Please contact Laura Wendlandt (wenlaura@umich.edu) with questions, clarifications, or suggestions.
+
+Here are the descriptions of what columns are included in recent_news.csv (refer to when adding a new row to the datafile):
+
+----------
+
+Date (required) - date of the news event
+
+Description (required) - short description of the news event
+
+Link (optional) - link to further information about the news event
+
+Category (required) - which website this publication should appear on (ie. "LIT","Girls Encoded"; Multiple categories should be separated by a comma and a space)
+
+----------
+
+NOTE: The order that news events appear in recent_news.csv will be the order that they appear on the website (sorted by year).

@@ -1,0 +1,33 @@
+Please contact Laura Wendlandt (wenlaura@umich.edu) with questions, clarifications, or suggestions.
+
+Here are the descriptions of what columns are included in reading_group.csv (refer to when adding a new row to the datafile):
+
+----------
+
+Date (required) - date of the reading group meeting
+
+Time (required) - time of the reading group meeting
+
+Presenters (required) - presenters for the reading group meeting (Multiple presenters should be separated by a semi-colon and a space)
+
+PresentersWebsites (required) - websites for the presenters (If you have multiple presenters, separate their websites by a semi-colon and a space; if a presenter does not have a website, include a blank string in the list)
+
+PaperAuthors (required) - the authors of the paper being presented (If there are multiple papers being presented, separate the lists of authors by a semi-colon and a space)
+
+PaperTitles (required) - the titles of the paper being presented (If there are multiple papers being presented, separate the titles by a semi-colon and a space)
+
+PaperConferences (required) - the conferences that the papers were published in (If there are multiple papers being presented, separate the conferences by a semi-colon and space)
+
+PaperLinks (optional) - links to the papers being presented (If there are multiple papers being presented, separate the links by a semi-colon and a space)
+
+Slides (optional) - links to the slides used in reading group (If there are multiple sets of slides, separate the links by a semi-colon and a space; It will be assumed that the order of the slides corresponds to the order of the papers being presented)
+
+Location (required) - location of the reading group meeting
+
+Category (required) - which website this publication should appear on (ie. "LIT","Girls Encoded"; Multiple categories should be separated by a comma and a space)
+
+Semester (required) - what semester reading group this is (in the format "Winter 20XX" or "Fall 20XX")
+
+----------
+
+NOTE: The order that reading group meetings appear in reading_group.csv will be the order that they appear on the website (sorted by semester). To be consistent, meetings should appear from most recent (at the top of the file) to least recent (at the bottom of the file).

@@ -2,11 +2,18 @@ This is the website for the LIT research group at the University of Michigan. Th
 
 For questions about this README or the website, please contact Laura Wendlandt at wenlaura@umich.edu.
 
+---------------
+WHAT'S INCLUDED
+---------------
+	 * LIT website (home page: index.html)
+	 * Girls Encoded website (home page: girls_encoded_index.html)
+	 * Laura's personal website (home page: laura_index.html)
+
 ----------------------------------
 HOW TO MAKE CHANGES TO THE WEBSITE
 ----------------------------------
 Most of the website is dynamically generated from a set of CSV files. For most of the changes that you'll need to make, all you need to do is change the CSV file and the website will automatically update. Here's some things that you might need to update:
-     * Adding a publication: update data/publications.csv
+	 * Adding a publication: update data/publications.csv
 	 * Adding a download or demo: update data/publications.csv
 	 * Adding/updating information about a person: update data/people.csv
 	 * Adding a new reading group event: update data/reading_group.csv

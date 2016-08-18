@@ -1,0 +1,19 @@
+Please contact Laura Wendlandt (wenlaura@umich.edu) with questions, clarifications, or suggestions.
+
+Here are the descriptions of what columns are included in projects.csv (refer to when adding a new row to the datafile):
+
+----------
+
+Name (required) - name of the project
+
+Description (optional) - description of the project (feel free to use HTML markup, just make sure to use the straight quotes, rather than the curved ones for links)
+
+Link (optional) - link to the project webpage
+
+NewTab (required) - either TRUE or FALSE; should the webpage open in a new tab? (if it's a part of the LIT website, no; if it's a separate website, yes)
+
+Current (required) - either TRUE or FALSE; is this a current project?
+
+Category (required) - which website this publication should appear on (ie. "LIT","Girls Encoded"; Multiple categories should be separated by a comma and a space)
+
+----------

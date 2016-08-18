@@ -1,0 +1,23 @@
+Please contact Laura Wendlandt (wenlaura@umich.edu) with questions, clarifications, or suggestions.
+
+Here are the descriptions of what columns are included in people.csv (refer to when adding a new row to the datafile):
+
+----------
+
+Image (optional) - filename of the image for this person (This image should be formatted as a square image and placed in the images folder in the repository)
+
+Name (required) - name of the person
+
+Description (optional) - description of the person
+
+Uniqname (required) - uniqname of the person, if the person is at the University of Michigan (if the person is not at U of M, this is the first part of their e-mail address, before the @ sign)
+
+E-mail Domain (required) - the domain of the person's e-mail (ie. umich.edu, if the person is at U of M)
+
+Link (optional) - link to the person's website
+
+Category (required) - which website this publication should appear on (ie. "LIT","Girls Encoded"; Multiple categories should be separated by a comma and a space)
+
+----------
+
+NOTE: The order that people are listed in people.csv will be the order that they appear on the website (should be, in general, professors first, and then students / post-docs in alphabetical order).
