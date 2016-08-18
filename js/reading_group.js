@@ -124,11 +124,11 @@ function compareSemesters(a, b) {
     
     //If the years are different, show the most recent year first
     if(a_components[1] != b_components[1]) {
-        return a_components[1] - b_components[1];
+        return b_components[1] - a_components[1];
     } else if(a_components[1] == "Winter") {
-        return -1;
-    } else if(a_components[1] == "Spring") {
         return 1;
+    } else if(a_components[1] == "Fall") {
+        return -1;
     } else {
         return 0;
     }
