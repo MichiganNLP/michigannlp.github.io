@@ -58,7 +58,7 @@ function processReadingGroup(allText,pageCategory) {
         $('#reading-group').append('<h2 class="featurette-heading">' + semesters[i].name + '</h2>');
         var entry = '<table id="reading-group-table"><tbody id="reading-group-tbody"><tr><th id="col1" class><p class="lead"><b>Date / Time</b></p></th><th id="col2" class="centered"><p class="lead"><b>Presenter</b></p></th><th id="col3" class="centered"><p class="lead"><b>Paper</b></p></th><th id="col4" class="centered"><p class="lead"><b>Location</b></p></th></tr>'
 
-        for(var j=0; j<semesters.events.length; ++j) {
+        for(var j=0; j<semesters[i].events.length; ++j) {
             event = semesters.events[j];
             
             //date/time
