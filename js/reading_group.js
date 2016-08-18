@@ -69,13 +69,13 @@ function processReadingGroup(allText,pageCategory) {
             var presentersWebsites = event.presentersWebsites.split('; ');
 
             entry = entry + '<td class="centered"><p class="lead">';
-            for(var j=0; j<presenters.length; ++j) {
-                if(presentersWebsites[j]) {
-                    entry = entry + '<a href="' + presentersWebsites[j] + '" target="_blank">' + presenters[j] + '</a>';
+            for(var k=0; k<presenters.length; ++k) {
+                if(presentersWebsites[k]) {
+                    entry = entry + '<a href="' + presentersWebsites[k] + '" target="_blank">' + presenters[k] + '</a>';
                 } else {
-                    entry = entry + presenters[j];
+                    entry = entry + presenters[k];
                 }
-                if(j != presenters.length - 1) {
+                if(k != presenters.length - 1) {
                     entry = entry + ', ';
                 }
             }
@@ -88,8 +88,6 @@ function processReadingGroup(allText,pageCategory) {
             paperLinks = event.paperLinks.split('; ');
             slides = event.slides.split('; ');
             
-            alert(paperAuthors);
-            alert(paperTitles);
             entry = entry + '<td class="centered"><p class="lead">';
             for(var k=0; k<paperAuthors.length; ++k) {
                 entry = entry + paperAuthors[k] + '. "';
