@@ -121,6 +121,8 @@ function processReadingGroup(allText,pageCategory) {
 function compareSemesters(a, b) {
     a_components = a.name.split(' ');
     b_components = b.name.split(' ');
+    alert(a_components);
+    alert(b_components);
     
     //If the years are different, show the most recent year first
     if(a_components[1] != b_components[1]) {
