@@ -126,9 +126,9 @@ function compareSemesters(a, b) {
     if(a_components[1] != b_components[1]) {
         return b_components[1] - a_components[1];
     } else if(a_components[1] == "Winter") {
-        return -1;
-    } else if(a_components[1] == "Fall") {
         return 1;
+    } else if(a_components[1] == "Fall") {
+        return -1;
     } else {
         return 0;
     }
