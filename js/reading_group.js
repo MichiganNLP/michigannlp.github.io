@@ -115,6 +115,7 @@ function processReadingGroup(allText,pageCategory) {
         
         entry = entry + '</tbody></table>';
         $('#reading-group').append(entry);
+        $('#reading-group').append('<p class="lead"><a href="#">Back to top</a></p>');
     }
 }
 
