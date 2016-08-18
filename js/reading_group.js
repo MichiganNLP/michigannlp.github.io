@@ -88,6 +88,8 @@ function processReadingGroup(allText,pageCategory) {
             paperLinks = event.paperLinks.split('; ');
             slides = event.slides.split('; ');
             
+            alert(paperAuthors);
+            alert(paperTitles);
             entry = entry + '<td class="centered"><p class="lead">';
             for(var k=0; k<paperAuthors.length; ++k) {
                 entry = entry + paperAuthors[k] + '. "';
