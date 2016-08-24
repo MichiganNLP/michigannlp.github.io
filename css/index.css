@@ -329,3 +329,7 @@ p.lead-nomargin {
     width: 39%;
     margin-left: 1%;
 }
+
+#top_margin {
+    margin-top: 20px;
+}
