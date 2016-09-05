@@ -39,7 +39,7 @@ function processSponsors(allText,pageCategory) {
             }
             index = index + 1;
             
-            entry = '<div class="col-md-3"><img src="../images/sponsors/'+ sponsor.image + '" class="profile_pic_nonrounded" alt="' + sponsor.name + '"><p class="lead"><b></div>';
+            entry = '<div class="col-md-3" id="sponsor_cell"><img src="../images/sponsors/'+ sponsor.image + '" class="profile_pic_nonrounded" alt="' + sponsor.name + '"><p class="lead"><b></div>';
             $('#sponsors_row' + rowNum).append(entry);
         }
     }

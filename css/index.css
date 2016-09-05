@@ -264,6 +264,10 @@ p.lead-slim-indent-bottom {
     margin-bottom: 30px;
 }
 
+#sponsor_cell {
+    width: 1000px;
+}
+
 /* Girls Encoded Get Involved Page */
 #get-involved-row {
     margin-top: 20px;
