@@ -33,16 +33,16 @@ function processSponsors(allText,pageCategory) {
             }
         }
         if(found==1) {
-            if(totalWidth == 0 || totalWidth + sponsor.width > 4) { //append new row
+            if(totalWidth == 0 || totalWidth + parseInt(sponsor.width) > 4) { //append new row
                 rowNum = rowNum + 1;
                 $('#sponsors').append('<div class="row" id="sponsors_row' + rowNum +'">');
                 totalWidth = 0
-                alert('inside');
-                alert(totalWidth);
+                //alert('inside');
+                //alert(totalWidth);
             }
-            totalWidth = totalWidth + sponsor.width;
-            alert('outside');
-            alert(totalWidth);
+            totalWidth = totalWidth + parseInt(sponsor.width);
+            //alert('outside');
+            //alert(totalWidth);
             
             entry = '<div class="col-md-' + sponsor.width*3 + '" id="sponsor_cell"><img src="../images/sponsors/'+ sponsor.image + '" class="profile_pic_nonrounded" alt="' + sponsor.name + '"><p class="lead"><b></div>';
             $('#sponsors_row' + rowNum).append(entry);
