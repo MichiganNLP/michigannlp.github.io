@@ -37,7 +37,7 @@ function processSponsors(allText,pageCategory) {
                 rowNum = rowNum + 1;
                 $('#sponsors').append('<div class="row" id="sponsors_row' + rowNum +'">');
                 totalWidth = 0
-                alert('new row');
+                alert(totalWidth);
             }
             totalWidth = totalWidth + sponsor.width;
             
