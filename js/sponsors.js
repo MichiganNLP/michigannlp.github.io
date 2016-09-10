@@ -14,11 +14,11 @@ function processSponsors(allText,pageCategory) {
     arrData = parseCsv(allText);
     
     var rowNum = -1;
-    var index = 1;
+    var totalWidth = 0; //4 wide to a row
     for (var i=1; i<arrData.length; i++) {
         var data = arrData[i];
         
-        var sponsor = {image:data[0], name:data[1], category:data[2]};
+        var sponsor = {image:data[0], name:data[1], category:data[2], width:data[3]};
 
         var allCats = sponsor.category.split(',');
         var found = 0;
@@ -33,13 +33,14 @@ function processSponsors(allText,pageCategory) {
             }
         }
         if(found==1) {
-            if(index % 4 == 1) { //append new row
+            if(totalWidth == 0 || totalWidth + sponsor.width > 4) { //append new row
                 rowNum = rowNum + 1;
                 $('#sponsors').append('<div class="row" id="sponsors_row' + rowNum +'">');
+                totalWidth = 0
             }
-            index = index + 1;
+            totalWidth = totalWidth + sponsor.width;
             
-            entry = '<div class="col-md-3" id="sponsor_cell"><img src="../images/sponsors/'+ sponsor.image + '" class="profile_pic_nonrounded" alt="' + sponsor.name + '"><p class="lead"><b></div>';
+            entry = '<div class="col-md-' + sponsor.width*3 + '" id="sponsor_cell"><img src="../images/sponsors/'+ sponsor.image + '" class="profile_pic_nonrounded" alt="' + sponsor.name + '"><p class="lead"><b></div>';
             $('#sponsors_row' + rowNum).append(entry);
         }
     }
