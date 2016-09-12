@@ -45,7 +45,9 @@ function processEvents(allText,pageCategory) {
         var data = arrData[i];
         
         var event = {title:data[0], description:data[1], image:data[2], image_alt:data[3], category:data[4]};
-        alert(event);
+        alert(event.title);
+        alert(event.description);
+        alert(event.image);
 
         var allCats = event.category.split(',');
         var found = 0;
