@@ -288,13 +288,19 @@ p.lead-nomargin {
 }
 
 #sponsor-heading-silver {
-    background-color: #C0C0C0;
+    background-color: #d3d3d3;
     padding: 10px;
     color: #444;
 }
 
 #sponsor-heading-bronze {
-    background-color: #cc6600;
+    background-color: #E6801A;
+    padding: 10px;
+    color: #444;
+}
+
+#sponsor-heading-platinum {
+    background-color: #C09A7E;
     padding: 10px;
     color: #444;
 }
