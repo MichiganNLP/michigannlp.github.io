@@ -45,9 +45,6 @@ function processEvents(allText,pageCategory) {
         var data = arrData[i];
         
         var event = {title:data[0], description:data[1], image:data[2], image_alt:data[3], category:data[4]};
-        alert(event.title);
-        alert(event.description);
-        alert(event.image);
 
         var allCats = event.category.split(',');
         var found = 0;
@@ -71,9 +68,9 @@ function processEvents(allText,pageCategory) {
         
             entry = entry + '<div class="col-sm-6"><div class="panel panel-default"><div class="panel-heading"><h3 class="panel-title">' + event.title + '</h3></div><div class="panel-body">'
             if(entry.image) {
-                entry = entry + '<img id="events-left-image" src="images/' + entry.image + '" alt="' + entry.image_alt + '">';
+                entry = entry + '<img id="events-left-image" src="images/' + event.image + '" alt="' + event.image_alt + '">';
             }
-            entry = entry + entry.description + '</div></div></div>';
+            entry = entry + event.description + '</div></div></div>';
             
             added = added + 1;
         }
