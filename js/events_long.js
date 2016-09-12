@@ -67,7 +67,7 @@ function processEvents(allText,pageCategory) {
             }
         
             entry = entry + '<div class="col-sm-6"><div class="panel panel-default"><div class="panel-heading"><h3 class="panel-title">' + event.title + '</h3></div><div class="panel-body">'
-            if(entry.image) {
+            if(event.image) {
                 entry = entry + '<img id="events-left-image" src="images/' + event.image + '" alt="' + event.image_alt + '">';
             }
             entry = entry + event.description + '</div></div></div>';
