@@ -52,7 +52,8 @@ function processRecentNews(allText,pageCategory) {
                 }
             }
             if(!dateFound) {
-                alert(currentMonth,currentYear)
+                alert(currentMonth)
+                alert(currentYear)
                 var date = {month:currentMonth, year:currentYear, news:[news]};
                 dates.push(date);
             }
