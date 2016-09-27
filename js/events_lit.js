@@ -44,7 +44,7 @@ function processRecentNews(allText,pageCategory) {
             
             //is this month and year already in the dates array?
             var dateFound = false;
-            for(var j=1; j<dates.length; j++) {
+            for(var j=0; j<dates.length; j++) {
                 if(dates[j].month == currentMonth && dates[j].year == currentYear) {
                     dates[j].news.push(news);
                     dateFound = true;
@@ -52,8 +52,6 @@ function processRecentNews(allText,pageCategory) {
                 }
             }
             if(!dateFound) {
-                alert(currentMonth)
-                alert(currentYear)
                 var date = {month:currentMonth, year:currentYear, news:[news]};
                 dates.push(date);
             }
