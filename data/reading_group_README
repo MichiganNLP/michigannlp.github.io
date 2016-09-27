@@ -30,4 +30,4 @@ Semester (required) - what semester reading group this is (in the format "Winter
 
 ----------
 
-NOTE: The order that reading group meetings appear in reading_group.csv will be the order that they appear on the website (sorted by semester). To be consistent, meetings should appear from most recent (at the top of the file) to least recent (at the bottom of the file).
+NOTE: The order that reading group meetings appear in reading_group.csv will be the order that they appear on the website (sorted by semester).
