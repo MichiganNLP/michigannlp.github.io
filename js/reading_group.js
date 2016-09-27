@@ -87,25 +87,25 @@ function processReadingGroup(allText,pageCategory) {
             paperConferences = event.paperConferences.split('; ');
             paperLinks = event.paperLinks.split('; ');
             slides = event.slides.split('; ');
-            alert(paperAuthors)
-            alert(paperAuthors.length)
             entry = entry + '<td class="centered"><p class="lead">';
             for(var k=0; k<paperAuthors.length; ++k) {
-                entry = entry + paperAuthors[k] + '. "';
-                if(paperLinks[k]) {
-                    entry = entry + '<a href="' + paperLinks[k] + '" target="_blank">' + paperTitles[k] + '</a>" ';
-                } else {
-                    entry = entry + paperTitles[k] + '" ';
-                }
-                entry = entry + paperConferences[k] + '.'
-                if(slides.length > 1 && paperAuthors.length > 1) {
-                    entry = entry + ' [<a href="' + slides[k] + '" target="_blank">slides</a>]';
-                }
-                if(slides.length == 1 && k == paperAuthors.length-1 && slides[0]) {
-                    entry = entry + ' [<a href="' + slides[0] + '" target="_blank">slides</a>]';
-                }
-                if(k != paperAuthors.length-1) {
-                    entry = entry + '<br />';
+                if(paperAuthors[k]) {
+                    entry = entry + paperAuthors[k] + '. "';
+                    if(paperLinks[k]) {
+                        entry = entry + '<a href="' + paperLinks[k] + '" target="_blank">' + paperTitles[k] + '</a>" ';
+                    } else {
+                        entry = entry + paperTitles[k] + '" ';
+                    }
+                    entry = entry + paperConferences[k] + '.'
+                    if(slides.length > 1 && paperAuthors.length > 1) {
+                        entry = entry + ' [<a href="' + slides[k] + '" target="_blank">slides</a>]';
+                    }
+                    if(slides.length == 1 && k == paperAuthors.length-1 && slides[0]) {
+                        entry = entry + ' [<a href="' + slides[0] + '" target="_blank">slides</a>]';
+                    }
+                    if(k != paperAuthors.length-1) {
+                        entry = entry + '<br />';
+                    }
                 }
             }
             entry = entry + '</p></td>';
