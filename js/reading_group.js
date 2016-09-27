@@ -87,9 +87,9 @@ function processReadingGroup(allText,pageCategory) {
             paperConferences = event.paperConferences.split('; ');
             paperLinks = event.paperLinks.split('; ');
             slides = event.slides.split('; ');
-            
-            entry = entry + '<td class="centered"><p class="lead">';
+            alert(paperAuthors)
             alert(paperAuthors.length)
+            entry = entry + '<td class="centered"><p class="lead">';
             for(var k=0; k<paperAuthors.length; ++k) {
                 entry = entry + paperAuthors[k] + '. "';
                 if(paperLinks[k]) {
