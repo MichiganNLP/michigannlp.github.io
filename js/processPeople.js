@@ -88,9 +88,9 @@ function processPeople(allText,pageCategory) {
         entriesAdded = entriesAdded + 1;
         if(entriesAdded % 6 == 1) { //append new row
             rowNum = rowNum + 1;
-            $('#alumni').append('<div class="row" id="row' + rowNum +'">');
+            $('#alumni').append('<div class="row" id="alumni_row' + rowNum +'">');
         }
         
-        $('#row' + rowNum).append(entry);
+        $('#alumni_row' + rowNum).append(entry);
     }
 }
