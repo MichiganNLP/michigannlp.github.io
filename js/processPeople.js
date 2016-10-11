@@ -83,7 +83,14 @@ function processPeople(allText,pageCategory) {
         } else {
             entry = entry + person.name;
         }
-        entry = entry + '</b></p>' + '<p class="lead">' + person.description + '</p><p class="lead">' + person.uniqname + ' at ' + person.email_domain + '</p>' + '</div>';
+        
+        entry = entry + '</b></p>' + '<p class="lead">' + person.description + '</p>'
+        
+        if(person.uniqname && person.email_domain) {
+            entry = entry + '<p class="lead">' + person.uniqname + ' at ' + person.email_domain + '</p>';
+        }
+
+        entry = entry + '</div>';
         
         entriesAdded = entriesAdded + 1;
         if(entriesAdded % 6 == 1) { //append new row
