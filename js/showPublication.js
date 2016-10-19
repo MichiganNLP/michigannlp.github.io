@@ -16,25 +16,25 @@ function showPublication(publication,includeDownloadLink) {
     if(publication.link || publication.demo || publication.data || publication.software) {
         entry = entry + ' ('
         if(publication.link) {
-            entry = entry + '<a href="' + publication.link + '">pdf</a>';
+            entry = entry + '<a href="' + publication.link + '" target="_blank">pdf</a>';
             if(publication.demo || publication.data || publication.software) {
                 entry = entry + ', ';
             }
         }
         if(publication.demo) {
-            entry = entry + '<a href="' + publication.demo + '">demo</a>';
+            entry = entry + '<a href="' + publication.demo + '" target="_blank">demo</a>';
             if(publication.data || publication.software) {
                 entry = entry + ', ';
             }
         }
         if(publication.data) {
-            entry = entry + '<a href="' + publication.data + '">data</a>';
+            entry = entry + '<a href="' + publication.data + '" target="_blank">data</a>';
             if(publication.software) {
                 entry = entry + ', ';
             }
         } 
         if(publication.software) {
-            entry = entry + '<a href="' + publication.software + '">software</a>';
+            entry = entry + '<a href="' + publication.software + '" target="_blank">software</a>';
         }
         entry = entry + ')';
     }
