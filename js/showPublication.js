@@ -17,24 +17,36 @@ function showPublication(publication,includeDownloadLink) {
         entry = entry + ' ('
         if(publication.link) {
             entry = entry + '<a href="' + publication.link + '" target="_blank">pdf</a>';
-            if(publication.demo || publication.data || publication.software) {
+            if(publication.demo || publication.data || publication.software || publication.abstract || publication.bibtex) {
                 entry = entry + ', ';
             }
         }
         if(publication.demo) {
             entry = entry + '<a href="' + publication.demo + '" target="_blank">demo</a>';
-            if(publication.data || publication.software) {
+            if(publication.data || publication.software || publication.abstract || publication.bibtex) {
                 entry = entry + ', ';
             }
         }
         if(publication.data) {
             entry = entry + '<a href="' + publication.data + '" target="_blank">data</a>';
-            if(publication.software) {
+            if(publication.software || publication.abstract || publication.bibtex) {
                 entry = entry + ', ';
             }
         } 
         if(publication.software) {
             entry = entry + '<a href="' + publication.software + '" target="_blank">software</a>';
+            if(publication.abstract || publication.bibtex) {
+                entry = entry + ', ';
+            }
+        }
+        if(publication.abstract) {
+            entry = entry + '<a data-toggle="collapse" data-parent="#accordion" href="#' + publication.id + '_abstract">abstract</a>';
+            if(publication.bibtex) {
+                entry = entry + ', ';
+            }
+        }
+        if(publication.bibtex) {
+            entry = entry + '<a data-toggle="collapse" data-parent="#accordion" href="#' + publication.id + '_bibtex">BibTeX</a>';
         }
         entry = entry + ')';
     }
@@ -45,6 +57,15 @@ function showPublication(publication,includeDownloadLink) {
         entry = entry + '<p class="lead-slim-bottom">**More detailed resources for this paper can be found on the <a href="downloads.html">downloads</a> page.</p>';
     } else {
         entry = entry + '<p class="lead-slim-indent-bottom"><em>' + publication.publication + '</em></p>';
+    }
+    
+    if(publication.abstract) {
+        entry = entry + '<div id="' + publication.id + '_abstract" class="panel-collapse collapse out">;
+        entry = entry + '<p class="lead-slim">' + publication.abstract + '</p></div>';
+    }
+    if(publication.bibtex) {
+        entry = entry + '<div id="' + publication.id + '_bibtex" class="panel-collapse collapse out">;
+        entry = entry + '<p class="lead-slim">' + publication.bibtex + '</p></div>';
     }
 
     return entry;
