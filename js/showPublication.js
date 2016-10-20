@@ -60,11 +60,11 @@ function showPublication(publication,includeDownloadLink) {
     }
     
     if(publication.abstract) {
-        entry = entry + '<div id="' + publication.id + '_abstract" class="panel-collapse collapse out">;
+        entry = entry + '<div id="' + publication.id + '_abstract" class="panel-collapse collapse out">';
         entry = entry + '<p class="lead-slim">' + publication.abstract + '</p></div>';
     }
     if(publication.bibtex) {
-        entry = entry + '<div id="' + publication.id + '_bibtex" class="panel-collapse collapse out">;
+        entry = entry + '<div id="' + publication.id + '_bibtex" class="panel-collapse collapse out">';
         entry = entry + '<p class="lead-slim">' + publication.bibtex + '</p></div>';
     }
 
