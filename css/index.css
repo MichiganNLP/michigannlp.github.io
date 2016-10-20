@@ -63,6 +63,10 @@ p.lead-slim-indent-bottom {
   text-indent: 2em;
 }
 
+p.bibtex {
+    font-family: "Courier New";
+}
+
 #recent_news_heading {
     font-size: 30px;
 }
