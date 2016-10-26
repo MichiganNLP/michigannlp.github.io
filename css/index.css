@@ -72,8 +72,8 @@ p.bibtex {
 }
 
 /* LIT Publications Page */
-link-no-underline:hover {
-    text-decoration: none;
+link-no-underline {
+    color: red;
 }
 
 /* LIT Projects Page */
