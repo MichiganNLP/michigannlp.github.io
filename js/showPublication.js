@@ -40,13 +40,13 @@ function showPublication(publication,includeDownloadLink) {
             }
         }
         if(publication.abstract) {
-            entry = entry + '<a data-toggle="collapse" data-parent="#accordion" href="#' + publication.id + '_abstract">abstract</a>';
+            entry = entry + '<a class="link-no-underline" data-toggle="collapse" data-parent="#accordion" href="#' + publication.id + '_abstract">abstract</a>';
             if(publication.bibtex) {
                 entry = entry + ', ';
             }
         }
         if(publication.bibtex) {
-            entry = entry + '<a data-toggle="collapse" data-parent="#accordion" href="#' + publication.id + '_bibtex">BibTeX</a>';
+            entry = entry + '<a class="link-no-underline" data-toggle="collapse" data-parent="#accordion" href="#' + publication.id + '_bibtex">BibTeX</a>';
         }
         entry = entry + ')';
     }

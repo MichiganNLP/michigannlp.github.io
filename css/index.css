@@ -71,6 +71,11 @@ p.bibtex {
     font-size: 30px;
 }
 
+/* LIT Publications Page */
+a.link-no-underline.link {
+    text-decoration: none;
+}
+
 /* LIT Projects Page */
 
 #project-list {
