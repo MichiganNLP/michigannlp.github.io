@@ -72,7 +72,7 @@ p.bibtex {
 }
 
 /* LIT Publications Page */
-#link-no-underline {
+#link-no-underline:hover {
     color: red;
 }
 
