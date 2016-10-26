@@ -100,6 +100,7 @@ function processDownloads(allText,pageCategory) {
             }
             
             //name
+            entry = entry + '<a name="' + publication.id + '"></a>';
             entry = entry + '<div class="col-sm-6"><div class="panel panel-default"><div class="panel-heading"><h3 class="panel-title"><a name="' + publication.downloadName + '">' + publication.downloadName + '</a></h3></div><div class="panel-body">';
             
             //dates
@@ -159,7 +160,6 @@ function processDownloads(allText,pageCategory) {
         }
         
         entry = entry + '</div>'; //close row div
-        $('#all-downloads').append('<a name="' + publication.id + '"></a>')
         $('#all-downloads').append(entry);
         $('#all-downloads').append('<p class="lead"><a href="#">Back to top</a></p>');
     }
