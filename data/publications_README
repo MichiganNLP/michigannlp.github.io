@@ -22,6 +22,10 @@ Data (optional) - link to data used in publication
 
 Software (optional) - link to software described in publication
 
+BibTeX (optional) - proper BibTeX citation for the publication (use </br> after a new line
+
+Abstract (optional) - abstract of the paper
+
 PageCategory (required) - which website this publication should appear on (ie. "LIT","Girls Encoded"; Multiple categories should be separated by a comma and a space)
 
 Download (required) - either TRUE or FALSE; is there a separate download associated with this publication? (The download will appear on the "Downloads" page of the website; you can include downloads that don't have papers associated with them by leaving the year, title, authors, and publication fields blank)
