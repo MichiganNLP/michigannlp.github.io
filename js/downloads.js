@@ -159,6 +159,7 @@ function processDownloads(allText,pageCategory) {
         }
         
         entry = entry + '</div>'; //close row div
+        $('#all-downloads').append('<a name="' + publication.id + '"></a>')
         $('#all-downloads').append(entry);
         $('#all-downloads').append('<p class="lead"><a href="#">Back to top</a></p>');
     }
