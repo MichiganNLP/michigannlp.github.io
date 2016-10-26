@@ -8,12 +8,6 @@ $(document).ready(function() {
         dataType: "text",
         success: function(data) {processDownloads(data,pageCategory);}
     });
-    
-    downloadId = $.cookie("downloadId");
-    if(downloadId != -1) {
-        location.hash = "#" + downloadId;
-        $.cookie("downloadId", -1);
-    }
 });
 
 function processDownloads(allText,pageCategory) {
@@ -168,6 +162,13 @@ function processDownloads(allText,pageCategory) {
         $('#all-downloads').append('<a name="' + publication.id + '"></a>')
         $('#all-downloads').append(entry);
         $('#all-downloads').append('<p class="lead"><a href="#">Back to top</a></p>');
+    }
+    
+    //if downloadId cookie is set, jump to proper download
+    downloadId = $.cookie("downloadId");
+    if(downloadId != -1) {
+        location.hash = "#" + downloadId;
+        $.cookie("downloadId", -1);
     }
 }
 
