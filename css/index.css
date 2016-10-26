@@ -73,19 +73,19 @@ p.bibtex {
 
 /* LIT Publications Page */
 #link-no-underline:link {
-    color: red;
+    color: red !important;
 }
 
 #link-no-underline:visited {
-    color: blue;
+    color: blue !important;
 }
 
 #link-no-underline:hover {
-    color: green;
+    color: green !important;
 }
 
 #link-no-underline:active {
-    color: yellow;
+    color: yellow !important;
 }
 
 /* LIT Projects Page */
