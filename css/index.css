@@ -72,20 +72,12 @@ p.bibtex {
 }
 
 /* LIT Publications Page */
-#link-no-underline:link {
-    color: red !important;
+.link-no-underline:link {
+    text-decoration: none;
 }
 
-#link-no-underline:visited {
-    color: blue !important;
-}
-
-#link-no-underline:hover {
-    color: green !important;
-}
-
-#link-no-underline:active {
-    color: yellow !important;
+.link-no-underline:hover {
+    text-decoration: underline;
 }
 
 /* LIT Projects Page */
