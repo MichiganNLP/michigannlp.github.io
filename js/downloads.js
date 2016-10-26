@@ -8,6 +8,12 @@ $(document).ready(function() {
         dataType: "text",
         success: function(data) {processDownloads(data,pageCategory);}
     });
+    
+    downloadId = $.cookie("downloadId");
+    if(downloadId != -1) {
+        location.hash = "#" + downloadId;
+        $.cookie("downloadId", -1);
+    }
 });
 
 function processDownloads(allText,pageCategory) {
