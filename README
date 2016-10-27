@@ -32,8 +32,14 @@ If you need to change something else not listed above, you might need to edit
 the actual html/css/js. Feel free to contact Laura if you can't find the right
 spot to change.
 
-Once you've made your change, submit a pull request to the Git repository. Laura
-will take care of accepting the request and updating the live website.
+Once you've changed the appropriate files:
+	* Please don't push directly to the Master branch (you shouldn't even have
+	  permission to do this).
+	* Instead, create your own branch, make the changes, and then submit a
+	  merge request (please see
+	  https://docs.gitlab.com/ee/gitlab-basics/add-merge-request.html for more
+	  information on how to do this).
+	* Laura will accept the merge request and update the live website.
 
 ------------------------------------------
 Instructions for Updating the Live Website
