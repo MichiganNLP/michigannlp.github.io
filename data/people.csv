@@ -1,5 +1,5 @@
 image,name,description,uniqname,e-mail_domain,link,alumni,category
-rada.jpg,Rada Mihalcea,"Associate Professor, Computer Science and Engineering",mihalcea,umich.edu,https://web.eecs.umich.edu/~mihalcea/,FALSE,"LIT, Girls Encoded, Computational Social Science"
+rada.jpg,Rada Mihalcea,"Professor, Computer Science and Engineering",mihalcea,umich.edu,https://web.eecs.umich.edu/~mihalcea/,FALSE,"LIT, Girls Encoded, Computational Social Science"
 pennebaker.jpg,James Pennebaker,"Regents Centennial Chair of Psychology, University of Texas at Austin",pennebaker,mail.utexas.edu,https://liberalarts.utexas.edu/psychology/faculty/pennebak,FALSE,Computational Social Science
 mohamed.jpg,Mohamed Abouelenien,Post-Doctoral Researcher,zmohamed,umich.edu,http://web.eecs.umich.edu/~zmohamed/,FALSE,LIT
 mahmoud.jpg,Mahmoud Azab,"PhD Student, Computer Science and Engineering",mazab,umich.edu,http://web.eecs.umich.edu/~mazab/,FALSE,LIT
@@ -16,7 +16,7 @@ charlie.jpg,Charlie Welch,"PhD Student, Computer Science and Engineering",cfwelc
 laura.jpg,Laura Wendlandt,"PhD Student, Computer Science and Engineering",wenlaura,umich.edu,http://www.laurawendlandt.com,FALSE,"LIT, Girls Encoded, Computational Social Science"
 steve.jpg,Steven Wilson,"PhD Student, Computer Science and Engineering",steverw,umich.edu,http://nlp.eecs.umich.edu/~steverw/,FALSE,"LIT, Computational Social Science"
 zheng.jpg,Zheng Wu,"Masters Student, Electrical and Computer Engineering",zhengwu,umich.edu,,FALSE,LIT
-hakan.jpg,Hakan Ceyland,"PhD 2011, Netflix",,,,TRUE,LIT
+hakan.jpg,Hakan Ceylan,"PhD 2011, Netflix",,,,TRUE,LIT
 hogene.jpg,Ho-gene Choe,"Masters 2016, Microsoft",,,,TRUE,LIT
 kino.jpg,Kino Coursey,"PhD 2009, Daxtron Labs",,,http://www.daxtron.com/aboutDax.html,TRUE,LIT
 andras.jpg,Andras Csomai,"PhD 2008, Google",,,,TRUE,LIT
