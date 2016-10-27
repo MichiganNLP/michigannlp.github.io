@@ -33,4 +33,15 @@ the actual html/css/js. Feel free to contact Laura if you can't find the right
 spot to change.
 
 Once you've made your change, submit a pull request to the Git repository. Laura
-will take care of accepting the request and updating the actual website.
+will take care of accepting the request and updating the live website.
+
+------------------------------------------
+Instructions for Updating the Live Website
+------------------------------------------
+In general, only the web admin needs to worry about this, but the procedure is
+documented here in case someone else needs to do this.
+
+1) SSH into the LIT web server (lit.eecs.umich.edu)
+2) Move into the website directory (/var/www/html). This is set up as a git
+repository connecting this repository.
+3) Run "git pull".
