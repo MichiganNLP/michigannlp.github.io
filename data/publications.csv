@@ -1,10 +1,12 @@
 year,title,authors,publication,link,category,demo,data,software,bibtex,abstract,pageCategory,download,downloadName,downloadDescription,downloadLink,downloadDate,downloadLinkNames,new
+2016,Targeted Sentiment to Understand Student Comments,"Charles Welch, Rada Mihalcea","COLING, 2016",,,,,,,,,,,,,,,
+2016,Targeted Sentiment Analysis: Identifying Student Sentiment Toward Courses and Instructors,"Charles Welch, Rada Mihalcea","Workshops at the Sixteenth International Conference on Intelligent Virtual Agents, 2016",,,,,,,,,,,,,,,
 2016,Structured Matching for Phrase Localization,"Mingzhe Wang, Mahmoud Azab, Noriyuki Kojima, Rada Mihalcea, Jia Deng","European Conference on Computer Vision (ECCV), 2016",http://web.eecs.umich.edu/~jiadeng/paper/WangEtAl_ECCV2016.pdf,Images and Text,,,https://github.com/mingzhew/structured-matching,"@inproceedings{wang16structured,</br>
  author = {Mingzhe Wang and Mahmoud Azab and Noriyuki Kojima and Rada Mihalcea and Jia Deng},</br>
  booktitle = {Proceedings of the European Conference on Computer Vision ({ECCV})},</br>
  title = {Structured Matching for Phrase Localization},</br>
  year = {2016}</br>
-}","In this paper we introduce a new approach to phrase localization: grounding phrases in sentences to image regions. We propose a structured matching of phrases and regions that encourages the semantic relations between phrases to agree with the visual relations between regions. We formulate structured matching as a discrete optimization problem and relax it to a linear program. We use neural networks to embed regions and phrases into vectors, which then define the similarities (matching weights) between regions and phrases. We integrate structured matching with neural networks to enable end-to-end training. Experiments on Flickr30K Entities demonstrate the empirical effectiveness of our approach.",LIT,FALSE,,,,,,FALSE
+}","In this paper we introduce a new approach to phrase localization: grounding phrases in sentences to image regions. We propose a structured matching of phrases and regions that encourages the semantic relations between phrases to agree with the visual relations between regions. We formulate structured matching as a discrete optimization problem and relax it to a linear program. We use neural networks to embed regions and phrases into vectors, which then define the similarities (matching weights) between regions and phrases. We integrate structured matching with neural networks to enable end-to-end training. Experiments on Flickr30K Entities demonstrate the empirical effectiveness of our approach.",LIT,FALSE,,,,,,
 2016,Building a Motivational Interviewing Dataset,"Verónica Pérez-Rosas, Rada Mihalcea, Kenneth Resnicow, Lawrence An, Satinder Singh","NAACL Workshop on Clinical Psychology, 2016",http://web.eecs.umich.edu/~mihalcea/papers/perezrosas.clpsych16.pdf,Motivational Interviewing,,,,"@inproceedings{rosas16building,</br>
  author = {Ver{\’o}nica P{\'e}rez-Rosas and Rada Mihalcea and Kenneth Resnicow and Lawrence An and Satinder Singh},</br>
  booktitle = {NAACL Workshop on Clinical Psychology},</br>
@@ -245,21 +247,3 @@ year,title,authors,publication,link,category,demo,data,software,bibtex,abstract,
 ,,,,,Other,,,,,,LIT,TRUE,Text Filtering,"Evaluation software for text filtering systems, implements the normalized utility, F-measure, precision, and recall, as defined in the TREC 2002 Filtering task. Straightforward usage, follows closely the TREC 2002 Filtering guidelines.",http://web.eecs.umich.edu/~mihalcea/downloads/filter_eval.pl,,,FALSE
 ,,,,,Semantics,,,,,,LIT,TRUE,Wikify Demo,Wikify identifies keywords in documents and turns them into Wikipedia-style links.,http://lit.eecs.umich.edu/~wikify/,,demo,FALSE
 ,,,,,Computational Social Science,,,,,,LIT,TRUE,GeoLIWC Demo,GeoLIWC visualizes geographical distributions of LIWC categories in the United States.,http://lit.eecs.umich.edu/~geoliwc/,,demo,FALSE
-,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,
