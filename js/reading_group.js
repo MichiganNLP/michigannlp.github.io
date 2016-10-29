@@ -20,6 +20,11 @@ function processReadingGroup(allText,pageCategory) {
         
         var event = {date:data[0], time:data[1], presenters:data[2], presentersWebsites:data[3], paperAuthors:data[4], paperTitles:data[5], paperConferences:data[6], paperLinks:data[7], slides:data[8], location:data[9], category:data[10], semester:data[11]};
 
+	//A hack to make things work (not sure why this isn't needed for the other csv files?)	
+	if(!event.date) {
+	    continue;
+	}
+
         var allCats = event.category.split(',');
         var found = 0;
         //Is the document category in this array?
