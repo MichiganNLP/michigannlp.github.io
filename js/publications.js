@@ -24,7 +24,6 @@ $(document).ready(function() {
 
 function processPublications(allText) {
     arrData = parseCsv(allText);
-    alert(arrData.length)
 
     var rowNum = -1;
     for (var i=1; i<arrData.length; i++) {
@@ -32,7 +31,11 @@ function processPublications(allText) {
 
         var publication = {id:i, title:data[1], authors:data[2], publication:data[3], link:data[4], category:data[5], demo:data[6], data:data[7], software:data[8], bibtex:data[9], abstract:data[10], pageCategory:data[11], download:data[12], downloadName:data[13], downloadDescription:data[14], downloadLink:data[15], downloadDate:data[16], downloadLinkNames:data[17]};
 
-        var allCats = publication.pageCategory.split(',');
+	if(!publication.title) {
+	    continue;
+	}
+
+	var allCats = publication.pageCategory.split(',');
         var found = 0;
         //Is the document category in this array?
         for(var j=0; j<allCats.length; j++) {

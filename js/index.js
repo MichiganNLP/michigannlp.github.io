@@ -17,7 +17,8 @@ function processRecentNews(allText,pageCategory) {
     arrData = parseCsv(allText);
     
     var appended = 0; //Only append the first four recent events
-    
+    var last = false;   
+ 
     for (var i=1; i<arrData.length; i++) {
         var data = arrData[i];
         
@@ -42,18 +43,22 @@ function processRecentNews(allText,pageCategory) {
             }
             entry = entry + '</p>';
         
-            if(appended < 4) { //Only show the four most recent entries on the home page
+            if(appended < 8) { //Only show the most recent entries on the home page
                 $('#recent_news').append(entry);
                 appended = appended + 1;
             }
         }
-    }
-    
-    var pageCategory = $('meta[name=category]').attr("content");
-    if(pageCategory == "LIT") {
-        $('#recent_news').append('<p id="italics" class="lead">See more news <a href="news.html">here</a>.</p>');
-    }
-    if(pageCategory == "Girls Encoded") {
-        $('#recent_news').append('<p id="italics" class="lead">See more news <a href="girls_encoded_events.html">here</a>.</p>');
+
+	//A little bit hack-y
+	if(appended == 8 && !last) {
+	    last = true;
+    	    var pageCategory = $('meta[name=category]').attr("content");
+    	    if(pageCategory == "LIT") {
+                $('#recent_news').append('<p id="italics" class="lead">See more news <a href="news.html">here</a>.</p>');
+            }
+            if(pageCategory == "Girls Encoded") {
+        	$('#recent_news').append('<p id="italics" class="lead">See more news <a href="girls_encoded_events.html">here</a>.</p>');
+    	    }
+	}
     }
 }
