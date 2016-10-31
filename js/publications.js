@@ -12,7 +12,7 @@ var pageCategory; //the category of the page (ie. LIT, Girls Encoded)
 
 $(document).ready(function() {
     pageCategory = $('meta[name=category]').attr("content");
-    
+
     //Dynamically load recent news
      $.ajax({
         type: "GET",
@@ -24,13 +24,14 @@ $(document).ready(function() {
 
 function processPublications(allText) {
     arrData = parseCsv(allText);
-    
+    alert(arrData.length)
+
     var rowNum = -1;
     for (var i=1; i<arrData.length; i++) {
         var data = arrData[i];
-        
+
         var publication = {id:i, title:data[1], authors:data[2], publication:data[3], link:data[4], category:data[5], demo:data[6], data:data[7], software:data[8], bibtex:data[9], abstract:data[10], pageCategory:data[11], download:data[12], downloadName:data[13], downloadDescription:data[14], downloadLink:data[15], downloadDate:data[16], downloadLinkNames:data[17]};
-                
+
         var allCats = publication.pageCategory.split(',');
         var found = 0;
         //Is the document category in this array?
@@ -61,7 +62,7 @@ function processPublications(allText) {
                     categories.push(allCats[j]);
                 }
             }
-            
+
             //Is this year already in the array?
             var found = false;
             for(var j=0; j<years.length; j++) {
@@ -77,22 +78,22 @@ function processPublications(allText) {
             }
         }
     }
-    
+
     if(pageCategory=="LIT") {
         showCategories();
-    
+
         if(categorySet==1) {
             $('#categories').append('<p class="lead"><a onclick="allPublications()" href="">Go back to all publications</a></p>');
         }
     }
-    
+
     for(var i=0; i<years.length; ++i) {
         if(categorySet==0) {
             $('#publications').append('<h2 class="featurette-heading">' + years[i].name + '</h2>');
         }
         for(var j=0; j<years[i].publications.length; ++j) {
             publication = years[i].publications[j];
-            
+
             if(categorySet==0) { //show all publications
                 entry = showPublication(publication,true);
                 $('#publications').append(entry);
