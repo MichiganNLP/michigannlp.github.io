@@ -95,11 +95,11 @@ function processReadingGroup(allText,pageCategory) {
             entry = entry + '<td class="centered"><p class="lead">';
             for(var k=0; k<paperAuthors.length; ++k) {
                 if(paperAuthors[k]) {
-                    entry = entry + paperAuthors[k] + '. "';
+                    entry = entry + paperAuthors[k] + '.';
                     if(paperLinks[k]) {
-                        entry = entry + '<a href="' + paperLinks[k] + '" target="_blank">' + paperTitles[k] + '</a>" ';
-                    } else {
-                        entry = entry + paperTitles[k] + '" ';
+                        entry = entry + ' "<a href="' + paperLinks[k] + '" target="_blank">' + paperTitles[k] + '</a>" ';
+                    } else if(paperTitles[k]) {
+                        entry = entry + ' "' + paperTitles[k] + '" ';
                     }
                     entry = entry + paperConferences[k] + '.'
                     if(slides.length > 1 && paperAuthors.length > 1) {
