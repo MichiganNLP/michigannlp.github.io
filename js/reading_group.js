@@ -101,7 +101,9 @@ function processReadingGroup(allText,pageCategory) {
                     } else if(paperTitles[k]) {
                         entry = entry + ' "' + paperTitles[k] + '" ';
                     }
-                    entry = entry + paperConferences[k] + '.'
+                    if(paperConferences[k]) {
+                        entry = entry + paperConferences[k] + '.'
+                    }
                     if(slides.length > 1 && paperAuthors.length > 1) {
                         entry = entry + ' [<a href="' + slides[k] + '" target="_blank">slides</a>]';
                     }
