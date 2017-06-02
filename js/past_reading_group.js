@@ -25,7 +25,7 @@ function processReadingGroup(allText,pageCategory) {
             continue;
         }
         
-        if(event.past == "TRUE") {
+        if(event.past=="FALSE") {
             continue;
         }
 
@@ -64,7 +64,7 @@ function processReadingGroup(allText,pageCategory) {
     
     //now display all of the semester information
     for(var i=0; i<semesters.length; ++i) {
-        $('#reading-group').append('<h2 class="featurette-heading">' + semesters[i].name + '</h2>');
+        $('#past-reading-group').append('<h2 class="featurette-heading">' + semesters[i].name + '</h2>');
         var entry = '<table id="reading-group-table"><tbody id="reading-group-tbody"><tr><th id="col1" class><p class="lead"><b>Date / Time</b></p></th><th id="col2" class="centered"><p class="lead"><b>Presenter</b></p></th><th id="col3" class="centered"><p class="lead"><b>Paper</b></p></th><th id="col4" class="centered"><p class="lead"><b>Location</b></p></th></tr>'
 
         for(var j=0; j<semesters[i].events.length; ++j) {
@@ -126,8 +126,8 @@ function processReadingGroup(allText,pageCategory) {
         }
         
         entry = entry + '</tbody></table>';
-        $('#reading-group').append(entry);
-        $('#reading-group').append('<p class="lead"><a href="#">Back to top</a></p>');
+        $('#past-reading-group').append(entry);
+        $('#past-reading-group').append('<p class="lead"><a href="#">Back to top</a></p>');
     }
 }
 
