@@ -1,26 +1,26 @@
 date,description,link,category
-8/8/17,“Matching Graduate Applicants with Faculty Members” to appear at SocInfo 2017,http://web.eecs.umich.edu/~mihalcea/papers/lahiri.socinfo17.pdf,LIT
-8/8/17,“Multimodal Analysis and Prediction of Latent User Dimensions” to appear at SocInfo 2017,http://web.eecs.umich.edu/~mihalcea/papers/wendlandt.socinfo17.pdf,LIT
-8/8/17,“Demographic-Aware Word Associations” to appear at EMNLP 2017,http://web.eecs.umich.edu/~mihalcea/papers/garimella.emnlp17.pdf,LIT
-7/15/17,New download available: Targeted Sentiment,downloads.html,LIT
-5/10/17,Chapter on semantic similarity published in the Oxford Handbook of Computational Linguistics,http://www.oxfordhandbooks.com/view/10.1093/oxfordhb/9780199573691.001.0001/oxfordhb-9780199573691-e-49,LIT
-5/10/17,"""Understanding and Predicting Empathic Behavior in Counseling Therapy” to appear at ACL 2017",http://web.eecs.umich.edu/~mihalcea/papers/perezrosas.acl17.pdf,LIT
-5/8/17,LIT students present work at Midwest Speech and Language Days and Midwest Computational Linguistics Colloquium 2017,http://ttic.uchicago.edu/~kgimpel/MSLD2017.html,LIT
-2/24/17,Girls Encoded sponsors new student-led initiatives to recruit and retain women and minorities in computer science,http://girlsencoded.eecs.umich.edu/ideas.html,LIT
-2/14/17,Upcoming NLP Talk: Yejin Choi,https://www.eecs.umich.edu/eecs/etc/events/showevent.cgi?4226,LIT
-1/11/17,“Predicting Counselor Behaviors in Motivational Interviewing Encounters” to appear at EACL 2017,http://web.eecs.umich.edu/~mihalcea/papers/perezrosas.eacl17.pdf,LIT
-12/21/16,Upcoming NLP Talk: Regina Barzilay,http://eecs.umich.edu/eecs/etc/events/showevent.cgi?4095,LIT
-12/20/16,“Gender-based Multimodal Deception Detection” to appear at the ACM Conference on Applied Computing (ACM SAC),http://web.eecs.umich.edu/~mihalcea/papers/abouelenien17.acmsac.pdf,LIT
-12/20/16,“Detecting Deceptive Behavior via Integration of Discriminative Features from Multiple Modalities” to appear in IEEE Transactions on Information Forensics and Security,http://web.eecs.umich.edu/~mihalcea/papers/abouelenien17.ieeetifs.pdf,LIT
-11/17/16,Steve Wilson’s poster at MIDAS 2016 Annual Symposium wins “Most Likely Societal Impact” award,,LIT
-11/14/16,Upcoming NLP Talk: Smaranda Muresan,https://www.eecs.umich.edu/eecs/etc/events/showevent.cgi?4080,LIT
-11/11/16,LIT members will present their work at the 2016 UM NLP Workshop on December 2nd,http://web.eecs.umich.edu/~jkummerf/um-nlp-workshop-2016/,LIT
-10/31/16,Mahmoud Azab will attend SocInfo 2016 to present his work on analyzing RateMyProfessor data,http://web.eecs.umich.edu/~mihalcea/papers/azab.socinfo16.pdf,LIT
-10/31/16,Charles Welch will attend COLING 2016 to present his research on targeted sentiment in student comments,http://web.eecs.umich.edu/~mihalcea/papers/welch.coling16.pdf,LIT
-10/31/16,Aparna Garimella will attend COLING 2016 to present her work on understanding cross-cultural word usage differences,http://web.eecs.umich.edu/~mihalcea/papers/garimella.coling16.pdf,LIT
-10/31/16,Steve Wilson will attend the Computational Social Science workshop at EMNLP 2016 and present his research on disentangling topic models,http://web.eecs.umich.edu/~mihalcea/papers/wilson.emnlpcss16.pdf,LIT
-10/31/16,Rada Mihalcea will give a keynote talk at IBERAMIA 2016,,LIT
-10/31/16,<i>Keyword Extraction from Emails</i> to appear in the Journal of Natural Language Engineering,http://web.eecs.umich.edu/~mihalcea/papers/lahiri.jnle16.pdf,LIT
+8/8/2017,“Matching Graduate Applicants with Faculty Members” to appear at SocInfo 2017,http://web.eecs.umich.edu/~mihalcea/papers/lahiri.socinfo17.pdf,LIT
+8/8/2017,“Multimodal Analysis and Prediction of Latent User Dimensions” to appear at SocInfo 2017,http://web.eecs.umich.edu/~mihalcea/papers/wendlandt.socinfo17.pdf,LIT
+8/8/2017,“Demographic-Aware Word Associations” to appear at EMNLP 2017,http://web.eecs.umich.edu/~mihalcea/papers/garimella.emnlp17.pdf,LIT
+7/15/2017,New download available: Targeted Sentiment,downloads.html,LIT
+5/10/2017,Chapter on semantic similarity published in the Oxford Handbook of Computational Linguistics,http://www.oxfordhandbooks.com/view/10.1093/oxfordhb/9780199573691.001.0001/oxfordhb-9780199573691-e-49,LIT
+5/10/2017,"""Understanding and Predicting Empathic Behavior in Counseling Therapy” to appear at ACL 2017",http://web.eecs.umich.edu/~mihalcea/papers/perezrosas.acl17.pdf,LIT
+5/8/2017,LIT students present work at Midwest Speech and Language Days and Midwest Computational Linguistics Colloquium 2017,http://ttic.uchicago.edu/~kgimpel/MSLD2017.html,LIT
+2/24/2017,Girls Encoded sponsors new student-led initiatives to recruit and retain women and minorities in computer science,http://girlsencoded.eecs.umich.edu/ideas.html,LIT
+2/14/2017,Upcoming NLP Talk: Yejin Choi,https://www.eecs.umich.edu/eecs/etc/events/showevent.cgi?4226,LIT
+1/11/2017,“Predicting Counselor Behaviors in Motivational Interviewing Encounters” to appear at EACL 2017,http://web.eecs.umich.edu/~mihalcea/papers/perezrosas.eacl17.pdf,LIT
+12/21/2016,Upcoming NLP Talk: Regina Barzilay,http://eecs.umich.edu/eecs/etc/events/showevent.cgi?4095,LIT
+12/20/2016,“Gender-based Multimodal Deception Detection” to appear at the ACM Conference on Applied Computing (ACM SAC),http://web.eecs.umich.edu/~mihalcea/papers/abouelenien17.acmsac.pdf,LIT
+12/20/2016,“Detecting Deceptive Behavior via Integration of Discriminative Features from Multiple Modalities” to appear in IEEE Transactions on Information Forensics and Security,http://web.eecs.umich.edu/~mihalcea/papers/abouelenien17.ieeetifs.pdf,LIT
+11/17/2016,Steve Wilson’s poster at MIDAS 2016 Annual Symposium wins “Most Likely Societal Impact” award,,LIT
+11/14/2016,Upcoming NLP Talk: Smaranda Muresan,https://www.eecs.umich.edu/eecs/etc/events/showevent.cgi?4080,LIT
+11/11/2016,LIT members will present their work at the 2016 UM NLP Workshop on December 2nd,http://web.eecs.umich.edu/~jkummerf/um-nlp-workshop-2016/,LIT
+10/31/2016,Mahmoud Azab will attend SocInfo 2016 to present his work on analyzing RateMyProfessor data,http://web.eecs.umich.edu/~mihalcea/papers/azab.socinfo16.pdf,LIT
+10/31/2016,Charles Welch will attend COLING 2016 to present his research on targeted sentiment in student comments,http://web.eecs.umich.edu/~mihalcea/papers/welch.coling16.pdf,LIT
+10/31/2016,Aparna Garimella will attend COLING 2016 to present her work on understanding cross-cultural word usage differences,http://web.eecs.umich.edu/~mihalcea/papers/garimella.coling16.pdf,LIT
+10/31/2016,Steve Wilson will attend the Computational Social Science workshop at EMNLP 2016 and present his research on disentangling topic models,http://web.eecs.umich.edu/~mihalcea/papers/wilson.emnlpcss16.pdf,LIT
+10/31/2016,Rada Mihalcea will give a keynote talk at IBERAMIA 2016,,LIT
+10/31/2016,<i>Keyword Extraction from Emails</i> to appear in the Journal of Natural Language Engineering,http://web.eecs.umich.edu/~mihalcea/papers/lahiri.jnle16.pdf,LIT
 9/27/2016,"""Structured Matching for Phrase Localization” to appear in ECCV 2016",http://web.eecs.umich.edu/~jiadeng/paper/WangEtAl_ECCV2016.pdf,LIT
 9/12/2016,CS KickStart Gives Incoming Freshmen an Introduction to Computer Science,http://www.eecs.umich.edu/eecs/about/articles/2016/CS_KickStart.html,"LIT, Girls Encoded"
 9/5/2016,Upcoming Event: Lunch with JPMorgan Chase,girls_encoded_events.html,Girls Encoded
