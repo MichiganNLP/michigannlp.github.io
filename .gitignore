@@ -6,3 +6,5 @@ _site
 *.xcf
 workspace.xcworkspace/*
 .htaccess
+downloads/*
+wiki/*
