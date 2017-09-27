@@ -14,7 +14,7 @@ function processPeople(allText,pageCategory) {
     for (var i=1; i<arrData.length; i++) {
         var data = arrData[i];
     
-        var person = {image:data[0], name:data[1], description:data[2], uniqname:data[3], email_domain:data[4], link:data[5], alumni:data[6], category:data[7]};
+        var person = {image:data[0], name:data[1], description:data[2], uniqname:data[3], email_domain:data[4], link:data[5], status:data[6], category:data[7]};
 
         var allCats = person.category.split(',');
         var found = 0;
@@ -29,9 +29,9 @@ function processPeople(allText,pageCategory) {
             }
         }
         if(found==1) {
-            if(person.alumni=="TRUE") {
+            if(person.status=="Alumni") {
                 alumni.push(person);
-            } else {
+            } else if(person.status=="Current") {
                 current.push(person);
             }
         }
