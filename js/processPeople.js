@@ -10,7 +10,9 @@ function processPeople(allText,pageCategory) {
     
     current = [];
     alumni = [];
-    
+    previousInterns = []
+	previousVisiting = []
+
     for (var i=1; i<arrData.length; i++) {
         var data = arrData[i];
     
@@ -33,7 +35,11 @@ function processPeople(allText,pageCategory) {
                 alumni.push(person);
             } else if(person.status=="Current") {
                 current.push(person);
-            }
+            } else if(person.status=="PreviousInterns") {
+				previousInterns.push(person);
+			} else if(person.status=="PreviousVisiting") {
+				previousVisiting.push(person);
+			}
         }
     }
         
@@ -99,5 +105,31 @@ function processPeople(allText,pageCategory) {
         }
         
         $('#alumni_row' + rowNum).append(entry);
+    }
+
+    for(var i=0; i<previousInterns.length; ++i) {
+		person = previousInterns[i];
+		entry = '<p class="lead centered">'
+		if(person.link) {
+            entry = entry + '<a href="' + person.link + '">' + person.name + '</a>';
+        } else {
+            entry = entry + person.name;
+        }
+		entry = entry + '</p>';
+        
+        $('#previous_interns').append(entry);
+    }
+    
+	for(var i=0; i<previousVisiting.length; ++i) {
+		person = previousVisiting[i];
+		entry = '<p class="lead centered">'
+		if(person.link) {
+            entry = entry + '<a href="' + person.link + '">' + person.name + '</a>';
+        } else {
+            entry = entry + person.name;
+        }
+		entry = entry + '</p>';
+        
+        $('#previous_visiting').append(entry);
     }
 }
