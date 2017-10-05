@@ -115,6 +115,11 @@ function processPeople(allText,pageCategory) {
         } else {
             entry = entry + person.name;
         }
+		
+		if(person.description) {
+			entry = entry + ' (' + person.description + ')';
+		}
+
 		entry = entry + '</p>';
         
         $('#previous_interns').append(entry);
@@ -128,6 +133,11 @@ function processPeople(allText,pageCategory) {
         } else {
             entry = entry + person.name;
         }
+
+		if(person.description) {
+			entry = entry + ' (' + person.description + ')';
+		}
+
 		entry = entry + '</p>';
         
         $('#previous_visiting').append(entry);
