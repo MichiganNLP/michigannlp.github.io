@@ -1,48 +1,48 @@
-image,name,description,uniqname,e-mail_domain,link,status,category
-rada.jpg,Rada Mihalcea,"Professor, Computer Science and Engineering",mihalcea,umich.edu,https://web.eecs.umich.edu/~mihalcea/,Current,"LIT, Girls Encoded, Computational Social Science"
-pennebaker.jpg,James Pennebaker,"Regents Centennial Chair of Psychology, University of Texas at Austin",pennebaker,mail.utexas.edu,https://liberalarts.utexas.edu/psychology/faculty/pennebak,Current,Computational Social Science
-mahmoud.jpg,Mahmoud Azab,"PhD Student, Computer Science and Engineering",mazab,umich.edu,http://web.eecs.umich.edu/~mazab/,Current,LIT
-carmen.jpg,Carmen Banea,Post-Doctoral Researcher,carmennb,umich.edu,http://www.carmenbanea.com/,Current,LIT
-paul.jpg,Cristian-Paul Bara,"PhD Student, Computer Science and Engineering",cpbara,umich.edu,,Current,LIT
-,Ryan Boyd,"PhD Student, Psychology, University of Texas at Austin",ryanb,ryanb.cc,http://ryanb.cc/,Current,Computational Social Science
-meixing.jpg,MeiXing Dong,"PhD Student, Computer Science and Engineering",meixingd,umich.edu,http://meixingdong.com/,Current,LIT
-aparna.jpg,Aparna Garimella,"PhD Student, Computer Science and Engineering",gaparna,umich.edu,,Current,"LIT, Computational Social Science"
-oana.jpg,Oana Ignat,"PhD Student, Computer Science and Engineering",oignat,umich.edu,,Current,LIT
-uriah.jpg,Uriah Israel,"PhD Student, Applied Physics",ulisrael,umich.edu,,Current,LIT
-jonathan.jpg,Jonathan Kummerfeld,Post-Doctoral Researcher,jkummerf,umich.edu,http://www.jkk.name/,Current,LIT
-shibamouli.jpg,Shibamouli Lahiri,"PhD Student, Computer Science and Engineering",lahiri,umich.edu,http://web.eecs.umich.edu/~lahiri/,Current,LIT
-yaoyiran.jpg,Yaoyiran Li,"Masters Student, Robotics",yaoyiran,umich.edu,,Current,LIT
-tushar.jpg,Tushar Maheshwari,"Research Intern, IIITS, Sri City",tmaheshw,umich.edu,https://www.linkedin.com/in/tushar-maheshwari-265a1612a/,Current,LIT
-veronica.jpg,Verónica Pérez-Rosas,Post-Doctoral Researcher,vrncapr,umich.edu,,Current,"LIT, Girls Encoded"
-kristen.PNG,Kristen Reault,Research Intern,kreault,umich.edu,,Current,LIT
-aishwarya.jpg,Aishwarya Reganti,"Research Intern, IIITS, Sri City",areganti,umich.edu,https://aishwarya-nr.github.io/,Current,LIT
-clayton.jpg,Clayton Thorrez,"Undergraduate, Computer Science and Engineering",thorrez,umich.edu,,Current,LIT
-yuchen.png,Yuchen Wang,"Undergraduate, Computer Science and Engineering",lucasyc,umich.edu,,Current,LIT
-charlie.jpg,Charlie Welch,"PhD Student, Computer Science and Engineering",cfwelch,umich.edu,http://web.eecs.umich.edu/~cfwelch/,Current,LIT
-laura.jpg,Laura Wendlandt,"PhD Student, Computer Science and Engineering",wenlaura,umich.edu,http://wendlandt.github.io/,Current,"LIT, Girls Encoded, Computational Social Science"
-steve.jpg,Steven Wilson,"PhD Student, Computer Science and Engineering",steverw,umich.edu,http://nlp.eecs.umich.edu/~steverw/,Current,"LIT, Computational Social Science"
-xinyi.jpg,Xinyi Wu,"Undergraduate, Data Science Engineering",wuxinyi,umich.edu,,Current,LIT
-harry.jpg,Harry Zhang,"Undergraduate, Computer Science and Engineering",zharry,umich.edu,http://www-personal.umich.edu/~zharry/,Current,LIT
-mohamed.jpg,Mohamed Abouelenien,"Post-Doctoral Researcher 2017, University of Michigan-Dearborn",,,http://web.eecs.umich.edu/~zmohamed/,Alumni,LIT
-alberto.jpg,Alberto Castro-Hernández,"Post-Doctoral Researcher 2017, Miami University",,,http://nopalbits.com/acastroh/,Alumni,LIT
-hakan.jpg,Hakan Ceylan,"PhD 2011, Netflix",,,,Alumni,LIT
-hogene.jpg,Ho-gene Choe,"Masters 2016, Microsoft",,,,Alumni,LIT
-kino.jpg,Kino Coursey,"PhD 2009, Daxtron Labs",,,http://www.daxtron.com/aboutDax.html,Alumni,LIT
-andras.jpg,Andras Csomai,"PhD 2008, Google",,,,Alumni,LIT
-bharath.jpg,Bharath Dandala,"PhD 2013, IBM",,,,Alumni,LIT
-samer.jpg,Samer Hassan,"PhD 2011, Google",,,www.samerhassan.com,Alumni,LIT
-li.jpg,Li Ji,Masters 2017,,,,Alumni,LIT
-ben.jpg,Ben Leong,"PhD 2012, ETS Research",,,http://www.benleong.net/,Alumni,LIT
-michael.jpg,Michael Mohler,"PhD 2012, LCC",,,,Alumni,LIT
-konstantinos.jpg,Konstantinos Pappas,Masters 2016,,,,Alumni,LIT
-ravi.jpg,Ravi Sinha,"PhD 2013, IBM",,,http://ambidextrous.name/,Alumni,LIT
-zheng.jpg,Zheng Wu,"Masters 2017, Amazon Alexa",,,,Alumni,LIT
-,Jessica Xi Chen,Undergraduate Student 2016,,,,PreviousInterns,LIT
-,Quincy Davenport,Summer 2017,,,,PreviousInterns,LIT
-,Christy Li,Summer 2017,,,,PreviousInterns,LIT
-,Xianzhi Ruan,2016,,,,PreviousInterns,LIT
-,Xuetong (Emily) Sun,Summer 2017,,,,PreviousInterns,LIT
-,Renhan Zhang,Masters Student 2016,,,,PreviousInterns,LIT
-,Maximilian Mozes,"Visiting Student, Technical University of Munich",,,http://mmozes.net,PreviousVisiting,LIT
-,Mohini Tellakat,"Visiting PhD Student, University of Texas at Austin",,,,PreviousVisiting,LIT
-,Berrin Yanikoglu,"Visiting Professor, Sabanci University",,,http://people.sabanciuniv.edu/berrin,PreviousVisiting,LIT
+image,name,description,uniqname,e-mail_domain,link,status,category,
+rada.jpg,Rada Mihalcea,"Professor, Computer Science and Engineering",mihalcea,umich.edu,https://web.eecs.umich.edu/~mihalcea/,Current,"LIT, Girls Encoded, Computational Social Science",
+pennebaker.jpg,James Pennebaker,"Regents Centennial Chair of Psychology, University of Texas at Austin",pennebaker,mail.utexas.edu,https://liberalarts.utexas.edu/psychology/faculty/pennebak,Current,Computational Social Science,
+mahmoud.jpg,Mahmoud Azab,"PhD Student, Computer Science and Engineering",mazab,umich.edu,http://web.eecs.umich.edu/~mazab/,Current,LIT,
+carmen.jpg,Carmen Banea,Post-Doctoral Researcher,carmennb,umich.edu,http://www.carmenbanea.com/,Current,LIT,
+paul.jpg,Cristian-Paul Bara,"PhD Student, Computer Science and Engineering",cpbara,umich.edu,,Current,LIT,
+,Ryan Boyd,"PhD Student, Psychology, University of Texas at Austin",ryanb,ryanb.cc,http://ryanb.cc/,Current,Computational Social Science,
+meixing.jpg,MeiXing Dong,"PhD Student, Computer Science and Engineering",meixingd,umich.edu,http://meixingdong.com/,Current,LIT,
+aparna.jpg,Aparna Garimella,"PhD Student, Computer Science and Engineering",gaparna,umich.edu,,Current,"LIT, Computational Social Science",
+oana.jpg,Oana Ignat,"PhD Student, Computer Science and Engineering",oignat,umich.edu,,Current,LIT,
+uriah.jpg,Uriah Israel,"PhD Student, Applied Physics",ulisrael,umich.edu,,Current,LIT,
+jonathan.jpg,Jonathan Kummerfeld,Post-Doctoral Researcher,jkummerf,umich.edu,http://www.jkk.name/,Current,LIT,
+shibamouli.jpg,Shibamouli Lahiri,"PhD Student, Computer Science and Engineering",lahiri,umich.edu,http://web.eecs.umich.edu/~lahiri/,Current,LIT,
+yaoyiran.jpg,Yaoyiran Li,"Masters Student, Robotics",yaoyiran,umich.edu,,Current,LIT,
+veronica.jpg,Verónica Pérez-Rosas,Post-Doctoral Researcher,vrncapr,umich.edu,,Current,"LIT, Girls Encoded",
+kristen.PNG,Kristen Reault,Research Intern,kreault,umich.edu,,Current,LIT,
+clayton.jpg,Clayton Thorrez,"Undergraduate, Computer Science and Engineering",thorrez,umich.edu,,Current,LIT,
+yuchen.png,Yuchen Wang,"Undergraduate, Computer Science and Engineering",lucasyc,umich.edu,,Current,LIT,
+charlie.jpg,Charlie Welch,"PhD Student, Computer Science and Engineering",cfwelch,umich.edu,http://web.eecs.umich.edu/~cfwelch/,Current,LIT,
+laura.jpg,Laura Wendlandt,"PhD Student, Computer Science and Engineering",wenlaura,umich.edu,http://wendlandt.github.io/,Current,"LIT, Girls Encoded, Computational Social Science",
+steve.jpg,Steven Wilson,"PhD Student, Computer Science and Engineering",steverw,umich.edu,http://nlp.eecs.umich.edu/~steverw/,Current,"LIT, Computational Social Science",
+xinyi.jpg,Xinyi Wu,"Undergraduate, Data Science Engineering",wuxinyi,umich.edu,,Current,LIT,
+harry.jpg,Harry Zhang,"Undergraduate, Computer Science and Engineering",zharry,umich.edu,http://www-personal.umich.edu/~zharry/,Current,LIT,
+mohamed.jpg,Mohamed Abouelenien,"Post-Doctoral Researcher 2017, University of Michigan-Dearborn",,,http://web.eecs.umich.edu/~zmohamed/,Alumni,LIT,
+alberto.jpg,Alberto Castro-Hernández,"Post-Doctoral Researcher 2017, Miami University",,,http://nopalbits.com/acastroh/,Alumni,LIT,
+hakan.jpg,Hakan Ceylan,"PhD 2011, Netflix",,,,Alumni,LIT,
+hogene.jpg,Ho-gene Choe,"Masters 2016, Microsoft",,,,Alumni,LIT,
+kino.jpg,Kino Coursey,"PhD 2009, Daxtron Labs",,,http://www.daxtron.com/aboutDax.html,Alumni,LIT,
+andras.jpg,Andras Csomai,"PhD 2008, Google",,,,Alumni,LIT,
+bharath.jpg,Bharath Dandala,"PhD 2013, IBM",,,,Alumni,LIT,
+samer.jpg,Samer Hassan,"PhD 2011, Google",,,www.samerhassan.com,Alumni,LIT,
+li.jpg,Li Ji,Masters 2017,,,,Alumni,LIT,
+ben.jpg,Ben Leong,"PhD 2012, ETS Research",,,http://www.benleong.net/,Alumni,LIT,
+michael.jpg,Michael Mohler,"PhD 2012, LCC",,,,Alumni,LIT,
+konstantinos.jpg,Konstantinos Pappas,Masters 2016,,,,Alumni,LIT,
+ravi.jpg,Ravi Sinha,"PhD 2013, IBM",,,http://ambidextrous.name/,Alumni,LIT,
+zheng.jpg,Zheng Wu,"Masters 2017, Amazon Alexa",,,,Alumni,LIT,
+,Tushar Maheshwari,Fall 2017,,,https://www.linkedin.com/in/tushar-maheshwari-265a1612a/,PreviousInterns,LIT,
+,Aishwarya Reganti,Fall 2017,,,https://aishwarya-nr.github.io/,PreviousInterns,LIT,
+,Jessica Xi Chen,Undergraduate Student 2016,,,,PreviousInterns,LIT,
+,Quincy Davenport,Summer 2017,,,,PreviousInterns,LIT,
+,Christy Li,Summer 2017,,,,PreviousInterns,LIT,
+,Xianzhi Ruan,2016,,,,PreviousInterns,LIT,
+,Xuetong (Emily) Sun,Summer 2017,,,,PreviousInterns,LIT,
+,Renhan Zhang,Masters Student 2016,,,,PreviousInterns,LIT,
+,Maximilian Mozes,"Visiting Student, Technical University of Munich",,,http://mmozes.net,PreviousVisiting,LIT,
+,Mohini Tellakat,"Visiting PhD Student, University of Texas at Austin",,,,PreviousVisiting,LIT,
+,Berrin Yanikoglu,"Visiting Professor, Sabanci University",,,http://people.sabanciuniv.edu/berrin,PreviousVisiting,LIT,
