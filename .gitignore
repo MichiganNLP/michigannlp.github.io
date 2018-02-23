@@ -8,3 +8,4 @@ workspace.xcworkspace/*
 .htaccess
 downloads/*
 wiki/*
+*.DS_Store
