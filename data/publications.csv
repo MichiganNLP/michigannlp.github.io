@@ -1,4 +1,10 @@
 year,title,authors,publication,link,category,demo,data,software,bibtex,abstract,pageCategory,download,downloadName,downloadDescription,downloadLink,downloadDate,downloadLinkNames,new
+2018,Factors Influencing the Surprising Instability of Word Embeddings,"Laura Wendlandt, Jonathan K. Kummerfeld, Rada Mihalcea ","NAACL-HLT, 2018",http://wendlandt.github.io/papers/naacl18embeddings.pdf,Semantics,,,files/downloads/embeddingStability.zip,"@article{Wendlandt18Surprising,</br>
+author = {Wendlandt, L. and J. Kummerfeld and R. Mihalcea},</br>
+title = {Factors Influencing the Surprising Instability of Word Embeddings},</br>
+journal = {NAACL-HLT},</br>
+year = {2018}</br>
+}","Despite the recent popularity of word embedding methods, there is only a small body of work exploring the limitations of these representations. In this paper, we consider one aspect of embedding spaces, namely their stability. We show that even relatively high frequency words (100-200 occurrences) are often unstable. We provide empirical evidence for how various factors contribute to the stability of word embeddings, and we analyze the effects of stability on downstream tasks.",LIT,TRUE,Embedding Stability (code),Code for evaluating stability of embeddings.,files/downloads/embeddingStability.zip,"April 17, 2018",embeddingStability,TRUE
 2018,Analyzing the Quality of Counseling Conversations: the Tell-Tale Signs of Effective Counseling,"Verónica Pérez-Rosas, Xuetong Sun, Christy Li, Yuchen Wang, Kenneth Resnicow, Rada Mihalcea","11th Language Resources and Evaluation Conference (LREC), 2018",files/lrec2018_effectiveMI.pdf,"Motivational Interviewing, Computational Social Science",,,,"@article{Perez-Rosas18,</br>
 author = {Verónica Pérez-Rosas, Xuetong Sun, Christy Li, Yuchen Wang, Kenneth Resnicow, Rada Mihalcea},</br>
 title = {Analyzing the Quality of Counseling Conversations: the Tell-Tale Signs of Effective Counseling},</br>
