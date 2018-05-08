@@ -18,7 +18,7 @@ function processReadingGroup(allText,pageCategory) {
     for (var i=1; i<arrData.length; i++) {
         var data = arrData[i];
         
-        var event = {date:data[0], time:data[1], presenters:data[2], presentersWebsites:data[3], paperAuthors:data[4], paperTitles:data[5], paperConferences:data[6], paperLinks:data[7], slides:data[8], location:data[9], category:data[10], semester:data[11], past:data[12]};
+        var event = {date:data[0], time:data[1], topic:data[2], presenters:data[3], presentersWebsites:data[4], paperAuthors:data[5], paperTitles:data[6], paperConferences:data[7], paperLinks:data[8], slides:data[9], location:data[10], category:data[11], semester:data[12], past:data[13]};
 
         //A hack to make things work (not sure why this isn't needed for the other csv files?)
         if(!event.date) {
