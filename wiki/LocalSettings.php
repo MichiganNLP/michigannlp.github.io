@@ -67,7 +67,7 @@ $wgDBTableOptions = "ENGINE=InnoDB, DEFAULT CHARSET=binary";
 $wgDBmysql5 = false;
 
 ## Shared memory settings
-$wgMainCacheType = CACHE_NONE;
+$wgMainCacheType = CACHE_ACCEL;
 $wgMemCachedServers = [];
 
 ## To enable image uploads, make sure the 'images' directory
@@ -92,7 +92,7 @@ $wgShellLocale = "en_US.utf8";
 ## Set $wgCacheDirectory to a writable directory on the web server
 ## to make your wiki go slightly faster. The directory should not
 ## be publically accessible from the web.
-#$wgCacheDirectory = "$IP/cache";
+$wgCacheDirectory = "$IP/cache";
 
 # Site language code, should be one of the list in ./languages/data/Names.php
 $wgLanguageCode = "en";
@@ -160,3 +160,10 @@ wfLoadExtension( 'WikiEditor' );
 # End of automatically generated settings.
 # Add more configuration options below.
 
+#$wgEnableParserCache = false;
+#$wgCachePages = false;
+
+$wgParserCacheExpireTime = 2592000;
+$wgSessionCacheType = CACHE_DB;
+
+$wgDebugLogFile = "/var/log/mediawiki/debug-{$wgDBname}.log";
