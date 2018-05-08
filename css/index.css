@@ -170,12 +170,20 @@ p.bibtex {
     width: 12%;
 }
 
+#colTopic {
+	width: 10%;
+}
+
 #col2 {
     width: 15%;
 }
 
 #col3 {
-    width: 63%;
+	width: 63%;
+}
+
+#col3_topic {
+    width: 53%;
 }
 
 #col4 {
