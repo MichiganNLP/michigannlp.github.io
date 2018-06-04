@@ -1,4 +1,5 @@
 year,title,authors,publication,link,category,demo,data,software,bibtex,abstract,pageCategory,download,downloadName,downloadDescription,downloadLink,downloadDate,downloadLinkNames,new
+2018,Speaker Naming in Movies,"Mahmoud Azab, Mingzhe Wang, Max Smith, Noriyuki Kojima, Jia Deng, Rada Mihalcea","NAACL-HLT, 2018",,Images and Text,,,files/downloads/speakerNaming.zip,,,LIT,True,Speaker Naming,A dataset of 18 movies and 6 episodes of Big Bang Theory manually labeled with speaker names,files/downloads/speakerNaming.zip,6/4/2018,,True
 2018,Factors Influencing the Surprising Instability of Word Embeddings,"Laura Wendlandt, Jonathan K. Kummerfeld, Rada Mihalcea ","NAACL-HLT, 2018",http://wendlandt.github.io/papers/naacl18embeddings.pdf,Semantics,,,files/downloads/embeddingStability.zip,"@article{Wendlandt18Surprising,</br>
 author = {Wendlandt, L. and J. Kummerfeld and R. Mihalcea},</br>
 title = {Factors Influencing the Surprising Instability of Word Embeddings},</br>
