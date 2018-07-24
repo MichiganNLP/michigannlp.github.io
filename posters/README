@@ -1,0 +1,3 @@
+To convert to small jpg, use ImageMagick:
+
+convert image.jpg -resize 300 image.jpg #width = 300
