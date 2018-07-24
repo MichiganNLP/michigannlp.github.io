@@ -214,6 +214,7 @@ p.bibtex {
 /* LIT Poster Gallery Page */
 
 .poster_image {
+	display: block;
 	margin: 0 auto 0 auto;
 }
 
