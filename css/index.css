@@ -214,7 +214,7 @@ p.bibtex {
 /* LIT Poster Gallery Page */
 
 .poster_image {
-	padding: 1px 1px 1px 1px;
+	margin: 0 auto 0 auto;
 }
 
 /* Girls Encoded Main Page */
