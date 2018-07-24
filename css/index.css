@@ -211,6 +211,12 @@ p.bibtex {
     color: red;
 }
 
+/* LIT Poster Gallery Page */
+
+.poster_image {
+	padding: 1px 1px 1px 1px;
+}
+
 /* Girls Encoded Main Page */
 
 #myCarousel {
