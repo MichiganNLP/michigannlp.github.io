@@ -218,6 +218,10 @@ p.bibtex {
 	margin: 0 auto 0 auto;
 }
 
+.poster_cell {
+	border-bottom: 1px grey dotted;
+}
+
 /* Girls Encoded Main Page */
 
 #myCarousel {

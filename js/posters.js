@@ -38,9 +38,9 @@ function processPublications(allText) {
 		}
 
 		if(found==1 && publication.poster) {
-			entry = '<div class="col-md-4"><a href="posters/'+publication.poster+'.pdf" target="_blank"><img src="posters/'+publication.poster+'.jpg" class="poster_image"></a><p class="lead centered">'+publication.posterTitle+'</p>'
+			entry = '<div class="col-md-4 poster_cell"><a href="posters/'+publication.poster+'.pdf" target="_blank"><img src="posters/'+publication.poster+'.jpg" class="poster_image"></a><p class="lead centered">'+publication.posterTitle+'</p>'
 			if(publication.link) {
-				entry = entry + '<p class="lead centered">Read full paper <a href="'+publication.link+'" target="_blank">here</a></p>'
+				entry = entry + '<p class="lead centered">Read full paper <a href="'+publication.link+'" target="_blank">here</a>.</p>'
 			}
 			entry = entry+'</div>'
 			entriesAdded = entriesAdded+1;
