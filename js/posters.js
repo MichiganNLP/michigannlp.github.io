@@ -27,7 +27,7 @@ function processPublications(allText) {
 		var allCats = publication.pageCategory.split(',');
 		var found = 0;
 		//Is the document category in this array?
-		for(var j=0; j<allCats.length); j++) {
+		for(var j=0; j<allCats.length; j++) {
 			if(allCats[j][0]==' ') {
 				allCats[j] = allCats[j].substr(1);
 			}
