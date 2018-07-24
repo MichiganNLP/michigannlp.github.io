@@ -38,13 +38,13 @@ function processPublications(allText) {
 		}
 
 		if(found==1 && publication.poster) {
-			entry = '<div class="col-md-3"><a href="posters/'+publication.poster+'.pdf" target="_blank"><img src="posters/'+publication.poster+'.jpg" class="poster_image"></a><p class="lead">'+publication.posterTitle+'</p>'
+			entry = '<div class="col-md-4"><a href="posters/'+publication.poster+'.pdf" target="_blank"><img src="posters/'+publication.poster+'.jpg" class="poster_image"></a><p class="lead centered">'+publication.posterTitle+'</p>'
 			if(publication.link) {
-				entry = entry + '<p class="lead">Read full paper <a href="'+publication.link+'" target="_blank">here</a></p>'
+				entry = entry + '<p class="lead centered">Read full paper <a href="'+publication.link+'" target="_blank">here</a></p>'
 			}
 			entry = entry+'</div>'
 			entriesAdded = entriesAdded+1;
-			if (entriesAdded % 4 == 1) { //append new row
+			if (entriesAdded % 3 == 1) { //append new row
 				rowNum = rowNum+1;
 				$('#posters').append('<div class="row" id="row'+rowNum+'">');
 			}
