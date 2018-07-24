@@ -29,7 +29,7 @@ function processPublications(allText) {
     for (var i=1; i<arrData.length; i++) {
         var data = arrData[i];
 
-        var publication = {id:i, title:data[1], authors:data[2], publication:data[3], link:data[4], category:data[5], demo:data[6], data:data[7], software:data[8], bibtex:data[9], abstract:data[10], poster:data[11], pageCategory:data[12], download:data[13], downloadName:data[14], downloadDescription:data[15], downloadLink:data[16], downloadDate:data[17], downloadLinkNames:data[18]};
+        var publication = {id:i, title:data[1], authors:data[2], publication:data[3], link:data[4], category:data[5], demo:data[6], data:data[7], software:data[8], bibtex:data[9], abstract:data[10], poster:data[11], posterTitle:data[12], pageCategory:data[13], download:data[14], downloadName:data[15], downloadDescription:data[16], downloadLink:data[17], downloadDate:data[18], downloadLinkNames:data[19]};
 
 	if(!publication.title) {
 	    continue;
