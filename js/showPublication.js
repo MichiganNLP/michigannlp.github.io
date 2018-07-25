@@ -13,41 +13,47 @@ function showPublication(publication,includeDownloadLink) {
         return '';
     }
     var entry = '<p class="lead-slim"><b>' + publication.title + '</b>';
-    if(publication.link || publication.demo || publication.data || publication.software) {
+    if(publication.link || publication.demo || publication.data || publication.software || publication.abstract || publication.bibtex || publication.poster) {
         entry = entry + ' ('
         if(publication.link) {
             entry = entry + '<a href="' + publication.link + '" target="_blank">pdf</a>';
-            if(publication.demo || publication.data || publication.software || publication.abstract || publication.bibtex) {
+            if(publication.demo || publication.data || publication.software || publication.abstract || publication.bibtex || publication.poster) {
                 entry = entry + ', ';
             }
         }
         if(publication.demo) {
             entry = entry + '<a href="' + publication.demo + '" target="_blank">demo</a>';
-            if(publication.data || publication.software || publication.abstract || publication.bibtex) {
+            if(publication.data || publication.software || publication.abstract || publication.bibtex || publication.poster) {
                 entry = entry + ', ';
             }
         }
         if(publication.data) {
             entry = entry + '<a href="' + publication.data + '" target="_blank">data</a>';
-            if(publication.software || publication.abstract || publication.bibtex) {
+            if(publication.software || publication.abstract || publication.bibtex || publication.poster) {
                 entry = entry + ', ';
             }
         } 
         if(publication.software) {
             entry = entry + '<a href="' + publication.software + '" target="_blank">software</a>';
-            if(publication.abstract || publication.bibtex) {
+            if(publication.abstract || publication.bibtex || publication.poster) {
                 entry = entry + ', ';
             }
         }
         if(publication.abstract) {
             entry = entry + '<a class="link-no-underline" data-toggle="collapse" data-parent="#accordion" href="#' + publication.id + '_abstract">abstract</a>';
-            if(publication.bibtex) {
+            if(publication.bibtex || publication.poster) {
                 entry = entry + ', ';
             }
         }
         if(publication.bibtex) {
             entry = entry + '<a class="link-no-underline" data-toggle="collapse" data-parent="#accordion" href="#' + publication.id + '_bibtex">BibTeX</a>';
+			if(publication.poster) {
+				entry = entry + ', ';
+			}
         }
+		if(publication.poster) {
+			entry = entry + '<a class="link-no-underline" href="posters/'publication.poster+'.pdf" target="_blank">Poster</a>';
+		}
         entry = entry + ')';
     }
     entry = entry + '</p><p class="lead-slim-indent">' + publication.authors + '</p>'
