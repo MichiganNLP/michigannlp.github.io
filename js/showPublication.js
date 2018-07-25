@@ -52,7 +52,7 @@ function showPublication(publication,includeDownloadLink) {
 			}
         }
 		if(publication.poster) {
-			entry = entry + '<a class="link-no-underline" href="posters/'publication.poster+'.pdf" target="_blank">Poster</a>';
+			entry = entry + '<a class="link-no-underline" href="posters/'+publication.poster+'.pdf" target="_blank">Poster</a>';
 		}
         entry = entry + ')';
     }
