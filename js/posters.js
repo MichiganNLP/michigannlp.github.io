@@ -77,7 +77,7 @@ function processPublications(allText) {
 		entriesAdded = entriesAdded+1;
 		if (entriesAdded % 3 == 1) { //append new row
 			rowNum = rowNum+1;
-			if((len(posters)/3)-1 > rowNum) { //not last row
+			if((posters.length/3)-1 > rowNum) { //not last row
 				$('#posters').append('<div class="row poster_row" id="row'+rowNum+'">');
 			} else { //last row
 				$('#posters').append('<div class="row" id="row'+rowNum+'">');
