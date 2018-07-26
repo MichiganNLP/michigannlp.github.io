@@ -39,6 +39,11 @@ function processPublications(allText) {
 
 		if(found==1 && publication.poster) {
 			entry = '<div class="col-md-4"><a href="posters/'+publication.poster+'.pdf" target="_blank"><img src="posters/'+publication.poster+'.jpg" class="poster_image"></a><p class="lead centered">'+publication.posterTitle+'</p>'
+			
+			if(publication.link) {
+				entry = entry + '<p class="lead centered">Read full paper <a href="'+publication.link+'" target="_blank">here</a>.</p>'
+			}
+			
 			if(publication.posterConference || publication.posterYear || publication.posterLocation) {
 				entry = entry + '<p class="lead centered"><i>Presented '
 				if(publication.posterConference) {
@@ -59,9 +64,6 @@ function processPublications(allText) {
 				entry = entry + '</i></p>'
 			}
 			
-			if(publication.link) {
-				entry = entry + '<p class="lead centered">Read full paper <a href="'+publication.link+'" target="_blank">here</a>.</p>'
-			}
 			entry = entry+'</div>'
 			entriesAdded = entriesAdded+1;
 			if (entriesAdded % 3 == 1) { //append new row
