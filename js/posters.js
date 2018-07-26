@@ -31,14 +31,14 @@ function processPublications(allText) {
 				break;
 			}
 		}
-		if(publication.poster) {
+		if(found==1 && publication.poster) {
 			posters.push(publication)
 		}
 	}
 
 	var rowNum = -1;
 	var entriesAdded = 0;
-	for (var i=1; i<posters.length; i++) {
+	for (var i=0; i<posters.length; i++) {
 		publication = posters[i]
 
 		entry = '<div class="col-md-4"><a href="posters/'+publication.poster+'.pdf" target="_blank"><img src="posters/'+publication.poster+'.jpg" class="poster_image"></a><p class="lead centered">'+publication.posterTitle
