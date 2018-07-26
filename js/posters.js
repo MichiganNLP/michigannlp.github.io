@@ -53,7 +53,7 @@ function processPublications(allText) {
 						entry = entry + ' '
 					}
 				}
-				if publication.posterLocation) {
+				if(publication.posterLocation) {
 					entry = entry + 'in ' + publication.posterLocation
 				}
 				entry = entry + '</i>'
