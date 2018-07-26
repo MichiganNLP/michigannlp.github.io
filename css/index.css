@@ -217,6 +217,7 @@ p.bibtex {
 	display: block;
 	margin: 0 auto 0 auto;
 	padding: 5px;
+	border: 1px grey solid;
 }
 
 .poster_row {
