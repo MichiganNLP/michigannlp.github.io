@@ -38,7 +38,7 @@ function processPublications(allText) {
 			}
 		}
 		if(found==1 && publication.poster) {
-			posters.append(publication)
+			posters.push(publication)
 		}
 	}
 
