@@ -44,7 +44,7 @@ function processPublications(allText) {
 				entry = entry + ' (<a href="'+publication.link+'" target="_blank">full paper</a>)'
 			}
 
-			entry = entry + '</p>
+			entry = entry + '</p>'
 			
 			if(publication.posterConference || publication.posterYear || publication.posterLocation) {
 				entry = entry + '<p class="lead centered"><i>Presented '
