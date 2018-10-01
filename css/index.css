@@ -80,8 +80,9 @@ p.bibtex {
     text-decoration: underline;
 }
 
-.green {
+.publication_notes {
 	color: green;
+	font-style: italic;
 }
 
 /* LIT Projects Page */
