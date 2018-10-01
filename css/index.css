@@ -80,6 +80,10 @@ p.bibtex {
     text-decoration: underline;
 }
 
+.green {
+	color: green;
+}
+
 /* LIT Projects Page */
 
 #project-list {

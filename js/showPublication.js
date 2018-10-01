@@ -56,6 +56,9 @@ function showPublication(publication,includeDownloadLink) {
 		}
         entry = entry + ')';
     }
+	if(publication.notes) {
+		entry = entry + '</p><p class="lead-slim-indent"><class span="green">'+publication.notes+'</class>'
+	}
     entry = entry + '</p><p class="lead-slim-indent">' + publication.authors + '</p>'
 
     if(includeDownloadLink && publication.download=="TRUE") {
