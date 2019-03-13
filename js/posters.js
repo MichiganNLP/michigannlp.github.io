@@ -50,7 +50,7 @@ function processPublications(allText) {
 		entry = entry + '</p>'
 
 		if(publication.posterAuthors) {
-			entry = entry + '<p class="lead centered">'+publication.posterAuthors'</p>'
+			entry = entry + '<p class="lead centered">'+publication.posterAuthors+'</p>'
 		}
 		
 		if(publication.posterConference || publication.posterYear || publication.posterLocation) {
