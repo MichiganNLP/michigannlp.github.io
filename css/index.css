@@ -197,6 +197,23 @@ p.bibtex {
 
 /* LIT Downloads Page */
 
+.outlineBox {
+	outline: 3px dotted grey;
+	padding: 20px 10px 10px 10px;
+	outline-offset: -10px;
+}
+
+#outlineBoxImage {
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	width: 50%;
+}
+
+.outlineBoxText {
+	text-align: center;
+}
+
 #downloads-outline {
     -webkit-column-count: 2; /* Chrome, Safari, Opera */
     -moz-column-count: 2; /* Firefox */
