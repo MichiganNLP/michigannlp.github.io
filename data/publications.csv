@@ -1,4 +1,10 @@
 year,title,authors,publication,link,category,demo,data,software,bibtex,abstract,poster,posterTitle,posterAuthors,posterConference,posterYear,posterLocation,pageCategory,download,downloadName,downloadDescription,downloadLink,downloadDate,downloadLinkNames,new,notes
+2019,Look Who’s Talking: Inferring Speaker Attributes from Personal Longitudinal Dialog,"Charles Welch, Verónica Pérez-Rosas, Jonathan Kummerfeld, Rada Mihalcea","20th International Conference on Computational Linguistics and Intelligent Text Processing (CICLing), 2019",,Conversational Technologies,,,,"@article{Welch19Look,</br>
+author = {Charles Welch, Ver\’{o}nica P\'{e}rez-Rosas, Jonathan Kummerfeld, Rada Mihalcea},</br>
+title = {Look Who’s Talking: Inferring Speaker Attributes from Personal Longitudinal Dialog},</br>
+journal = {20th International Conference on Computational Linguistics and Intelligent Text Processing (CICLing)},</br>
+year = {2019}</br>
+}",,,,,,,,LIT,FALSE,,,,,,FALSE,"Best Student Paper Award, CICLing 2019"
 ,,,,,,,,,,,aisymposium_activity_clusters,Clustering Human Activity Expressions,"Steven R. Wilson, Rada Mihalcea",University of Michigan AI Lab Symposium,2018,"Ann Arbor, Michigan, USA",LIT,,,,,,,,
 ,,,,,,,,,,,TMLSS_poster_welch_v2,Learning from Personal Longitudinal Dialog Data ,"Charlie Welch, Verónica Pérez-Rosas, Jonathan K. Kummerfeld, Rada Mihalcea",Transylvanian Machine Learning Summer School,2018,"Cluj-Napoca, Romania",LIT,,,,,,,,
 2018,Text-Based Detection and Understanding of Changes in Mental Health,"Yaoyiran Li, Rada Mihalcea, Steven R. Wilson","10th International Conference on Social Informatics (SocInfo), 2018",files/LiMihalceaWilson_Socinfo_18.pdf,Computational Social Science,,,,"@article{Li18Text,</br>
