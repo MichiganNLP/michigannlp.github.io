@@ -1,4 +1,5 @@
 year,title,authors,publication,link,category,demo,data,software,bibtex,abstract,poster,posterTitle,posterAuthors,posterConference,posterYear,posterLocation,pageCategory,download,downloadName,downloadDescription,downloadLink,downloadDate,downloadLinkNames,new,notes
+2019,Multimodal Deception Detection in Dialogues,"Felix Soldner, Verónica Pérez-Rosas, Rada Mihalcea","NAACL-HLT, 2019",,Deception Detection,,,,,,,,,,,,LIT,FALSE,,,,,,FALSE,
 2019,Multi-Label Transfer Learning for Multi-Relational Semantic Similarity,"Li Zhang, Steven R. Wilson, Rada Mihalcea","8th Joint Conference on Lexical and Computational Semantics (*SEM), 2019",,Semantics,,,,"@article{Zhang19Multi,</br>
 author = {Li Zhang, Steven R. Wilson, Rada Mihalcea},</br>
 title = {Multi-Label Transfer Learning for Multi-Relational Semantic Similarity},</br>
