@@ -1,6 +1,7 @@
 image,name,description,uniqname,e-mail_domain,link,status,category
 rada.jpg,Rada Mihalcea,Professor,mihalcea,umich.edu,https://web.eecs.umich.edu/~mihalcea/,Current,"LIT, Girls Encoded, Computational Social Science"
 pennebaker.jpg,James Pennebaker,"Regents Centennial Chair of Psychology, University of Texas at Austin",pennebaker,mail.utexas.edu,https://liberalarts.utexas.edu/psychology/faculty/pennebak,Current,Computational Social Science
+carlo.jpg,Carlo Strapparava,"Visiting Professor, Fondazione Bruno Kessler",strappa,fbk.eu,http://www.carlostrapparava.com/papers/Publications.html,Current,LIT
 veronica.jpg,Verónica Pérez-Rosas,Assistant Research Scientist,vrncapr,umich.edu,https://sites.google.com/site/perezrosasveronica/home,Current,"LIT, Girls Encoded"
 carmen.jpg,Carmen Banea,Postdoc,carmennb,umich.edu,http://www.carmenbanea.com/,Current,LIT
 jonathan.jpg,Jonathan Kummerfeld,Postdoc,jkummerf,umich.edu,http://www.jkk.name/,Current,LIT
@@ -18,9 +19,7 @@ uriah.jpg,Uriah Israel,"PhD Student, Applied Physics",ulisrael,umich.edu,,Curren
 ashkan.jpg,Ashkan Kazemi ,PhD Student,ashkank,umich.edu,http://www.ashkankazemi.ir/,Current,LIT
 allison.jpg,Allie Lahnala,PhD Student,alcllahn,umich.edu,,Current,LIT
 charlie.jpg,Charlie Welch,PhD Student,cfwelch,umich.edu,http://cfwelch.com/,Current,LIT
-hui.jpg,Hui Liu,"Visiting Student, Peking University",umschol,umich.edu,,Current,LIT
 jiajun.jpg,Jiajun Bao,Undergraduate,jiajunb,umich.edu,https://jiajunbao.github.io/,Current,LIT
-rj.jpg,RJ Duquette,"Undergraduate, Computer Science and Cognitive Science",duquetr,umich.edu,,Current,LIT
 chenxi.jpg,Chenxi Gu,Undergraduate,chenxgu,umich.edu,,Current,LIT
 maria.jpg,Maria Mathew,Undergraduate,msmathew,umich.edu,,Current,LIT
 jiaxin.jpg,Jiaxin Ye,Undergraduate,jaxinye,umich.edu,,Current,LIT
@@ -37,6 +36,7 @@ ben.jpg,Ben Leong,"PhD 2012, </br><i>Current</i>: ETS Research",,,http://www.ben
 michael.jpg,Michael Mohler,"PhD 2012, </br><i>Current</i>: LCC",,,,Alumni,LIT
 ravi.jpg,Ravi Sinha,"PhD 2013, </br><i>Current</i>: IBM",,,http://ambidextrous.name/,Alumni,LIT
 steve.jpg,Steven Wilson,"PhD 2019, <br><i>Current</i>: Post-Doc, University of Edinburgh",,,http://nlp.eecs.umich.edu/~steverw/,Alumni,"LIT, Computational Social Science"
+,RJ Duquette,"Undergraduate, Computer Science and Cognitive Science 2019",,,,PreviousInterns,LIT
 ,Yiting Shen,Masters Student 2019,,,,PreviousInterns,LIT
 ,Chaolun Zhang,Undergraduate 2019,,,https://www.linkedin.com/in/chaolun-zhang-2988a9126/,PreviousInterns,LIT
 ,Noriyuki Kojima,Undergraduate 2019,,,https://kojimano.github.io/,PreviousInterns,LIT
@@ -64,6 +64,7 @@ steve.jpg,Steven Wilson,"PhD 2019, <br><i>Current</i>: Post-Doc, University of E
 ,Ho-gene Choe,"Masters 2016, </br><i>Current</i>: Microsoft",,,,PreviousInterns,LIT
 ,Konstantinos Pappas,Masters 2016,,,,PreviousInterns,LIT
 ,Renhan Zhang,Masters 2016,,,,PreviousInterns,LIT
+,Hui Liu,"Visiting Student, Peking University",,,,PreviousVisiting,LIT
 ,Felix Soldner,"Visiting Student, University of Amsterdam",,,,PreviousVisiting,LIT
 ,Maximilian Mozes,"Visiting Student, Technical University of Munich",,,http://mmozes.net,PreviousVisiting,LIT
 ,Mohini Tellakat,"Visiting PhD Student, University of Texas at Austin",,,,PreviousVisiting,LIT
