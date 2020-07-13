@@ -7,7 +7,7 @@
 //<div>
 function processPeople(allText,pageCategory) {
     arrData = parseCsv(allText);
-    
+
     current = [];
     alumni = [];
     previousInterns = []
@@ -15,7 +15,11 @@ function processPeople(allText,pageCategory) {
 
     for (var i=1; i<arrData.length; i++) {
         var data = arrData[i];
-    
+
+        if (data.length == 1 && data[0].length == 0) {
+          continue;
+        }
+
         var person = {image:data[0], name:data[1], description:data[2], uniqname:data[3], email_domain:data[4], link:data[5], status:data[6], category:data[7]};
 
         var allCats = person.category.split(',');
@@ -42,7 +46,7 @@ function processPeople(allText,pageCategory) {
 			}
         }
     }
-        
+
     var rowNum = -1;
     var entriesAdded = 0;
     for(var i=0; i<current.length; ++i) {
@@ -57,24 +61,24 @@ function processPeople(allText,pageCategory) {
         } else {
             entry = entry + person.name;
         }
-        
+
         entry = entry + '</b></p>' + '<p class="lead">' + person.description + '</p>'
-        
+
         if(person.uniqname && person.email_domain) {
             entry = entry + '<p class="lead">' + person.uniqname + ' at ' + person.email_domain + '</p>';
         }
 
         entry = entry + '</div>';
-        
+
         entriesAdded = entriesAdded + 1;
         if(entriesAdded % 6 == 1) { //append new row
             rowNum = rowNum + 1;
             $('#current').append('<div class="row" id="row' + rowNum +'">');
         }
-        
+
         $('#row' + rowNum).append(entry);
     }
-    
+
     var rowNum = -1;
     var entriesAdded = 0;
     for(var i=0; i<alumni.length; ++i) {
@@ -89,21 +93,21 @@ function processPeople(allText,pageCategory) {
         } else {
             entry = entry + person.name;
         }
-        
+
         entry = entry + '</b></p>' + '<p class="lead">' + person.description + '</p>'
-        
+
         if(person.uniqname && person.email_domain) {
             entry = entry + '<p class="lead">' + person.uniqname + ' at ' + person.email_domain + '</p>';
         }
 
         entry = entry + '</div>';
-        
+
         entriesAdded = entriesAdded + 1;
         if(entriesAdded % 6 == 1) { //append new row
             rowNum = rowNum + 1;
             $('#alumni').append('<div class="row" id="alumni_row' + rowNum +'">');
         }
-        
+
         $('#alumni_row' + rowNum).append(entry);
     }
 
@@ -115,16 +119,16 @@ function processPeople(allText,pageCategory) {
         } else {
             entry = entry + person.name;
         }
-		
+
 		if(person.description) {
 			entry = entry + ' (' + person.description + ')';
 		}
 
 		entry = entry + '</p>';
-        
+
         $('#previous_interns').append(entry);
     }
-    
+
 	for(var i=0; i<previousVisiting.length; ++i) {
 		person = previousVisiting[i];
 		entry = '<p class="lead centered">'
@@ -139,7 +143,7 @@ function processPeople(allText,pageCategory) {
 		}
 
 		entry = entry + '</p>';
-        
+
         $('#previous_visiting').append(entry);
     }
 }
