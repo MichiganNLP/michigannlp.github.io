@@ -1,4 +1,15 @@
 date,description,link,category
+2/5/2021,"""Chord Embeddings: Analyzing What They Capture and Their Role for Next Chord Prediction and Artist Attribute Prediction"" to appear at the International Conference on Computational Intelligence in Music, Sound, Art and Design, 2021",publications.html,LIT
+1/13/2021,Congratulations to Rada Mihalcea for being named an AAAI fellow!,https://cse.engin.umich.edu/stories/rada-mihalcea-named-fellow-of-aaai,LIT
+12/9/2020,Congratulations to Dr. Charles Welch for successfully defending his dissertation!,,LIT
+11/1/2020,"3 papers to appear at COLING 2020: </br> ""Biased TextRank: Unsupervised Graph-Based Content Extraction"", </br> ""Exploring the Value of Personalized Word Embeddings"", </br> ""'Judge me by my size (noun), do you?' YodaLib: A Demographic-Aware Humor Generation Framework""",publications.html,LIT
+10/20/2020,"2 papers to appear at the EMNLP 2020 workshop on NLP for COVID-19: </br> ""Quantifying the Effects of COVID-19 on Mental Health Support Forums"", </br> ""Expressive Interviewing: A Conversational System for Coping with COVID-19""",publications.html,LIT
+10/5/2020,"""Building Location Embeddings from Physical Trajectories and Textual Representations"" to appear at AACL-IJCNLP 2020",publications.html,LIT
+10/5/2020,"2 papers to appear at EMNLP 2020: </br> ""Compositional Demographic Word Embeddings"", </br> ""Improving Low Compute Language Modeling with In-Domain Embedding Initialisation""",publications.html,LIT
+8/30/2020,"""MORSE: MultimOdal sentiment analysis for Real-life SEttings"" to appear at ICMI 2020",publications.html,LIT
+8/11/2020,"""Multimodal Deception Detection using Real-Life Trial Data"" available in IEEE Transactions on Affective Computing",publications.html,LIT
+8/7/2020,"""UPSTAGE: Unsupervised Context Augmentation for Utterance Classification in Patient-Provider Communication"" to appear at the Conference on Machine Learning and Healthcare, 2020",publications.html,LIT
+7/15/2020,Congratulations to Dr. Laura Burdick for successfully defending her dissertation!,,LIT
 7/1/2020,“Counseling-Style Reflection Generation Using Generative Pretrained Transformers with Augmented Context” to appear at SIGDIAL 2020,publications.html,LIT
 5/20/2020,“KinGDOM: Knowledge-Guided DOMain adaptation for sentiment analysis” to appear at ACL 2020,publications.html,LIT
 5/20/2020,"5 papers to appear at LREC 2020: </br>“MuSE: a Multimodal Dataset of Stressed Emotion”, </br>“Inferring Social Media Users’ Mental Health Status from Multimodal Information”, </br>“Small Town or Metropolis? Analyzing the Relationship between Population Size and Language”, </br>“LifeQA: A Real-life Dataset for Video Question Answering”, </br>“HAHA 2019 Dataset: A Corpus for Humor Analysis in Spanish”",publications.html,LIT
