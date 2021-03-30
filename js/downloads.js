@@ -173,6 +173,12 @@ function processDownloads(allText,pageCategory) {
     if(downloadId != -1) {
         location.hash = "#" + downloadId;
         $.cookie("downloadId", -1);
+    } else if (location.hash.length != 0) {
+        var unescaped = unescape(location.hash).slice(1);
+        var foundElement = $('a[name="' + unescaped + '"]');
+        if (foundElement.length == 1) {
+            foundElement.closest("div.row")[0].scrollIntoView();
+        }
     }
 }
 
