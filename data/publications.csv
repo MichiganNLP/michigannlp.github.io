@@ -1,5 +1,13 @@
 year,title,authors,publication,link,category,demo,data,software,bibtex,abstract,poster,posterTitle,posterAuthors,posterConference,posterYear,posterLocation,pageCategory,download,downloadName,downloadDescription,downloadLink,downloadDate,downloadLinkNames,new,notes,,
-2021,MUSER: MUltimodal Stress Detection using Emotion Recognition as an Auxiliary Task,"Yiqun Yao, Michalis Papakostas, Mihai Burzo, Mohamed Abouelenien, Rada Mihalcea","NAACL-HLT, 2021",files/yao_muser.pdf,"Humor and Emotions, Images and Text",,,https://github.com/FlamingHorizon/MuSER,"@inproceedings{yao2020muser, </br>
+2021,Evaluating Automatic Speech Recognition Quality and Its Impact on Counselor Utterance Coding,"Do June Min, Verónica Pérez-Rosas, Rada Mihalcea","CLPsych Workshop, 2021",files/min_asrquality_2021.pdf,Conversational Technologies,,,,"@inproceedings{min2021tq, </br>
+title = ""Evaluating Automatic Speech Recognition Quality and Its Impact on Counselor Utterance Coding"", </br>
+author={Min, Do June and Pérez-Rosas, Verónica and Mihalcea, Rada}, </br>
+booktitle={Proceedings of the Seventh Workshop on Computational Linguistics and Clinical Psychology}, </br>
+pages={}, </br>
+year={2021}, </br>
+publisher={Association for Computational Linguistics} </br>
+}","Automatic speech recognition (ASR) is a crucial step in many natural language processing (NLP) applications, as often available data consists mainly of raw speech. Since the result of the ASR step is considered as a meaningful, informative input to later steps in the NLP pipeline, it is important to understand the behavior and failure mode of this step. In this work, we analyze the quality of ASR in the psychotherapy domain, using motivational interviewing conversations between therapists and clients. We conduct domain agnostic and domain-relevant evaluations using evaluation metrics and also identify domain-relevant keywords in the ASR output. Moreover, we empirically study the effect of mixing ASR and manual data during the training of a downstream NLP model, and also demonstrate how additional local context can help alleviate the error introduced by noisy ASR transcripts.",,,,,,,LIT,FALSE,,,,,,FALSE,,,
+2021,MUSER: MUltimodal Stress Detection using Emotion Recognition as an Auxiliary Task,"Yiqun Yao, Michalis Papakostas, Mihai Burzo, Mohamed Abouelenien, Rada Mihalcea","NAACL-HLT, 2021",files/yao_muser_2021.pdf,"Humor and Emotions, Images and Text",,,https://github.com/FlamingHorizon/MuSER,"@inproceedings{yao2020muser, </br>
   title={{\sc MUSER:} \underline{MU}ltimodal \underline{S}tress Detection using \\\underline{E}motion \underline{R}ecognition as an Auxiliary Task}, </br>
   author={Yiqun Yao, Michalis Papakostas, Mihai Burzo, Mohamed Abouelenien, and Rada Mihalcea}, </br>
   booktitle={Proceedings of the 2021 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies}, </br>
