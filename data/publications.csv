@@ -1,4 +1,10 @@
 year,title,authors,publication,link,category,demo,data,software,bibtex,abstract,poster,posterTitle,posterAuthors,posterConference,posterYear,posterLocation,pageCategory,download,downloadName,downloadDescription,downloadLink,downloadDate,downloadLinkNames,new,notes,,
+2021,Extractive and Abstractive Explanations for Fact-Checking and Evaluation of News,"Ashkan Kazemi, Zehua Li, Verónica Pérez-Rosas and Rada Mihalcea",NLP for Internet Freedom Workshop at NAACL 2021,https://arxiv.org/pdf/2104.12918.pdf,"Computational Social Science, Summarization",,,,"@article{kazemi2021extractive, </br>
+  title={Extractive and Abstractive Explanations for Fact-Checking and Evaluation of News}, </br>
+  author={Kazemi, Ashkan and Li, Zehua and P{\'e}rez-Rosas, Ver{\'o}nica and Mihalcea, Rada}, </br>
+  journal={arXiv preprint arXiv:2104.12918}, </br>
+  year={2021} </br>
+}","In this paper, we explore the construction of natural language explanations for news claims, with the goal of assisting fact-checking and news evaluation applications. We experiment with two methods: (1) an extractive method based on Biased TextRank -- a resource-effective unsupervised graph-based algorithm for content extraction; and (2) an abstractive method based on the GPT-2 language model. We perform comparative evaluations on two misinformation datasets in the political and health news domains, and find that the extractive method shows the most promise.",,,,,,,LIT,FALSE,,,,,,FALSE,,,
 2021,Evaluating Automatic Speech Recognition Quality and Its Impact on Counselor Utterance Coding,"Do June Min, Verónica Pérez-Rosas, Rada Mihalcea","CLPsych Workshop, 2021",files/min_asrquality_2021.pdf,Conversational Technologies,,,,"@inproceedings{min2021tq, </br>
 title = ""Evaluating Automatic Speech Recognition Quality and Its Impact on Counselor Utterance Coding"", </br>
 author={Min, Do June and Pérez-Rosas, Verónica and Mihalcea, Rada}, </br>
