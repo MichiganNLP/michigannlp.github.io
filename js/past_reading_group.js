@@ -12,19 +12,19 @@ $(document).ready(function() {
 
 function processReadingGroup(allText,pageCategory) {
     arrData = parseCsv(allText);
-    
+
     var semesters = []; //each semester has a name and a list of events
 
     for (var i=1; i<arrData.length; i++) {
         var data = arrData[i];
-        
-        var event = {date:data[0], time:data[1], topic:data[2], presenters:data[3], presentersWebsites:data[4], paperAuthors:data[5], paperTitles:data[6], paperConferences:data[7], paperLinks:data[8], slides:data[9], location:data[10], category:data[11], semester:data[12], past:data[13]};
+
+        var event = {date:data[0], time:data[1], topic:data[2], presenters:data[3], presentersWebsites:data[4], paperAuthors:data[5], paperTitles:data[6], paperConferences:data[7], paperLinks:data[8], slides:data[9], location:data[10], zoomLink:data[11], category:data[12], semester:data[13], past:data[14]};
 
         //A hack to make things work (not sure why this isn't needed for the other csv files?)
         if(!event.date) {
             continue;
         }
-        
+
         if(event.past=="FALSE") {
             continue;
         }
@@ -55,13 +55,13 @@ function processReadingGroup(allText,pageCategory) {
                 var semester = {name:event.semester, events:[event]};
                 semesters.push(semester);
             }
-            
+
         }
     }
-    
+
     //sort the semester list
     semesters.sort(compareSemesters);
-    
+
     //now display all of the semester information
     for(var i=0; i<semesters.length; ++i) {
         $('#past-reading-group').append('<h2 class="featurette-heading">' + semesters[i].name + '</h2>');
@@ -69,10 +69,10 @@ function processReadingGroup(allText,pageCategory) {
 
         for(var j=0; j<semesters[i].events.length; ++j) {
             event = semesters[i].events[j];
-            
+
             //date/time
             entry = entry + '<tr><td><p class="lead">' + event.date + '<br />' + event.time + '</p></td>';
-            
+
             //presenters
             var presenters = event.presenters.split('; ');
             var presentersWebsites = event.presentersWebsites.split('; ');
@@ -89,7 +89,7 @@ function processReadingGroup(allText,pageCategory) {
                 }
             }
             entry = entry + '</p></td>';
-            
+
             //papers
             paperAuthors = event.paperAuthors.split('; ');
             paperTitles = event.paperTitles.split('; ');
@@ -120,11 +120,16 @@ function processReadingGroup(allText,pageCategory) {
                 }
             }
             entry = entry + '</p></td>';
-            
+
             //location
-            entry = entry + '<td class="centered"><p class="lead">' + event.location + '</p></td></tr>';
+            if (event.zoomLink) {
+                entry += '<td class="centered"><p class="lead"><a href="' + event.zoomLink + '">' + event.location + '</a></p></td></tr>';
+            }
+            else {
+                entry += '<td class="centered"><p class="lead">' + event.location + '</p></td></tr>';
+            }
         }
-        
+
         entry = entry + '</tbody></table>';
         $('#past-reading-group').append(entry);
         $('#past-reading-group').append('<p class="lead"><a href="#">Back to top</a></p>');
@@ -134,7 +139,7 @@ function processReadingGroup(allText,pageCategory) {
 function compareSemesters(a, b) {
     a_components = a.name.split(' ');
     b_components = b.name.split(' ');
-    
+
     //If the years are different, show the most recent year first
     if(a_components[1] != b_components[1]) {
         return b_components[1] - a_components[1];
