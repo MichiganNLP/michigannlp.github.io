@@ -1,4 +1,10 @@
 year,title,authors,publication,link,category,demo,data,software,bibtex,abstract,poster,posterTitle,posterAuthors,posterConference,posterYear,posterLocation,pageCategory,download,downloadName,downloadDescription,downloadLink,downloadDate,downloadLinkNames,new,notes,,
+2021,Analyzing the Surprising Variability in Word Embedding Stability Across Languages,"Laura Burdick, Jonathan K. Kummerfeld, Rada Mihalcea",EMNLP 2021,files/burdick_stability_multi_language_2021.pdf,Semantics,,,files/downloads/multilingual-stability-master.zip,"@article{Burdick21MultilingualStability,</br>
+author = {Laura Burdick and Jonathan K. Kummerfeld and Rada Mihalcea},</br>
+title = {Analyzing the Surprising Variability in Word Embedding Stability Across Languages},</br>
+journal = {EMNLP},</br>
+year = {2021}</br>
+}","Word embeddings are powerful representations that form the foundation of many natural language processing architectures, both in English and in other languages. To gain further insight into word embeddings, we explore their stability (e.g., overlap between the nearest neighbors of a word in different embedding spaces) in diverse languages. We discuss linguistic properties that are related to stability, drawing out insights about correlations with affixing, language gender systems, and other features. This has implications for embedding use, particularly in research that uses them to study language trends.",,,,,,,LIT,FALSE,,,,,,FALSE,,,
 2021,Claim Matching Beyond English to Scale Global Fact-Checking,"Ashkan Kazemi, Kiran Garimella, Devin Gaffney and Scott A. Hale",ACL 2021,https://arxiv.org/pdf/2106.00853.pdf,"Deception Detection and Misinformation, Computational Social Science",,https://zenodo.org/record/4890950,,"@inproceedings{kazemi2021claim, </br>
     title={Claim Matching Beyond {E}nglish to Scale Global Fact-Checking}, </br>
     author={Ashkan Kazemi and Kiran Garimella and Devin Gaffney and Scott A. Hale}, </br>
