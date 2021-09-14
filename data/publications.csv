@@ -13,7 +13,7 @@ year = {2021}</br>
     year = ""2021"", </br>
     publisher = ""Association for Computational Linguistics"", </br>
 }","We aim to automatically identify human action reasons in online videos. We focus on the widespread genre of lifestyle vlogs, in which people perform actions while verbally describing them. We introduce and make publicly available the WhyAct dataset, consisting of 1,077 visual actions manually annotated with their reasons. We describe a multimodal model that leverages visual and textual information to automatically infer the reasons corresponding to an action presented in the video.",,,,,,,LIT,FALSE,,,,,,FALSE,
-2021,To Batch or Not to Batch? Comparing Batching and Curriculum Learning Strategies across Tasks and Datasets,"Laura Burdick, Jonathan K. Kummerfeld, Rada Mihalcea","Mathematics, 2021",https://www.mdpi.com/2227-7390/9/18/2234,Semantics,,,,"@Article{math9182234, </br>
+2021,To Batch or Not to Batch? Comparing Batching and Curriculum Learning Strategies across Tasks and Datasets,"Laura Burdick, Jonathan K. Kummerfeld, Rada Mihalcea","Mathematics, 2021",https://www.mdpi.com/2227-7390/9/18/2234,Semantics,,,files/downloads/batching-curriculum-master.zip,"@Article{math9182234, </br>
 AUTHOR = {Burdick, Laura and Kummerfeld, Jonathan K. and Mihalcea, Rada}, </br>
 TITLE = {To Batch or Not to Batch? Comparing Batching and Curriculum Learning Strategies across Tasks and Datasets}, </br>
 JOURNAL = {Mathematics}, </br>
