@@ -1,4 +1,22 @@
 year,title,authors,publication,link,category,demo,data,software,bibtex,abstract,poster,posterTitle,posterAuthors,posterConference,posterYear,posterLocation,pageCategory,download,downloadName,downloadDescription,downloadLink,downloadDate,downloadLinkNames,new,notes
+2021,Understanding the Impact of COVID-19 on Online Mental Health Forums,"Laura Biester, Katie Matton, Janarthanan Rajendran, Emily Mower Provost, Rada Mihalcea","ACM Transactions on Management Information Systems, 2021",files/biester_covid_forums_2021.pdf,"NLP for Healthcare, Computational Social Science",,,https://github.com/lbiester/COVID-Mental-Health/tree/journal,"@article{10.1145/3458770, </br>
+author = {Biester, Laura and Matton, Katie and Rajendran, Janarthanan and Provost, Emily Mower and Mihalcea, Rada}, </br>
+title = {Understanding the Impact of COVID-19 on Online Mental Health Forums}, </br>
+year = {2021}, </br>
+issue_date = {December 2021}, </br>
+publisher = {Association for Computing Machinery}, </br>
+address = {New York, NY, USA}, </br>
+volume = {12}, </br>
+number = {4}, </br>
+issn = {2158-656X}, </br>
+url = {https://doi.org/10.1145/3458770}, </br>
+doi = {10.1145/3458770}, </br>
+journal = {ACM Trans. Manage. Inf. Syst.}, </br>
+month = sep, </br>
+articleno = {31}, </br>
+numpages = {28}, </br>
+keywords = {topic modeling, time series, user interaction, COVID-19, Mental health} </br>
+}","Like many of the disasters that have preceded it, the COVID-19 pandemic is likely to have a profound impact on people’s mental health. Understanding its impact can inform strategies for mitigating negative consequences. This work seeks to better understand the impacts of COVID-19 on mental health by examining how discussions on mental health subreddits have changed in the three months following the WHO’s declaration of a global pandemic. First, the rate at which the pandemic is discussed in each community is quantified. Then, volume of activity is measured to determine whether the number of people with mental health concerns has risen, and user interactions are analyzed to determine how they have changed during the pandemic. Finally, the content of the discussions is analyzed. Each of these metrics is considered with respect to a set of control subreddits to better understand if the changes present are specific to mental health subreddits or are representative of Reddit as a whole. There are numerous changes in the three mental health subreddits that we consider, r/Anxiety, r/depression, r/SuicideWatch; there is reduced posting activity in most cases, and there are significant changes in discussion of some topics such as work and anxiety. The results suggest that there is not an overwhelming increase in online mental health support-seeking on Reddit during the pandemic, but that discussion content related to mental health has changed.",,,,,,,LIT,FALSE,,,,,,FALSE,
 2021,Analyzing the Surprising Variability in Word Embedding Stability Across Languages,"Laura Burdick, Jonathan K. Kummerfeld, Rada Mihalcea",EMNLP 2021,files/burdick_stability_multi_language_2021.pdf,Semantics,,,files/downloads/multilingual-stability-master.zip,"@article{Burdick21MultilingualStability,</br>
 author = {Laura Burdick and Jonathan K. Kummerfeld and Rada Mihalcea},</br>
 title = {Analyzing the Surprising Variability in Word Embedding Stability Across Languages},</br>
