@@ -2,13 +2,23 @@ $(document).ready(function() {
     var pageCategory = $('meta[name=category]').attr("content");
 
     //Dynamically load recent news
+    $.ajaxSetup({ cache: false });
      $.ajax({
         type: "GET",
-        url: "../data/reading_group.csv",
+        url: "../data/reading_group.url",
         dataType: "text",
-        success: function(data) {processReadingGroup(data,pageCategory);}
+        success: function(data) {processGoogleSheet(data,pageCategory);}
     });
 });
+
+function processGoogleSheet(googleURL, pageCategory) {
+    $.ajax({
+        type: "GET",
+        url: googleURL,
+        dataType: "text",
+        success: function(data) {processReadingGroup(data, pageCategory)}
+    })
+}
 
 function processReadingGroup(allText,pageCategory) {
     arrData = parseCsv(allText);
@@ -18,7 +28,7 @@ function processReadingGroup(allText,pageCategory) {
     for (var i=1; i<arrData.length; i++) {
         var data = arrData[i];
 
-        var event = {date:data[0], time:data[1], topic:data[2], presenters:data[3], presentersWebsites:data[4], paperAuthors:data[5], paperTitles:data[6], paperConferences:data[7], paperLinks:data[8], slides:data[9], location:data[10], zoomLink:data[11], category:data[12], semester:data[13], past:data[14]};
+        var event = {date:data[0], time:data[1], topic:data[2], presenters:data[3], presentersWebsites:data[4], paperAuthors:data[5], paperTitles:data[6], paperConferences:data[7], paperLinks:data[8], slides:data[9], location:data[10], zoomLink:data[11], category:data[12], semester:data[13], past:data[14], altDisplayNote:data[15], liveOK: data[17]};
 
         //A hack to make things work (not sure why this isn't needed for the other csv files?)
         if(!event.date) {
@@ -67,8 +77,18 @@ function processReadingGroup(allText,pageCategory) {
         $('#reading-group').append('<h2 class="featurette-heading">' + semesters[i].name + '</h2>');
         var entry = '<table id="reading-group-table"><tbody id="reading-group-tbody"><tr><th id="col1" class><p class="lead"><b>Date / Time</b></p></th><th id="col2" class="centered"><p class="lead"><b>Facilitator</b></p></th><th id="col3_topic" class="centered"><p class="lead"><b>Paper</b></p></th><th id="col4" class="centered"><p class="lead"><b>Location</b></p></th></tr>'
 
+        var prevDisplayed = false;
         for(var j=0; j<semesters[i].events.length; ++j) {
             event = semesters[i].events[j];
+            var liveOK = event.liveOK == "TRUE";
+
+            if (!liveOK) {
+                if (!prevDisplayed && event.altDisplayNote == "TBD") {
+                    continue;
+                }
+            } else {
+                prevDisplayed = true;
+            }
 
             //date/time
             entry = entry + '<tr><td><p class="lead">' + event.date + '<br />' + event.time + '</p></td>';
@@ -78,14 +98,16 @@ function processReadingGroup(allText,pageCategory) {
             var presentersWebsites = event.presentersWebsites.split('; ');
 
             entry = entry + '<td class="centered"><p class="lead">';
-            for(var k=0; k<presenters.length; ++k) {
-                if(presentersWebsites[k]) {
-                    entry = entry + '<a href="' + presentersWebsites[k] + '" target="_blank">' + presenters[k] + '</a>';
-                } else {
-                    entry = entry + presenters[k];
-                }
-                if(k != presenters.length - 1) {
-                    entry = entry + ', ';
+            if (liveOK) {
+                for(var k=0; k<presenters.length; ++k) {
+                    if(presentersWebsites[k]) {
+                        entry = entry + '<a href="' + presentersWebsites[k] + '" target="_blank">' + presenters[k] + '</a>';
+                    } else {
+                        entry = entry + presenters[k];
+                    }
+                    if(k != presenters.length - 1) {
+                        entry = entry + ', ';
+                    }
                 }
             }
             entry = entry + '</p></td>';
@@ -97,27 +119,31 @@ function processReadingGroup(allText,pageCategory) {
             paperLinks = event.paperLinks.split('; ');
             slides = event.slides.split('; ');
             entry = entry + '<td class="centered"><p class="lead">';
-            for(var k=0; k<paperAuthors.length; ++k) {
-                if(paperAuthors[k]) {
-                    entry = entry + paperAuthors[k] + '.';
-                    if(paperLinks[k]) {
-                        entry = entry + ' "<a href="' + paperLinks[k] + '" target="_blank">' + paperTitles[k] + '</a>" ';
-                    } else if(paperTitles[k]) {
-                        entry = entry + ' "' + paperTitles[k] + '" ';
-                    }
-                    if(paperConferences[k]) {
-                        entry = entry + paperConferences[k] + '.'
-                    }
-                    if(slides.length > 1 && paperAuthors.length > 1) {
-                        entry = entry + ' [<a href="' + slides[k] + '" target="_blank">slides</a>]';
-                    }
-                    if(slides.length == 1 && k == paperAuthors.length-1 && slides[0]) {
-                        entry = entry + ' [<a href="' + slides[0] + '" target="_blank">slides</a>]';
-                    }
-                    if(k != paperAuthors.length-1) {
-                        entry = entry + '<br />';
+            if (liveOK) {
+                for(var k=0; k<paperAuthors.length; ++k) {
+                    if(paperAuthors[k]) {
+                        entry = entry + paperAuthors[k] + '.';
+                        if(paperLinks[k]) {
+                            entry = entry + ' "<a href="' + paperLinks[k] + '" target="_blank">' + paperTitles[k] + '</a>" ';
+                        } else if(paperTitles[k]) {
+                            entry = entry + ' "' + paperTitles[k] + '" ';
+                        }
+                        if(paperConferences[k]) {
+                            entry = entry + paperConferences[k] + '.'
+                        }
+                        if(slides.length > 1 && paperAuthors.length > 1) {
+                            entry = entry + ' [<a href="' + slides[k] + '" target="_blank">slides</a>]';
+                        }
+                        if(slides.length == 1 && k == paperAuthors.length-1 && slides[0]) {
+                            entry = entry + ' [<a href="' + slides[0] + '" target="_blank">slides</a>]';
+                        }
+                        if(k != paperAuthors.length-1) {
+                            entry = entry + '<br />';
+                        }
                     }
                 }
+            } else {
+                entry += event.altDisplayNote;
             }
             entry = entry + '</p></td>';
 
