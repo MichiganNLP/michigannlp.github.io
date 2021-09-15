@@ -1,6 +1,10 @@
 Please contact Laura Biester (lbiester@umich.edu) with questions, clarifications, or suggestions.
 
-Here are the descriptions of what columns are included in reading_group.csv (refer to when adding a new row to the datafile):
+The reading group page is managed differently from the other pages. Instead of reading from a CSV, we read from a google doc that can be updated easily by presenters. The google doc is published as a CSV at the URL listed in `data/reading_group.url`.
+
+Entries are "activated" on the website by setting the `LiveFlag` to `TRUE` in the google doc. Only Laura Biester (webmaster) and Oana Ignat (reading group coordinator) have permission to update this flag. When updating this flag, the website should always be viewed to ensure that no errors are caused when the entry is added.
+
+Here are the descriptions of what columns are included in reading group csv (refer to when adding a new row to the datafile):
 
 ----------
 
@@ -24,10 +28,20 @@ Slides (optional) - links to the slides used in reading group (If there are mult
 
 Location (required) - location of the reading group meeting
 
+MeetingLink (optional) - the link to join the meeting, if it is virtual
+
 Category (required) - which website this publication should appear on (ie. "LIT","Girls Encoded"; Multiple categories should be separated by a comma and a space)
 
 Semester (required) - what semester reading group this is (in the format "Winter 20XX" or "Fall 20XX")
 
+Past (required) - boolean - is this a previous semester?
+
+AltDisplayNote (required) - default "TBD" - what is displayed if there is no entry but later entries are provided
+
+LiveFlag (required) - boolean - should this entry be displayed on the website?
+
+LiveOK - computed by google sheet based off of other columns (validation that required columns are present and LiveFlag is true)
+
 ----------
 
-NOTE: The order that reading group meetings appear in reading_group.csv will be the order that they appear on the website (sorted by semester).
+NOTE: The order that reading group meetings appear in the google doc will be the order that they appear on the website (sorted by semester).
