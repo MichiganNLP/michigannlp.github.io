@@ -1,7 +1,7 @@
 function parseCsv(allText) {
     //http://www.bennadel.com/blog/1504-ask-ben-parsing-csv-strings-with-javascript-exec-regular-expression-command.htm
     strDelimiter = (",");
-    
+
     // Create a regular expression to parse the CSV values.
     var objPattern = new RegExp(
         (
@@ -14,7 +14,7 @@ function parseCsv(allText) {
     ),
     "gi"
     );
-    
+
     var arrData = [[]];
     var arrMatches = null;
     while (arrMatches = objPattern.exec(allText)){
@@ -35,6 +35,11 @@ function parseCsv(allText) {
         }
         arrData[ arrData.length - 1 ].push( strMatchedValue );
     }
-    
+
+    // handle the possibility of a newline ending the file
+    if (arrData[arrData.length - 1].length == 1 && arrData[arrData.length - 1][0].length == 0) {
+        arrData = arrData.slice(0, arrData.length - 1)
+    }
+
     return arrData
 }
