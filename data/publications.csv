@@ -39,6 +39,14 @@ year = {2021}</br>
     year = ""2021"", </br>
     publisher = ""Association for Computational Linguistics"", </br>
 }","We aim to automatically identify human action reasons in online videos. We focus on the widespread genre of lifestyle vlogs, in which people perform actions while verbally describing them. We introduce and make publicly available the WhyAct dataset, consisting of 1,077 visual actions manually annotated with their reasons. We describe a multimodal model that leverages visual and textual information to automatically infer the reasons corresponding to an action presented in the video.",,,,,,,LIT,FALSE,,,,,,FALSE,
+2021,Detecting Inspiring Content on Social Media,"Oana Ignat, Y-Lan Boureau, Jane A. Yu, Alon Halevy",ACII 2021,https://arxiv.org/pdf/2109.02734.pdf,Humor and Emotions,,,,"@misc{ignat2021detecting,
+      title={Detecting Inspiring Content on Social Media}, 
+      author={Oana Ignat and Y-Lan Boureau and Jane A. Yu and Alon Halevy},
+      year={2021},
+      eprint={2109.02734},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL}
+}","Inspiration moves a person to see new possibilities and transforms the way they perceive their own potential. Inspiration has received little attention in psychology, and has not been researched before in the NLP community. To the best of our knowledge, this work is the first to study inspiration through machine learning methods. We aim to automatically detect inspiring content from social media data. To this end, we analyze social media posts to tease out what makes a post inspiring and what topics are inspiring. We release a dataset of 5,800 inspiring and 5,800 non-inspiring English-language public post unique ids collected from a dump of Reddit public posts made available by a third party and use linguistic heuristics to automatically detect which social media English-language posts are inspiring.",ACII.2021.Inspiration.poster,Detecting Inspiring Content on Social Media,"Oana Ignat, Y-Lan Boureau, Jane A. Yu, Alon Halevy",ACII,2021,Virtual,LIT,FALSE,,,,,,FALSE,
 2021,To Batch or Not to Batch? Comparing Batching and Curriculum Learning Strategies across Tasks and Datasets,"Laura Burdick, Jonathan K. Kummerfeld, Rada Mihalcea","Mathematics, 2021",https://www.mdpi.com/2227-7390/9/18/2234,Semantics,,,files/downloads/batching-curriculum-master.zip,"@Article{math9182234, </br>
 AUTHOR = {Burdick, Laura and Kummerfeld, Jonathan K. and Mihalcea, Rada}, </br>
 TITLE = {To Batch or Not to Batch? Comparing Batching and Curriculum Learning Strategies across Tasks and Datasets}, </br>
