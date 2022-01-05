@@ -1,4 +1,10 @@
 year,title,authors,publication,link,category,demo,data,software,bibtex,abstract,poster,posterTitle,posterAuthors,posterConference,posterYear,posterLocation,pageCategory,download,downloadName,downloadDescription,downloadLink,downloadDate,downloadLinkNames,new,notes
+2022,Deep Learning for Text Style Transfer: A Survey,"Di Jin, Zhijing Jin, Zhiting Hu, Olga Vechtomova, Rada Mihalcea","Computational Linguistics Journal, 2022",https://arxiv.org/pdf/2011.00416.pdf,Other,,,,"@article{jin2021deep,</br>
+      title={Deep Learning for Text Style Transfer: A Survey}, </br>
+      author={Di Jin and Zhijing Jin and Zhiting Hu and Olga Vechtomova and Rada Mihalcea},</br>
+      year={2021},</br>
+      journal={Computational Linguistics}</br>
+}","Text style transfer is an important task in natural language generation, which aims to control certain attributes in the generated text, such as politeness, emotion, humor, and many others. It has a long history in the field of natural language processing, and recently has re-gained significant attention thanks to the promising performance brought by deep neural models. In this paper, we present a systematic survey of the research on neural text style transfer, spanning over 100 representative articles since the first neural text style transfer work in 2017. We discuss the task formulation, existing datasets and subtasks, evaluation, as well as the rich methodologies in the presence of parallel and non-parallel data. We also provide discussions on a variety of important topics regarding the future development of this task.",,,,,,,LIT,FALSE,,,,,,FALSE,
 2021,Analyzing the Surprising Variability in Word Embedding Stability Across Languages,"Laura Burdick, Jonathan K. Kummerfeld, Rada Mihalcea",EMNLP 2021,files/burdick_stability_multi_language_2021.pdf,Semantics,,,files/downloads/multilingual-stability-master.zip,"@article{Burdick21MultilingualStability,</br>
 author = {Laura Burdick and Jonathan K. Kummerfeld and Rada Mihalcea},</br>
 title = {Analyzing the Surprising Variability in Word Embedding Stability Across Languages},</br>
