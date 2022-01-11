@@ -1,4 +1,12 @@
 year,title,authors,publication,link,category,demo,data,software,bibtex,abstract,poster,posterTitle,posterAuthors,posterConference,posterYear,posterLocation,pageCategory,download,downloadName,downloadDescription,downloadLink,downloadDate,downloadLinkNames,new,notes
+2022,When Did It Happen? Duration-informed Temporal Localization of Narrated Actions in Vlogs,"Oana Ignat, Santiago Castro, Yuhuang Zhou, Jiajun Bao, Dandan Shan, Rada Mihalcea","ACM Transactions on Multimedia Computing Communications and Applications (TOMM), 2022",files/ignat_action_localization_2022.pdf,Vision and Text,,,https://github.com/MichiganNLP/vlog_action_localization,"@article{ignat2022vlogactionlocalization,</br>title={When Did It Happen? Duration-informed Temporal Localization of Narrated Actions in Vlogs},</br>author={Oana Ignat and Santiago Castro and Yuhuang Zhou and Jiajun Bao and Dandan Shan and Rada Mihalcea},</br>
+year = {2022},</br>
+issue_date = {January 2022},</br>
+publisher = {Association for Computing Machinery},</br>
+volume = {1},</br>
+number = {1},</br>
+issn = {1551-6857},</br>
+journal = {ACM Trans. Multimedia Comput. Commun. Appl.}</br>}","We consider the task of temporal human action localization in lifestyle vlogs. We introduce a novel dataset consisting of manual annotations of temporal localization for 13,000 narrated actions in 1,200 video clips. We present an extensive analysis of this data, which allows us to better understand how the language and visual modalities interact throughout the videos. We propose a simple yet effective method to localize the narrated actions based on their expected duration. Through several experiments and analyses, we show that our method brings complementary information with respect to previous methods, and leads to improvements over previous work for the task of temporal action localization.",,,,,,,LIT,TRUE,Action Localization Code,Code for temporal localization of narrated actions in vlogs.,https://github.com/MichiganNLP/vlog_action_localization,"January 11, 2022",Github,TRUE,
 2022,Deep Learning for Text Style Transfer: A Survey,"Di Jin, Zhijing Jin, Zhiting Hu, Olga Vechtomova, Rada Mihalcea","Computational Linguistics Journal, 2022",https://arxiv.org/pdf/2011.00416.pdf,Other,,,,"@article{jin2021deep,</br>
       title={Deep Learning for Text Style Transfer: A Survey}, </br>
       author={Di Jin and Zhijing Jin and Zhiting Hu and Olga Vechtomova and Rada Mihalcea},</br>
