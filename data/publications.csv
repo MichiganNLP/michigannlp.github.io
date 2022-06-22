@@ -11,6 +11,22 @@ title = {Using Paraphrases to Study Properties of Contextual Embeddings},</br>
 journal = {NAACL},</br>
 year = {2022}</br>
 }","We use paraphrases as a unique source of data to analyze contextualized embeddings, with a particular focus on BERT. Because paraphrases naturally encode consistent word and phrase semantics, they provide a unique lens for investigating properties of embeddings. Using the Paraphrase Database's alignments, we study words within paraphrases as well as phrase representations. We find that contextual embeddings effectively handle polysemous words, but give synonyms surprisingly different representations in many cases. We confirm previous findings that BERT is sensitive to word order, but find slightly different patterns than prior work in terms of the level of contextualization across BERT's layers.",,,,,,,LIT,FALSE,,,,,,FALSE,
+2022,Surfacing Racial Stereotypes through Identity Portrayal,"Gauri Kambhatla, Ian Stewart, Rada Mihalcea",FAccT 2022,https://dl.acm.org/doi/pdf/10.1145/3531146.3533217,Computational Social Science,,https://web.eecs.umich.edu/~mihalcea/downloads/RacialIdentities.zip,,"@inproceedings{Kambhatla2022RacialStereotypes,</br>
+author = {Kambhatla, Gauri and Stewart, Ian and Mihalcea, Rada},</br>
+title = {Surfacing Racial Stereotypes through Identity Portrayal},</br>
+year = {2022},</br>
+isbn = {9781450393522},</br>
+publisher = {Association for Computing Machinery},</br>
+address = {New York, NY, USA},</br>
+url = {https://doi.org/10.1145/3531146.3533217},</br>
+doi = {10.1145/3531146.3533217},</br>
+booktitle = {2022 ACM Conference on Fairness, Accountability, and Transparency},</br>
+pages = {1604–1615},</br>
+numpages = {12},</br>
+keywords = {racial bias, stereotypes, datasets},</br>
+location = {Seoul, Republic of Korea},</br>
+series = {FAccT '22}</br>
+}","People express racial stereotypes through conversations with others, increasingly in a digital format; as a result, the ability to computationally identify racial stereotypes could be beneficial to help mitigate some of the harmful effects of stereotyping. In this work, we seek to better understand how we can computationally surface racial stereotypes in text by identifying linguistic features associated with differences in racial identity portrayal, focused on two races (Black and White). We collect novel data of individuals’ self-presentation via crowdsourcing, where each crowdworker answers a set of prompts from their own perspective (real identity), and from the perspective of another racial identity (portrayed identity), keeping the gender constant. We use these responses as a dataset to identify stereotypes. Through a series of experiments based on classifications between real and portrayed identities, we show that generalizations and stereotypes appear to be more prevalent amongst white participants than black participants. Through analyses of predictive words and word usage patterns, we find that some of the most predictive features of an author portraying a different racial identity are known stereotypes, and reveal how people of different identities see themselves and others.",,,,,,,LIT,TRUE,Racial Identities,"A dataset consisting of short responses written from the perspective of real and portrayed racial identities. Responses are written from 615 crowd-workers on the Prolific platform who identify as either Black American or White American. Each participant wrote as themselves and as an imagined racial identity, resulting in a total of 1230 examples.",https://web.eecs.umich.edu/~mihalcea/downloads/RacialIdentities.zip,"June 22, 2022",Data,TRUE,
 2022,Analyzing the Effects of Annotator Gender Across NLP Tasks,"Laura Biester, Vanita Sharma, Ashkan Kazemi, Naihao Deng, Steven Wilson, Rada Mihalcea",NLPerspectives Workshop at LREC 2022,files/biester_nlperspectives_2022.pdf,"Computational Social Science, Other",,,https://github.com/MichiganNLP/Analyzing-the-Effects-of-Annotator-Gender-Across-NLP-Tasks,"@article{biester2022analyzingannotatorgender, </br>
   title={Analyzing the Effects of Annotator Gender Across NLP Tasks}, </br>
   author={Biester, Laura and Sharma, Vanita and Kazemi, Ashkan and Deng, Naihao and Wilson, Steven and Mihalcea, Rada}, </br>
