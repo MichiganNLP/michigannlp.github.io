@@ -35,7 +35,8 @@ year,title,authors,publication,link,category,demo,data,software,bibtex,abstract,
     year = ""2022"",</br>
     address = ""Gyeongju, Republic of Korea"",</br>
     publisher = ""International Committee on Computational Linguistics"",</br>
-    url = ""https://aclanthology.org/events/coling-2022/"",</br>
+    url = ""https://aclanthology.org/2022.coling-1.496"",</br>
+    pages = ""5613--5635""</br>
 }","Existing video understanding datasets mostly focus on human interactions, with little attention being paid to the ""in the wild"" settings, where the videos are recorded outdoors. We propose WILDQA, a video understanding dataset of videos recorded in outside settings. In addition to video question answering (Video QA), we also introduce the new task of identifying visual support for a given question and answer (Video Evidence Selection). Through evaluations using a wide range of baseline models, we show that WILDQA poses new challenges to the vision and language research communities. The dataset is available at https://lit.eecs.umich.edu/wildqa/.",,,,,,,LIT,FALSE,,,,,,FALSE,
 2022,How Well Do You Know Your Audience? Toward Socially-aware Question Generation,"Ian Stewart, Rada Mihalcea",SIGDIAL 2022,https://arxiv.org/pdf/2110.08445.pdf,Conversational Technologies,,,,"@inproceedings{Stewart2022Audience,</br>
     title = ""How Well Do You Know Your Audience? Toward Socially-aware Question Generation"",</br>
