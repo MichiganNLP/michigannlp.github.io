@@ -9,6 +9,24 @@ year,title,authors,publication,link,category,demo,data,software,bibtex,abstract,
   year = {2022},</br>
   copyright = {Creative Commons Attribution 4.0 International}</br>
 }","The COVID-19 pandemic disrupted everyone's life across the world. In this work, we characterize the subjective wellbeing patterns of 112 cities across the United States during the pandemic prior to vaccine availability, as exhibited in subreddits corresponding to the cities. We quantify subjective wellbeing using positive and negative affect. We then measure the pandemic's impact by comparing a community's observed wellbeing with its expected wellbeing, as forecasted by time series models derived from prior to the pandemic.We show that general community traits reflected in language can be predictive of community resilience. We predict how the pandemic would impact the wellbeing of each community based on linguistic and interaction features from normal times before the pandemic. We find that communities with interaction characteristics corresponding to more closely connected users and higher engagement were less likely to be significantly impacted. Notably, we find that communities that talked more about social ties normally experienced in-person, such as friends, family, and affiliations, were actually more likely to be impacted. Additionally, we use the same features to also predict how quickly each community would recover after the initial onset of the pandemic. We similarly find that communities that talked more about family, affiliations, and identifying as part of a group had a slower recovery.",,,,,,,LIT,FALSE,,,,,,FALSE,
+2022,Detection and Recognition of Driver Distraction Using Multimodal Signals,"Kapotaksha Das, Michalis Papakostas, Kais Riani, Andrew Gasiorowski, Mohamed Abouelenien, Mihai Burzo, Rada Mihalcea","ACM Transactions on Interactive Intelligent Systems, Volume 12, Issue 4",https://web.eecs.umich.edu/~mihalcea/papers/das.acmtis22.pdf,Vision and Text,,,,"@article{das2022driverdistraction,</br>
+author = {Das, Kapotaksha and Papakostas, Michalis and Riani, Kais and Gasiorowski, Andrew and Abouelenien, Mohamed and Burzo, Mihai and Mihalcea, Rada},</br>
+title = {Detection and Recognition of Driver Distraction Using Multimodal Signals},</br>
+year = {2022},</br>
+issue_date = {December 2022},</br>
+publisher = {Association for Computing Machinery},</br>
+address = {New York, NY, USA},</br>
+volume = {12},</br>
+number = {4},</br>
+issn = {2160-6455},</br>
+url = {https://doi.org/10.1145/3519267},</br>
+doi = {10.1145/3519267},</br>
+journal = {ACM Trans. Interact. Intell. Syst.},</br>
+month = {dec},</br>
+articleno = {33},</br>
+numpages = {28},</br>
+keywords = {thermal (keyword), machine learning, action unit analysis, Distracted driving, multimodal datasets, physiological signal processing, multimodal interaction}</br>
+}","Distracted driving is a leading cause of accidents worldwide. The tasks of distraction detection and recognition have been traditionally addressed as computer vision problems. However, distracted behaviors are not always expressed in a visually observable way. In this work, we introduce a novel multimodal dataset of distracted driver behaviors, consisting of data collected using twelve information channels coming from visual, acoustic, near-infrared, thermal, physiological and linguistic modalities. The data were collected from 45 subjects while being exposed to four different distractions (three cognitive and one physical). For the purposes of this paper, we performed experiments with visual, physiological, and thermal information to explore potential of multimodal modeling for distraction recognition. In addition, we analyze the value of different modalities by identifying specific visual, physiological, and thermal groups of features that contribute the most to distraction characterization. Our results highlight the advantage of multimodal representations and reveal valuable insights for the role played by the three modalities on identifying different types of driving distractions.",,,,,,,LIT,FALSE,,,,,,FALSE,
 2022,Differentially Private Language Models for Secure Data Sharing,"Justus Mattern, Zhijing Jin, Benjamin Weggenmann, Mrinmaya Sachan, Bernhard Schoelkopf",EMNLP 2022,https://zhijing-jin.com/files/papers/DiffPrivLM_EMNLP2022.pdf,Other,,,,"@inproceedings{jin2022private,</br>
    author = {Mattern, Justus and Jin, Zhijing and Weggenmann, Benjamin and Sachan, Mrinmaya and Schoelkopf, Bernhard},</br>
    title = {Differentially Private Language Models for Secure Data Sharing},</br>
