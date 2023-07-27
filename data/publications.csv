@@ -1,5 +1,5 @@
 year,title,authors,publication,link,category,demo,data,software,bibtex,abstract,poster,posterTitle,posterAuthors,posterConference,posterYear,posterLocation,pageCategory,download,downloadName,downloadDescription,downloadLink,downloadDate,downloadLinkNames,new,notes,,,,,,,,,,,,,
-2023,Scalable Performance Analysis for Vision-Language Models,"Santiago Castro*, Oana Ignat*, Rada Mihalcea (* = equal contribution)""",*SEM 2023,https://arxiv.org/pdf/2305.18786.pdf ,Vision and Text,,,,"@inproceedings{castro-etal-2023-scalable,
+2023,Scalable Performance Analysis for Vision-Language Models,"Santiago Castro*, Oana Ignat*, Rada Mihalcea (* = equal contribution)""",*SEM 2023,https://aclanthology.org/2023.starsem-1.26.pdf,Vision and Text,,,,"@inproceedings{castro-etal-2023-scalable,
     title = "Scalable Performance Analysis for Vision-Language Models",
     author = "Castro, Santiago  and
       Ignat, Oana  and
